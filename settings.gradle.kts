@@ -1,4 +1,4 @@
-rootProject.name = "deeplink"
+rootProject.name = "keeplink"
 
 pluginManagement {
     repositories {

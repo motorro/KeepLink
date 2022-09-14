@@ -2,7 +2,6 @@
 
 import org.jetbrains.dokka.Platform
 import org.jetbrains.dokka.gradle.DokkaTask
-import org.jetbrains.kotlin.gradle.tasks.FatFrameworkTask
 import java.net.URI
 import java.time.Duration
 
@@ -11,45 +10,32 @@ plugins {
     kotlin("plugin.serialization") version "1.7.10"
     id("org.jetbrains.dokka") version "1.7.10"
     id("maven-publish")
+    id("signing")
     id("org.ajoberstar.grgit") version "4.1.0"
+    id("io.github.gradle-nexus.publish-plugin") version "1.0.0"
 }
 
 apply(from = "gradle/versioning.gradle")
+apply(from = "gradle/maven-publish-config.gradle")
 val buildVersionName = project.extensions.extraProperties["buildVersionName"] as groovy.lang.Closure<*>
 val buildVersionCode = project.extensions.extraProperties["buildVersionCode"] as groovy.lang.Closure<*>
 
-group = "com.flyxo"
+group = "com.motorro"
 version = buildVersionName()
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 kotlin {
+
     val iosArm64 = iosArm64("iosArm64")
     val iosX64 = iosX64("iosX64")
     configure(listOf(iosArm64, iosX64)) {
         binaries {
             framework(listOf(RELEASE))
         }
-    }
-    val outputIos by tasks.creating(FatFrameworkTask::class) {
-        group = "output"
-        destinationDir = file("$projectDir/output/ios/Fat")
-        from(
-            iosArm64.binaries.getFramework("RELEASE"),
-            iosX64.binaries.getFramework("RELEASE")
-        )
-    }
-    val outputIosArm64 by tasks.creating(Copy::class) {
-        group = "output"
-        into(file("$projectDir/output/ios/Arm64"))
-        from(iosArm64.binaries.getFramework("RELEASE").linkTask)
-    }
-    val outputIosX64 by tasks.creating(Copy::class) {
-        group = "output"
-        into(file("$projectDir/output/ios/X64"))
-        from(iosX64.binaries.getFramework("RELEASE").linkTask)
     }
 
     jvm {
@@ -63,20 +49,9 @@ kotlin {
             useJUnit()
         }
     }
-    val dokkaJar by tasks.creating(Jar::class) {
-        group = "documentation"
-        archiveClassifier.set("javadoc")
-        from(tasks.dokkaHtml)
-    }
-    val outputJvm by tasks.creating(Copy::class) {
-        group = "output"
-        from(tasks.findByName("jvmJar"), tasks.findByName("jvmSourcesJar"), tasks.findByName("dokkaJar"))
-        into(file("$projectDir/output/jvm"))
-        mustRunAfter(tasks.build)
-    }
 
     js(IR) {
-        moduleName = "flyxo-deep-link"
+        moduleName = "keeplink"
         compilations.all {
             kotlinOptions.freeCompilerArgs += listOf(
                 "-Xopt-in=kotlin.js.ExperimentalJsExport"
@@ -97,15 +72,10 @@ kotlin {
                     timeout = "10s"
                 }
             }
-            // On customizing JS builds and distribution:
-            // https://kotlinlang.org/docs/reference/js-project-setup.html#choosing-execution-environment
-            distribution {
-                directory = file("$projectDir/output/npm")
-            }
         }
     }
 
-    val serializationVersion = "1.3.2"
+    val serializationVersion = "1.4.0"
 
     sourceSets {
         val commonMain by getting {
@@ -147,11 +117,13 @@ kotlin {
             }
         }
     }
+
     targets.all {
         compilations.all {
             kotlinOptions {
                 freeCompilerArgs = freeCompilerArgs + listOf(
-                    "-Xopt-in=kotlin.js.ExperimentalJsExport"
+                    "-opt-in=kotlin.RequiresOptIn",
+                    "-Xinline-classes"
                 )
             }
         }
@@ -188,24 +160,6 @@ tasks.withType<AbstractTestTask> {
     }
 }
 
-
-publishing {
-    repositories {
-        maven {
-            name ="output"
-            url = URI("file://${file("$projectDir/output/jvm").invariantSeparatorsPath}")
-        }
-    }
-}
-
-afterEvaluate {
-    val publications = extensions.getByType<PublishingExtension>().publications
-    publications.filterIsInstance<MavenPublication>().forEach { pub ->
-        pub.groupId = rootProject.group as String
-        pub.artifact(tasks.findByName("dokkaJar"))
-    }
-}
-
 val displayVersion by tasks.creating(Jar::class) {
     group = "documentation"
     description = "Display application version name"
@@ -215,3 +169,77 @@ val displayVersion by tasks.creating(Jar::class) {
     }
 }
 
+val libId = "keeplink"
+val libName = "keeplink"
+val libDesc = "Multiplatform deep-link operations"
+val projectUrl: String = "https://github.com/motorro/KeepLink"
+val projectScm: String = "https://github.com/motorro/KeepLink.git"
+val ossrhUsername: String? by project.extra
+val ossrhPassword: String? by project.extra
+val developerId: String = "motorro"
+val developerName: String = "Nikolai Kotchetkov"
+val developerEmail: String = "motorro@gmail.com"
+val signingKey: String? by project.extra
+val signingPassword: String? by project.extra
+
+val javadocJar by tasks.creating(Jar::class) {
+    group = "documentation"
+    archiveClassifier.set("javadoc")
+    from(tasks.dokkaHtml)
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "sonatype"
+            url = URI("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+            credentials {
+                username = ossrhUsername
+                password = ossrhPassword
+            }
+        }
+    }
+
+    publications.withType<MavenPublication> {
+        artifact(javadocJar)
+        pom {
+            name.set(libName)
+            description.set(libDesc)
+            url.set(projectUrl)
+            licenses {
+                license {
+                    name.set("Apache-2.0")
+                    url.set("https://apache.org/licenses/LICENSE-2.0")
+                }
+            }
+            developers {
+                developer {
+                    id.set(developerId)
+                    name.set(developerName)
+                    email.set(developerEmail)
+                }
+            }
+            scm {
+                connection.set(projectScm)
+                developerConnection.set(projectScm)
+                url.set(projectUrl)
+            }
+        }
+    }
+
+    signing {
+        useInMemoryPgpKeys(signingKey, signingPassword)
+        sign(publishing.publications)
+    }
+}
+
+nexusPublishing {
+    repositories {
+        sonatype {
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+            username.set(ossrhUsername)
+            password.set(ossrhPassword)
+        }
+    }
+}
