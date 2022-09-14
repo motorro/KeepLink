@@ -42,4 +42,5 @@ build/
 
 # Node.js
 node_modules/
+kotlin-js-store/
 
