@@ -1,6 +1,7 @@
 package com.motorro.keeplink.action.data
 
 import com.motorro.data.ComponentValue
+import kotlin.js.JsExport
 import kotlin.js.JsName
 
 /**
@@ -10,6 +11,7 @@ import kotlin.js.JsName
  * @param month Month: 1 - 12
  * @param day Day: 1 - 31
  */
+@JsExport
 data class LocalDateFields(
     @JsName("year") val year: Int,
     @JsName("month") val month: Int,

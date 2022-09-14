@@ -7,7 +7,9 @@ import com.motorro.keeplink.Action
 import com.motorro.keeplink.action.data.LocalDateFields
 import com.motorro.keeplink.action.data.TransportType
 import kotlinx.serialization.Serializable
+import kotlin.js.JsExport
 
+@JsExport
 @Serializable
 sealed class TestAction : Action() {
     /**

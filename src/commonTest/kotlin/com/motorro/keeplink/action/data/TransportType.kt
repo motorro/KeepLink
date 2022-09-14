@@ -1,10 +1,12 @@
 package com.motorro.keeplink.action.data
 
 import com.motorro.data.ComponentValue
+import kotlin.js.JsExport
 
 /**
  * Transport-type enum (JS-compatible)
  */
+@JsExport
 data class TransportType(val value: String): ComponentValue {
     companion object {
         /**
@@ -27,6 +29,7 @@ data class TransportType(val value: String): ComponentValue {
 /**
  * Allowed transport-types (JS-compatible)
  */
+@JsExport
 object TransportTypes {
     /**
      * Flight

@@ -106,12 +106,14 @@ kotlin {
         }
         val jvmMain by getting
         val jvmTest by getting {
+            dependsOn(commonTest)
             dependencies {
                 implementation(kotlin("test-junit"))
             }
         }
         val jsMain by getting
         val jsTest by getting {
+            dependsOn(commonTest)
             dependencies {
                 implementation(kotlin("test-js"))
             }

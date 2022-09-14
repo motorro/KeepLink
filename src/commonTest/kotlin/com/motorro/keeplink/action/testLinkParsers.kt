@@ -3,10 +3,12 @@ package com.motorro.keeplink.action
 import com.motorro.keeplink.DeepLinkSerializer
 import com.motorro.keeplink.LinkBuilder
 import com.motorro.keeplink.LinkParser
+import kotlin.js.JsExport
 
 /**
  * Test link parsers (JS-compatible)
  */
+@JsExport
 object LinkParsers {
     /**
      * Deep-link for URIs with `motorro` scheme:
@@ -26,6 +28,7 @@ object LinkParsers {
 /**
  * Test link builders (JS-compatible)
  */
+@JsExport
 object LinkBuilders {
     /**
      * Deep-link for URIs with `motorro` scheme:
