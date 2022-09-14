@@ -10,6 +10,10 @@ val UNKNOWN_COMPONENTS = pshComponentsOf(
 
 const val UNKNOWN_JSON = """{"path":["unknown","path"],"search":[{"name":"unknown","value":"param"}],"hash":"unknownHash"}"""
 
+val PROFILE_LINK_COMPONENTS = pshComponentsOf(
+    listOf("profile")
+)
+
 val MAGIC_LINK_COMPONENTS = pshComponentsOf(
     listOf("login", "magic", "hash")
 )

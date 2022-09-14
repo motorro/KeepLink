@@ -3,6 +3,7 @@ package com.motorro.keeplink.action
 import com.motorro.data.getValue
 import com.motorro.keeplink.ActionParser
 import com.motorro.keeplink.BranchActionParser
+import com.motorro.keeplink.DefaultActionParser
 import com.motorro.keeplink.SegmentCheckParser
 import com.motorro.keeplink.action.data.LocalDateFields
 import com.motorro.keeplink.action.data.TransportType
@@ -47,10 +48,16 @@ internal val SearchParser = with(TestAction.Search) {
     }
 }
 
+internal val ProfileParser = SegmentCheckParser(
+    TestAction.Profile.SEGMENT,
+    DefaultActionParser { TestAction.Profile() }
+)
+
 /**
  * Root parsers - all known branches from root node
  */
 private val rootParsers = listOf(
+    ProfileParser,
     LoginParser,
     SearchParser
 )

@@ -7,10 +7,12 @@ import com.motorro.keeplink.Action
 import com.motorro.keeplink.action.data.LocalDateFields
 import com.motorro.keeplink.action.data.TransportType
 import kotlinx.serialization.Serializable
+import kotlin.js.ExperimentalJsExport
 import kotlin.js.JsExport
 
 @JsExport
 @Serializable
+@OptIn(ExperimentalJsExport::class)
 sealed class TestAction : Action() {
     /**
      * Invalid action - parse or build error
@@ -58,9 +60,24 @@ sealed class TestAction : Action() {
     }
 
     /**
+     * Profile link
+     *
+     * `/profile
+     *
+     */
+    class Profile : TestAction() {
+        internal companion object {
+            const val SEGMENT = "profile"
+        }
+
+        override fun getPath(): Array<String> = super.getPath() + SEGMENT
+    }
+
+    /**
      * Login actions
      *
      * `/login`
+     *
      */
     sealed class Login : TestAction() {
         internal companion object {
