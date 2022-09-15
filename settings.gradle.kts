@@ -2,7 +2,22 @@ rootProject.name = "keeplink"
 
 pluginManagement {
     repositories {
+        mavenLocal()
         gradlePluginPortal()
-        maven(url = "https://ajoberstar.github.io/bintray-backup/")
+        mavenCentral()
     }
 }
+enableFeaturePreview("VERSION_CATALOGS")
+dependencyResolutionManagement {
+    repositories {
+        mavenLocal()
+        google()
+        mavenCentral()
+    }
+}
+
+include("testaction")
+include("uri")
+include("deeplink")
+include("push")
+include("mocks")
