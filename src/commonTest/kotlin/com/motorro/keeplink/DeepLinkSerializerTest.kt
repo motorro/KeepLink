@@ -2,10 +2,10 @@ package com.motorro.keeplink
 
 import com.motorro.data.UTM
 import com.motorro.data.UTM_SEARCH
-import com.motorro.data.of
 import com.motorro.keeplink.action.RootActionParser
 import com.motorro.keeplink.action.TestAction
 import com.motorro.keeplink.action.TestSerializers
+import com.motorro.keeplink.data.of
 import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json

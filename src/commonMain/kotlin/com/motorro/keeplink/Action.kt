@@ -1,7 +1,7 @@
 package com.motorro.keeplink
 
-import com.motorro.data.Param
-import com.motorro.data.PshComponents
+import com.motorro.keeplink.data.Param
+import com.motorro.keeplink.data.PshComponents
 import kotlinx.serialization.Serializable
 import kotlin.js.ExperimentalJsExport
 import kotlin.js.JsExport

@@ -1,5 +1,6 @@
 package com.motorro.data
 
+import com.motorro.keeplink.data.parseUtm
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue

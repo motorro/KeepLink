@@ -1,4 +1,4 @@
-package com.motorro.push
+package com.motorro.keeplink.data.push
 
 import kotlinx.serialization.Serializable
 import kotlin.js.ExperimentalJsExport

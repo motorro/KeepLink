@@ -1,4 +1,4 @@
-package com.motorro.data
+package com.motorro.keeplink.data
 
 import kotlin.js.ExperimentalJsExport
 import kotlin.js.JsExport

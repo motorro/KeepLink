@@ -1,8 +1,8 @@
 package com.motorro.keeplink
 
-import com.motorro.data.Param
-import com.motorro.data.PshComponents
-import com.motorro.data.toParams
+import com.motorro.keeplink.data.Param
+import com.motorro.keeplink.data.PshComponents
+import com.motorro.keeplink.data.toParams
 
 /**
  * Creates PSH components

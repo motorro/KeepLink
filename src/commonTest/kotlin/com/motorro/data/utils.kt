@@ -1,5 +1,8 @@
 package com.motorro.data
 
+import com.motorro.keeplink.data.SearchComponent
+import com.motorro.keeplink.data.toParams
+
 /**
  * Creates search components
  */

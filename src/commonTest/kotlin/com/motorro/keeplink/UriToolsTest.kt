@@ -1,7 +1,7 @@
 package com.motorro.keeplink
 
-import com.motorro.data.of
 import com.motorro.keeplink.action.TestAction
+import com.motorro.keeplink.data.of
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue

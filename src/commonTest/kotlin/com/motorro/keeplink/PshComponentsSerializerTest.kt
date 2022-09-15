@@ -1,6 +1,6 @@
 package com.motorro.keeplink
 
-import com.motorro.data.PshComponents
+import com.motorro.keeplink.data.PshComponents
 import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json

@@ -1,6 +1,6 @@
 package com.motorro.keeplink.action.data
 
-import com.motorro.data.ComponentValue
+import com.motorro.keeplink.data.ComponentValue
 import kotlin.js.JsExport
 
 /**

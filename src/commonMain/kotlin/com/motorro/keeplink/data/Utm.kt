@@ -1,10 +1,10 @@
-package com.motorro.data
+package com.motorro.keeplink.data
 
-import com.motorro.data.Utm.Companion.UTM_CAMPAIGN
-import com.motorro.data.Utm.Companion.UTM_CONTENT
-import com.motorro.data.Utm.Companion.UTM_MEDIUM
-import com.motorro.data.Utm.Companion.UTM_SOURCE
-import com.motorro.data.Utm.Companion.UTM_TERM
+import com.motorro.keeplink.data.Utm.Companion.UTM_CAMPAIGN
+import com.motorro.keeplink.data.Utm.Companion.UTM_CONTENT
+import com.motorro.keeplink.data.Utm.Companion.UTM_MEDIUM
+import com.motorro.keeplink.data.Utm.Companion.UTM_SOURCE
+import com.motorro.keeplink.data.Utm.Companion.UTM_TERM
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlin.js.ExperimentalJsExport

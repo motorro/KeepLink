@@ -1,12 +1,12 @@
 package com.motorro.keeplink.action
 
-import com.motorro.data.getValue
 import com.motorro.keeplink.ActionParser
 import com.motorro.keeplink.BranchActionParser
 import com.motorro.keeplink.DefaultActionParser
 import com.motorro.keeplink.SegmentCheckParser
 import com.motorro.keeplink.action.data.LocalDateFields
 import com.motorro.keeplink.action.data.TransportType
+import com.motorro.keeplink.data.getValue
 
 /**
  * Parser for [TestAction.Login.Magic] token in

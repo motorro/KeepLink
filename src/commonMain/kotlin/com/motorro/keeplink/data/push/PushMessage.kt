@@ -1,4 +1,4 @@
-package com.motorro.push
+package com.motorro.keeplink.data.push
 
 import com.motorro.keeplink.Action
 import com.motorro.keeplink.DeepLink
@@ -57,6 +57,7 @@ data class PushMessage<out A : Action> internal constructor(
 @JsExport
 @JsName("pushMessage")
 @OptIn(ExperimentalJsExport::class)
+@Suppress("NON_EXPORTABLE_TYPE")
 fun <A : Action> pushMessage(id: String, ttl: Int, deepLink: DeepLink<A>): PushMessage<A> = PushMessage(
     id = id,
     ttl = ttl,

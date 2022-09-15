@@ -1,8 +1,8 @@
 package com.motorro.keeplink
 
-import com.motorro.data.Param
-import com.motorro.data.PshComponents
-import com.motorro.data.PshComponentsImpl
+import com.motorro.keeplink.data.Param
+import com.motorro.keeplink.data.PshComponents
+import com.motorro.keeplink.data.PshComponentsImpl
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SerializationException
@@ -38,7 +38,8 @@ object PshComponentsSerializer : KSerializer<PshComponents> {
     override fun serialize(encoder: Encoder, value: PshComponents) {
         val out = encoder.beginStructure(descriptor)
         value.getPath().takeIf { it.isNotEmpty() }?.let { out.encodeSerializableElement(descriptor, 0, ListSerializer(String.serializer()), it.toList()) }
-        value.getSearch().takeIf { it.isNotEmpty() }?.let { out.encodeSerializableElement(descriptor, 1, ListSerializer(Param.serializer()), it.toList()) }
+        value.getSearch().takeIf { it.isNotEmpty() }?.let { out.encodeSerializableElement(descriptor, 1, ListSerializer(
+            Param.serializer()), it.toList()) }
         value.getHash().takeIf { it.isNotBlank() }?.let { out.encodeStringElement(descriptor, 2, it) }
         out.endStructure(descriptor)
     }

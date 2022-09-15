@@ -1,8 +1,8 @@
 package com.motorro.keeplink
 
 import com.motorro.data.UTM
-import com.motorro.data.toMap
 import com.motorro.keeplink.action.TestAction
+import com.motorro.keeplink.data.toMap
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

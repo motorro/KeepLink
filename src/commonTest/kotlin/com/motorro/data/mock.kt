@@ -1,5 +1,7 @@
 package com.motorro.data
 
+import com.motorro.keeplink.data.Utm
+
 val UTM_COMPONENTS = searchComponentOf(
     "utm_source" to "motorro",
     "utm_medium" to "cpc",

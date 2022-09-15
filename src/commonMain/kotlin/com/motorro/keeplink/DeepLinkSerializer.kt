@@ -6,6 +6,7 @@ import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
+import kotlin.js.ExperimentalJsExport
 import kotlin.js.JsExport
 
 /**
@@ -14,6 +15,8 @@ import kotlin.js.JsExport
  * @param parser Link parser
  */
 @JsExport
+@OptIn(ExperimentalJsExport::class)
+@Suppress("NON_EXPORTABLE_TYPE")
 open class DeepLinkSerializer<A : Action>(
     private val builder: LinkBuilder<A>,
     private val parser: LinkParser<A>,

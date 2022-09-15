@@ -1,7 +1,7 @@
 package com.motorro.keeplink
 
-import com.motorro.data.PshComponents
-import com.motorro.data.parseUtm
+import com.motorro.keeplink.data.PshComponents
+import com.motorro.keeplink.data.parseUtm
 import kotlin.js.ExperimentalJsExport
 import kotlin.js.JsExport
 import kotlin.js.JsName

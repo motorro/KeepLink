@@ -1,7 +1,7 @@
 package com.motorro.keeplink
 
-import com.motorro.data.Param
-import com.motorro.data.of
+import com.motorro.keeplink.data.Param
+import com.motorro.keeplink.data.of
 import java.net.URI
 
 /**

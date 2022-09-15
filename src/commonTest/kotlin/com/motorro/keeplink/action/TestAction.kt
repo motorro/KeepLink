@@ -1,11 +1,11 @@
 package com.motorro.keeplink.action
 
-import com.motorro.data.Param
-import com.motorro.data.PshComponents
-import com.motorro.data.of
 import com.motorro.keeplink.Action
 import com.motorro.keeplink.action.data.LocalDateFields
 import com.motorro.keeplink.action.data.TransportType
+import com.motorro.keeplink.data.Param
+import com.motorro.keeplink.data.PshComponents
+import com.motorro.keeplink.data.of
 import kotlinx.serialization.Serializable
 import kotlin.js.ExperimentalJsExport
 import kotlin.js.JsExport

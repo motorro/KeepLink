@@ -1,6 +1,6 @@
 package com.motorro.keeplink
 
-import com.motorro.data.PshComponents
+import com.motorro.keeplink.data.PshComponents
 
 /**
  * Parser to parse path branch
