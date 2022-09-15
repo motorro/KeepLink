@@ -33,7 +33,7 @@ kotlin {
         moduleName = "mocks"
         compilations.all {
             kotlinOptions.freeCompilerArgs += listOf(
-                "-Xopt-in=kotlin.js.ExperimentalJsExport"
+                "-opt-in=kotlin.js.ExperimentalJsExport"
             )
         }
         binaries.library()

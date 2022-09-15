@@ -42,7 +42,7 @@ kotlin {
         moduleName = "deeplink"
         compilations.all {
             kotlinOptions.freeCompilerArgs += listOf(
-                "-Xopt-in=kotlin.js.ExperimentalJsExport"
+                "-opt-in=kotlin.js.ExperimentalJsExport"
             )
         }
         binaries.library()
@@ -73,6 +73,7 @@ kotlin {
         val commonTest by getting {
             dependencies {
                 implementation(project(":mocks"))
+                implementation(project(":testaction"))
                 implementation(libs.kotlin.serialization.json)
                 implementation(libs.test.kotlin.common)
                 implementation(libs.test.kotlin.annotations.common)

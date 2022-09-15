@@ -1,8 +1,8 @@
 package com.motorro.keeplink
 
-import com.motorro.keeplink.action.TestAction
 import com.motorro.keeplink.mocks.UNKNOWN_COMPONENTS
 import com.motorro.keeplink.mocks.UTM
+import com.motorro.keeplink.testaction.TestAction
 import com.motorro.keeplink.uri.data.toMap
 import kotlin.test.Test
 import kotlin.test.assertEquals

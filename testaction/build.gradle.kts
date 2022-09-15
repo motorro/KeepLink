@@ -2,15 +2,12 @@
 
 import org.jetbrains.dokka.Platform
 import org.jetbrains.dokka.gradle.DokkaTask
-import java.net.URI
 import java.time.Duration
 
 plugins {
     id("org.jetbrains.kotlin.multiplatform")
     id("org.jetbrains.kotlin.plugin.serialization")
     id("org.jetbrains.dokka")
-    id("maven-publish")
-    id("signing")
 }
 
 group = rootProject.group
@@ -39,7 +36,7 @@ kotlin {
     }
 
     js(IR) {
-        moduleName = "uri"
+        moduleName = "keeplink"
         compilations.all {
             kotlinOptions.freeCompilerArgs += listOf(
                 "-opt-in=kotlin.js.ExperimentalJsExport"
@@ -66,12 +63,13 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api(libs.kotlin.serialization.core)
+                implementation(project(":deeplink"))
+                implementation(project(":mocks"))
+                implementation(libs.kotlin.serialization.core)
             }
         }
         val commonTest by getting {
             dependencies {
-                implementation(project(":mocks"))
                 implementation(libs.kotlin.serialization.json)
                 implementation(libs.test.kotlin.common)
                 implementation(libs.test.kotlin.annotations.common)
@@ -109,7 +107,7 @@ kotlin {
 }
 
 tasks.withType<DokkaTask>().configureEach {
-    val output = rootProject.rootDir.resolve("doc").resolve(name)
+    val output = project.rootDir.resolve("doc").resolve(name)
 
     outputDirectory.set(output)
     doFirst {
@@ -130,66 +128,8 @@ tasks.withType<DokkaTask>().configureEach {
     }
 }
 
-val libId = "uri"
-val libName = "uri"
-val libDesc = "Multiplatform URI parsing"
-val projectUrl: String = "https://github.com/motorro/KeepLink"
-val projectScm: String = "https://github.com/motorro/KeepLink.git"
-val ossrhUsername: String? by rootProject.extra
-val ossrhPassword: String? by rootProject.extra
-val developerId: String by rootProject.extra
-val developerName: String by rootProject.extra
-val developerEmail: String by rootProject.extra
-val signingKey: String? by rootProject.extra
-val signingPassword: String? by rootProject.extra
-
 val javadocJar by tasks.creating(Jar::class) {
     group = "documentation"
     archiveClassifier.set("javadoc")
     from(tasks.dokkaHtml)
-}
-
-publishing {
-    repositories {
-        maven {
-            name = "sonatype"
-            url = URI("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
-            credentials {
-                username = ossrhUsername
-                password = ossrhPassword
-            }
-        }
-    }
-
-    publications.withType<MavenPublication> {
-        artifact(javadocJar)
-        pom {
-            name.set(libName)
-            description.set(libDesc)
-            url.set(projectUrl)
-            licenses {
-                license {
-                    name.set("Apache-2.0")
-                    url.set("https://apache.org/licenses/LICENSE-2.0")
-                }
-            }
-            developers {
-                developer {
-                    id.set(developerId)
-                    name.set(developerName)
-                    email.set(developerEmail)
-                }
-            }
-            scm {
-                connection.set(projectScm)
-                developerConnection.set(projectScm)
-                url.set(projectUrl)
-            }
-        }
-    }
-
-    signing {
-        useInMemoryPgpKeys(signingKey, signingPassword)
-        sign(publishing.publications)
-    }
 }

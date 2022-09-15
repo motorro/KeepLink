@@ -1,11 +1,11 @@
 package com.motorro.keeplink
 
-import com.motorro.keeplink.action.RootActionParser
-import com.motorro.keeplink.action.TestAction
-import com.motorro.keeplink.action.TestSerializers
 import com.motorro.keeplink.mocks.UNKNOWN_COMPONENTS
 import com.motorro.keeplink.mocks.UTM
 import com.motorro.keeplink.mocks.UTM_SEARCH
+import com.motorro.keeplink.testaction.RootActionParser
+import com.motorro.keeplink.testaction.TestAction
+import com.motorro.keeplink.testaction.TestSerializers
 import com.motorro.keeplink.uri.data.of
 import com.motorro.keeplink.uri.pshComponentsOf
 import kotlinx.serialization.Contextual
