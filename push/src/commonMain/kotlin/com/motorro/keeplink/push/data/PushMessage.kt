@@ -1,4 +1,4 @@
-package com.motorro.keeplink.data.push
+package com.motorro.keeplink.push.data
 
 import com.motorro.keeplink.Action
 import com.motorro.keeplink.DeepLink
