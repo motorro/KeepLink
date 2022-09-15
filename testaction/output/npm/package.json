@@ -1,0 +1,13 @@
+{
+  "name": "testaction",
+  "version": "1.0.3",
+  "main": "testaction.js",
+  "types": "testaction.d.ts",
+  "devDependencies": {
+    "source-map-support": "0.5.21"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}

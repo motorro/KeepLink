@@ -39,7 +39,6 @@ local.properties
 # Builds
 out/
 build/
-testaction/output/
 
 # Logs
 *.log
