@@ -1,9 +1,9 @@
 package com.motorro.keeplink.testaction
 
-import com.motorro.keeplink.ActionParser
-import com.motorro.keeplink.BranchActionParser
-import com.motorro.keeplink.DefaultActionParser
-import com.motorro.keeplink.SegmentCheckParser
+import com.motorro.keeplink.deeplink.ActionParser
+import com.motorro.keeplink.deeplink.BranchActionParser
+import com.motorro.keeplink.deeplink.DefaultActionParser
+import com.motorro.keeplink.deeplink.SegmentCheckParser
 import com.motorro.keeplink.testaction.data.LocalDateFields
 import com.motorro.keeplink.testaction.data.TransportType
 import com.motorro.keeplink.uri.data.getValue

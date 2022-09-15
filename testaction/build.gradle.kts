@@ -1,7 +1,8 @@
-@file:Suppress("UNUSED_VARIABLE", "EXPERIMENTAL_API_USAGE")
+@file:Suppress("UNUSED_VARIABLE", "EXPERIMENTAL_API_USAGE", "OPT_IN_IS_NOT_ENABLED")
 
 import org.jetbrains.dokka.Platform
 import org.jetbrains.dokka.gradle.DokkaTask
+import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalDistributionDsl
 import java.time.Duration
 
 plugins {
@@ -22,6 +23,24 @@ kotlin {
             framework(listOf(RELEASE))
         }
     }
+    val outputIos by tasks.creating(org.jetbrains.kotlin.gradle.tasks.FatFrameworkTask::class) {
+        group = "output"
+        destinationDir = file("$projectDir/output/ios/Fat")
+        from(
+            iosArm64.binaries.getFramework("RELEASE"),
+            iosX64.binaries.getFramework("RELEASE")
+        )
+    }
+    val outputIosArm64 by tasks.creating(Copy::class) {
+        group = "output"
+        into(file("$projectDir/output/ios/Arm64"))
+        from(iosArm64.binaries.getFramework("RELEASE").linkTask)
+    }
+    val outputIosX64 by tasks.creating(Copy::class) {
+        group = "output"
+        into(file("$projectDir/output/ios/X64"))
+        from(iosX64.binaries.getFramework("RELEASE").linkTask)
+    }
 
     jvm {
         compilations.all {
@@ -36,7 +55,7 @@ kotlin {
     }
 
     js(IR) {
-        moduleName = "keeplink"
+        moduleName = "testaction"
         compilations.all {
             kotlinOptions.freeCompilerArgs += listOf(
                 "-opt-in=kotlin.js.ExperimentalJsExport"
@@ -49,6 +68,12 @@ kotlin {
                 useMocha {
                     timeout = "10s"
                 }
+            }
+            // On customizing JS builds and distribution:
+            // https://kotlinlang.org/docs/reference/js-project-setup.html#choosing-execution-environment
+            @OptIn(ExperimentalDistributionDsl::class)
+            distribution {
+                directory = file("$projectDir/output/npm")
             }
         }
         browser {

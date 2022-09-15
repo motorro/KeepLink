@@ -1,8 +1,8 @@
 package com.motorro.keeplink.testaction
 
-import com.motorro.keeplink.DeepLinkSerializer
-import com.motorro.keeplink.LinkBuilder
-import com.motorro.keeplink.LinkParser
+import com.motorro.keeplink.deeplink.DeepLinkSerializer
+import com.motorro.keeplink.deeplink.LinkBuilder
+import com.motorro.keeplink.deeplink.LinkParser
 import kotlin.js.ExperimentalJsExport
 import kotlin.js.JsExport
 

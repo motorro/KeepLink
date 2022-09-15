@@ -1,4 +1,4 @@
-package com.motorro.keeplink
+package com.motorro.keeplink.deeplink
 
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.PrimitiveKind

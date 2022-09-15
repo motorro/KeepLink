@@ -1,6 +1,6 @@
 package com.motorro.keeplink.testaction
 
-import com.motorro.keeplink.DeepLink
+import com.motorro.keeplink.deeplink.DeepLink
 import com.motorro.keeplink.mocks.UTM
 import com.motorro.keeplink.mocks.UTM_SEARCH
 import com.motorro.keeplink.testaction.LinkParsers.LOCALHOST_8080

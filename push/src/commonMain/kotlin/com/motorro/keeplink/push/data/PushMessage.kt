@@ -1,8 +1,8 @@
 package com.motorro.keeplink.push.data
 
-import com.motorro.keeplink.Action
-import com.motorro.keeplink.DeepLink
-import com.motorro.keeplink.WithAction
+import com.motorro.keeplink.deeplink.Action
+import com.motorro.keeplink.deeplink.DeepLink
+import com.motorro.keeplink.deeplink.WithAction
 import kotlinx.serialization.Contextual
 import kotlin.js.ExperimentalJsExport
 import kotlin.js.JsExport

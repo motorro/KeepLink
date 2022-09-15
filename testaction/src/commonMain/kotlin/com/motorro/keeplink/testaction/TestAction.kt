@@ -1,6 +1,6 @@
 package com.motorro.keeplink.testaction
 
-import com.motorro.keeplink.Action
+import com.motorro.keeplink.deeplink.Action
 import com.motorro.keeplink.testaction.data.LocalDateFields
 import com.motorro.keeplink.testaction.data.TransportType
 import com.motorro.keeplink.uri.data.Param

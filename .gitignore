@@ -36,9 +36,10 @@ local.properties
 *.iml
 *.ipr
 
-# IntelliJ
+# Builds
 out/
 build/
+testaction/output/
 
 # Node.js
 node_modules/

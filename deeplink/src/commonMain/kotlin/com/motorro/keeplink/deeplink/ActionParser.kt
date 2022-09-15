@@ -1,4 +1,4 @@
-package com.motorro.keeplink
+package com.motorro.keeplink.deeplink
 
 import com.motorro.keeplink.uri.data.PshComponents
 

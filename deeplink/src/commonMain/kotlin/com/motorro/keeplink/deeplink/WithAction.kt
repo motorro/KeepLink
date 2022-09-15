@@ -1,4 +1,4 @@
-package com.motorro.keeplink
+package com.motorro.keeplink.deeplink
 
 import kotlin.js.ExperimentalJsExport
 import kotlin.js.JsExport

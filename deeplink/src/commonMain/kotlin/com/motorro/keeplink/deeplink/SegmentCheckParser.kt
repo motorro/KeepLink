@@ -1,4 +1,4 @@
-package com.motorro.keeplink
+package com.motorro.keeplink.deeplink
 
 import com.motorro.keeplink.uri.data.PshComponents
 
@@ -7,7 +7,8 @@ import com.motorro.keeplink.uri.data.PshComponents
  * @property segment Segment to match
  * @property next Next matcher if any
  */
-open class SegmentCheckParser<A : Action>(private val segment: String, private val next: ActionParser<A>) : ActionParser<A> {
+open class SegmentCheckParser<A : Action>(private val segment: String, private val next: ActionParser<A>) :
+    ActionParser<A> {
     /**
      * Tries to parse given path
      * @param components Source action components
