@@ -73,3 +73,308 @@ application when deep-link is processed.
 To distinguish between applications an (or) domains use `scheme` and `host` components of URI. Check-out some sample
 [LinkBuilder/LinkParser](testaction/src/commonMain/kotlin/com/motorro/keeplink/testaction/testLinkParsers.kt)`
 to learn how to define your deep-link scheme.
+
+## Building your links
+
+**Hint:** Refer to [testaction](testaction) module for an example.
+
+### Dependencies and project setup
+
+Create a new Kotlin-multiplatform project and add the library dependency to your build file:
+
+```kotlin
+sourceSets {
+    val commonMain by getting {
+        dependencies {
+            implementation("com.motorro.keeplink:deeplink:x.x.x")
+            implementation(libs.kotlin.serialization.core) // If you want to serialize with Kotlin
+        }
+    }
+}
+```
+
+Define your required build targets and outputs (see the [sample](testaction/build.gradle.kts) for reference):
+
+iOS framework:
+```kotlin
+val iosArm64 = iosArm64("iosArm64")
+val iosX64 = iosX64("iosX64")
+configure(listOf(iosArm64, iosX64)) {
+    binaries {
+        framework(listOf(RELEASE))
+    }
+}
+val outputIos by tasks.creating(org.jetbrains.kotlin.gradle.tasks.FatFrameworkTask::class) {
+    group = "output"
+    destinationDir = file("$projectDir/output/ios/Fat")
+    from(
+        iosArm64.binaries.getFramework("RELEASE"),
+        iosX64.binaries.getFramework("RELEASE")
+    )
+}
+```
+
+NPM module for `Node.js` or a browser:
+```kotlin
+js(IR) {
+    moduleName = "yourmodulename"
+    compilations.all {
+        kotlinOptions.freeCompilerArgs += listOf(
+            "-opt-in=kotlin.js.ExperimentalJsExport"
+        )
+    }
+    binaries.library()
+    useCommonJs()
+    nodejs {
+        testTask {
+            useMocha {
+                timeout = "10s"
+            }
+        }
+        // On customizing JS builds and distribution:
+        // https://kotlinlang.org/docs/reference/js-project-setup.html#choosing-execution-environment
+        @OptIn(ExperimentalDistributionDsl::class)
+        distribution {
+            directory = file("$projectDir/output/npm")
+        }
+    }
+}
+```
+
+### Build documentation
+Add a [Dokka](https://github.com/Kotlin/dokka) task to your project to build the documentation. Then you could ship int 
+to your fellow developers and marketing team to keep a [link registry](doc/gfm/testaction/index.md) actual:
+```kotlin
+subprojects {
+    tasks {
+        withType<DokkaTask>().configureEach {
+            dokkaSourceSets.configureEach {
+                includes.from("moduledoc.md")
+            }
+        }
+        withType<DokkaTaskPartial>().configureEach {
+            dokkaSourceSets.configureEach {
+                includes.from("moduledoc.md")
+            }
+        }
+    }
+}
+```
+
+### Build your link structure
+
+To build your link structure inherit the [Action](deeplink/src/commonMain/kotlin/com/motorro/keeplink/deeplink/Action.kt):
+```kotlin
+@JsExport
+@Serializable
+@OptIn(ExperimentalJsExport::class)
+sealed class TestAction : Action() {
+
+    /**
+     * Login actions
+     *
+     * `/login`
+     *
+     */
+    sealed class Login : TestAction() {
+        internal companion object {
+            const val SEGMENT = "login"
+        }
+
+        /**
+         * Path component
+         */
+        override fun getPath(): Array<String> = super.getPath() + SEGMENT
+
+        /**
+         * Magic-link login action
+         *
+         * `/login/magic/{token}`
+         *
+         * @property token Login token
+         */
+        class Magic(val token: String) : Login() {
+            internal companion object {
+                const val SEGMENT = "magic"
+            }
+
+            override fun getPath(): Array<String> = super.getPath() + SEGMENT + token
+        }
+    }
+}
+```
+You define the structure in any way that best works for you best. The action implements the [PSHComponents](uri/src/commonMain/kotlin/com/motorro/keeplink/uri/data/PshComponents.kt)
+which defines the `path`, `search`, and `hash` components for your resulting URI when building.
+Refer to [TestAction](testaction/src/commonMain/kotlin/com/motorro/keeplink/testaction/TestAction.kt) definition to know more
+
+### Create parsers
+
+To use some handy library tools, create your parsers by implementing an [ActionParser](deeplink/src/commonMain/kotlin/com/motorro/keeplink/deeplink/ActionParser.kt):
+```kotlin
+/**
+ * Parses action from action components
+ */
+fun interface ActionParser<out A : Action> {
+    /**
+     * Tries to parse given path
+     * @param components Source action components
+     * @param pathIndex Path index to start parsing at
+     */
+    fun parse(components: PshComponents, pathIndex: Int): A?
+}
+```
+
+The parser accepts two parameters:
+1. `components` - parsed URI `path`, `search`, and `hash` components.
+2. `pathIndex` - current path segment index being processed. Optionally used by utility parsers (see below)
+
+The parser returns a parsed action or a `null` if parse fails or irrelevant.
+
+For example:
+```kotlin
+/**
+ * Parser for [TestAction.Login.Magic] token in
+ * `/login/magic/{token}`
+ * Validates token is not empty
+ */
+internal val MagicLinkHashParser = ActionParser { components, pathIndex ->
+    components.getPath().getOrNull(pathIndex)?.takeIf { it.isNotBlank() }?.let { TestAction.Login.Magic(it) }
+}
+```
+
+### Bind your schemes 
+
+To be completely type-safe create some predefined scheme/host builders and parsers that will build the URI string for you
+given a deep-link object. To do so use [LinkBuilder](deeplink/src/commonMain/kotlin/com/motorro/keeplink/deeplink/LinkBuilder.kt)
+and [LinkParser](deeplink/src/commonMain/kotlin/com/motorro/keeplink/deeplink/LinkParser.kt) utilities:
+```kotlin
+/**
+ * Test link parsers (JS-compatible)
+ */
+@JsExport
+@OptIn(ExperimentalJsExport::class)
+object LinkParsers {
+    /**
+     * Deep-link for URIs with `motorro` scheme:
+     *
+     * `motorro:/profile/chats/123`
+     */
+    val MOTORRO = LinkParser(RootActionParser, "motorro", "")
+}
+
+/**
+ * Test link builders (JS-compatible)
+ */
+@JsExport
+@OptIn(ExperimentalJsExport::class)
+object LinkBuilders {
+    /**
+     * Deep-link for URIs with `motorro` scheme:
+     *
+     * `motorro:/profile/chats/123`
+     */
+    val MOTORRO = LinkBuilder<TestAction>("motorro", "")
+}
+```
+
+That's basically it. Now build your project and assemble the output artifacts.
+
+## Consuming deep-links
+Add your artifacts to the target project. Use a pre-defined parser to parse your deep-link:
+```kotlin
+val parser = LinkParsers.MOTORRO
+val link = parser.parse("motorro:/login/magic/123")
+
+// Optionally obtain some Urchin data
+val utm = link?.utm
+if (null != utm) {
+    // Work out some analytics event
+}
+
+// Process link type-safe
+when(link.action) {
+    is TestLink.Login.Magic -> {
+        // Go to login screen
+    }
+    else -> {
+        //No link or parse failed. Start as usual 
+    }
+}
+```
+
+## Create deep-links
+Imagine you have a `Node.js` backend that provides data to your UI. Let's create a link for them:
+```typescript
+// Select the builder scheme
+const builder = LinkBuilders.MOTORRO;
+// Create an action
+const action = new Action.Login.Magic("123");
+// Create a deep-link, possibly adding some Urchin
+const link = deepLink(action).withUtm(utm("test"));
+
+// Build an URI string
+const linkStr = builder.build(link);
+```
+
+## Some handy parsers included
+The library comes with some handy parsers if you like. Although you are not required to use them, they could potentially 
+speed up your parsing and build parsers in more or less declarative way. See the [complete parser setup](testaction/src/commonMain/kotlin/com/motorro/keeplink/testaction/testActionParsers.kt) 
+in the `testaction` project.
+
+### SegmentCheckParser
+Checks that current segment being parsed matches your string and calls the next parser.
+Used to traverse your path:
+```kotlin
+/**
+ * Parser for [TestAction.Login.Magic]
+ */
+internal val MagicLinkParser = SegmentCheckParser(
+    TestAction.Login.Magic.SEGMENT,
+    BranchActionParser(listOf(MagicLinkHashParser)) { _, _ -> TestAction.Invalid.INSTANCE }
+)
+```
+The parser checks for correct segment (that is `/login/magic/`) and passes control to the [token parser](#create-parsers).
+
+### DefaultActionParser
+This one is simple. It just returns the action you produce in `action` parameter. May be used to return the action to 
+some intermediate segment if all it's children do not match (see `BranchActionParser` below):
+```kotlin
+/**
+ * Profile root parser
+ */
+internal val ProfileParser = SegmentCheckParser(
+    TestAction.Profile.SEGMENT,
+    DefaultActionParser { TestAction.Profile() }
+)
+```
+
+### BranchActionParser
+Iterates its children to find the first that returns a non-null result. If none answers positive - runs the `default` 
+fallback:
+```kotlin
+/**
+ * Root parsers - all known branches from root node
+ */
+private val rootParsers = listOf(
+    ProfileParser,
+    LoginParser,
+    SearchParser
+)
+
+/**
+ * Root parser for [TestAction]
+ * Returns:
+ * - known action if definitely known
+ * - Unknown action if component are not empty
+ * - Root action on empty components
+ */
+val RootActionParser = BranchActionParser(rootParsers) { components, _ ->
+    if (components.getPath().isEmpty()) TestAction.Root() else TestAction.Unknown(components)
+}
+```
+
+## Conclusion
+I hope someone finds the given approach (and the library) to deep-link management handy. As for me, it gives a more or 
+less complete solution to both the world of developers and the management. The proposed way aims to be a single source 
+of truth for deep-links in your project providing a write-once solution for both the coding and the documenting tasks.
+The approach keeps you from implementation errors and also saves your time when building and processing the links.

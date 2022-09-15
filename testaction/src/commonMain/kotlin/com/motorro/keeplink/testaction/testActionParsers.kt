@@ -61,6 +61,9 @@ internal val SearchParser = with(TestAction.Search) {
     }
 }
 
+/**
+ * Profile root parser
+ */
 internal val ProfileParser = SegmentCheckParser(
     TestAction.Profile.SEGMENT,
     DefaultActionParser { TestAction.Profile() }

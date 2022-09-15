@@ -121,7 +121,7 @@ sealed class TestAction : Action() {
     /**
      * Travel search with custom data types:
      *
-     * `/open/search?type={type}&from={from}&to={to}&date={date}`
+     * `/search?type={type}&from={from}&to={to}&date={date}`
      *
      * @property type Transport type to search
      * @property from Departure city
