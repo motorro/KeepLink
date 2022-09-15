@@ -1,11 +1,14 @@
 @file:Suppress("EXPERIMENTAL_API_USAGE", "DSL_SCOPE_VIOLATION")
 
+import org.jetbrains.dokka.Platform
+import org.jetbrains.dokka.gradle.DokkaTask
+import org.jetbrains.dokka.gradle.DokkaTaskPartial
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform) apply(false)
     alias(libs.plugins.kotlin.serialization) apply(false)
-    alias(libs.plugins.kotlin.dokka) apply(false)
+    alias(libs.plugins.kotlin.dokka)
     alias(libs.plugins.nexus.publish)
     alias(libs.plugins.git)
 }
@@ -53,6 +56,33 @@ allprojects {
     }
 }
 
+subprojects {
+    tasks {
+        withType<DokkaTask>().configureEach {
+            suppressInheritedMembers.set(true)
+            dokkaSourceSets.configureEach {
+                includeNonPublic.set(false)
+                skipEmptyPackages.set(true)
+                if (platform.get() == Platform.native) {
+                    displayName.set("native")
+                }
+                includes.from("moduledoc.md")
+            }
+        }
+        withType<DokkaTaskPartial>().configureEach {
+            suppressInheritedMembers.set(true)
+            dokkaSourceSets.configureEach {
+                includeNonPublic.set(false)
+                skipEmptyPackages.set(true)
+                if (platform.get() == Platform.native) {
+                    displayName.set("native")
+                }
+                includes.from("moduledoc.md")
+            }
+        }
+    }
+}
+
 val displayVersion by tasks.creating(Jar::class) {
     group = "documentation"
     description = "Display application version name"
@@ -70,5 +100,17 @@ nexusPublishing {
             username.set(project.extra["ossrhUsername"].toString())
             password.set(project.extra["ossrhPassword"].toString())
         }
+    }
+}
+
+val docDir = projectDir.resolve("doc")
+tasks {
+    dokkaHtmlMultiModule {
+        outputDirectory.set(docDir.resolve("html"))
+        includes.from("README.md")
+    }
+    dokkaGfmMultiModule {
+        outputDirectory.set(docDir.resolve("gfm"))
+        includes.from("README.md")
     }
 }

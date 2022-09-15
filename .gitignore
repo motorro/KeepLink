@@ -41,6 +41,9 @@ out/
 build/
 testaction/output/
 
+# Logs
+*.log
+
 # Node.js
 node_modules/
 kotlin-js-store/

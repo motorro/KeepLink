@@ -1,0 +1,13 @@
+//[uri](index.md)
+
+# uri
+
+[common, ios, js, jvm]\
+Provides cross-platform URI parsing and building
+
+## Packages
+
+| Name |
+|---|
+| [com.motorro.keeplink.uri](uri/com.motorro.keeplink.uri/index.md) | Base cross-platform tools for URI parsing and building |
+| [com.motorro.keeplink.uri.data](uri/com.motorro.keeplink.uri.data/index.md) | Data objects to represent URI components |

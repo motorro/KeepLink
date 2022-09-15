@@ -1,9 +1,6 @@
 @file:Suppress("UNUSED_VARIABLE", "EXPERIMENTAL_API_USAGE", "OPT_IN_IS_NOT_ENABLED")
 
-import org.jetbrains.dokka.Platform
-import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalDistributionDsl
-import java.time.Duration
 
 plugins {
     id("org.jetbrains.kotlin.multiplatform")
@@ -126,28 +123,6 @@ kotlin {
             dependsOn(commonTest)
             dependencies {
                 implementation(kotlin("test-js"))
-            }
-        }
-    }
-}
-
-tasks.withType<DokkaTask>().configureEach {
-    val output = project.rootDir.resolve("doc").resolve(name)
-
-    outputDirectory.set(output)
-    doFirst {
-        delete(output)
-    }
-
-    setProperty("timeout", Duration.ofMinutes(3))
-
-    dokkaSourceSets {
-        configureEach {
-            includes.from(rootProject.file("moduledoc.md").path)
-            includeNonPublic.set(false)
-            skipEmptyPackages.set(false)
-            if (platform.get() == Platform.native) {
-                displayName.set("native")
             }
         }
     }
