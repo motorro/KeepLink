@@ -120,10 +120,10 @@ val docDir = projectDir.resolve("doc")
 tasks {
     dokkaHtmlMultiModule {
         outputDirectory.set(docDir.resolve("html"))
-        includes.from("README.md")
+        includes.from("moduledoc.md")
     }
     dokkaGfmMultiModule {
         outputDirectory.set(docDir.resolve("gfm"))
-        includes.from("README.md")
+        includes.from("moduledoc.md")
     }
 }

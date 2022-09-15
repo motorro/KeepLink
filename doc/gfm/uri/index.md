@@ -5,6 +5,18 @@
 [common, ios, js, jvm]\
 Provides cross-platform URI parsing and building
 
+Dependency:
+
+```kotlin
+sourceSets {
+    val commonMain by getting {
+        dependencies {
+            implementation("com.motorro.keeplink:uri:x.x.x")
+        }
+    }
+}
+```
+
 ## Packages
 
 | Name |

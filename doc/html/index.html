@@ -31,7 +31,7 @@ if(savedDarkMode === true){
             </a>
     </div>
     <div>
-0.0.5    </div>
+1.0.2    </div>
     <div class="pull-right d-flex">
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
@@ -47,7 +47,83 @@ if(savedDarkMode === true){
   <div class="cover ">
     <div class="cover ">
       <h1 class="">KeepLink</h1>
-      <p class="paragraph">Kotlin multiplatform deep-link management</p>
+      <p class="paragraph">Kotlin multiplatform deep-link definition, parsing and creation library.</p>
+      <h2 class=""> Features:</h2>
+      <ul>
+        <li>
+          <p class="paragraph">Create sealed deep-link hierarchy to exactly define each link once for server and client</p>
+        </li>
+        <li>
+          <p class="paragraph">Build, parse and route in a type-safe way</p>
+        </li>
+        <li>
+          <p class="paragraph">Code completion on all platforms</p>
+        </li>
+        <li>
+          <p class="paragraph">Auto-generating documentation always in-line with the implementation</p>
+        </li>
+      </ul>
+      <h2 class=""> Motivation</h2>
+      <ol>
+        <li>
+          <p class="paragraph">As a business user I want an application to perform a certain action (open a page, update some data) by clicking     a hyper-text link on a web page or in a message.</p>
+        </li>
+        <li>
+          <p class="paragraph">As a business user I want to be able to push a link to a client device. For example in a marketing campaign.</p>
+        </li>
+        <li>
+          <p class="paragraph">As a business user I want to share a link through third-party sources (email, social network, etc).</p>
+        </li>
+        <li>
+          <p class="paragraph">As a marketing campaign operator I want app links to be well-documented across all platforms when building messages     for clients.</p>
+        </li>
+        <li>
+          <p class="paragraph">As a backend programmer I want to push actions to do to clients in a platform-independent way.</p>
+        </li>
+        <li>
+          <p class="paragraph">As a backend programmer I want to build supported deep-links as fast as possible without searching through     documentation too much. I want some help from programming tools (IDE) to build those links.</p>
+        </li>
+        <li>
+          <p class="paragraph">As a client-side programmer I want a link to be parsed on a client-side with parameters checked.</p>
+        </li>
+        <li>
+          <p class="paragraph">As a client-side programmer I want to know things to do when push-message arrives. A deep-link to action when parsed     will give me all needed data.</p>
+        </li>
+        <li>
+          <p class="paragraph">As a QA engineer I want deep-links to be documented to check if application fulfills the action it is intended to.</p>
+        </li>
+        <li>
+          <p class="paragraph">As an end-user I want to share a link to some page result, especially in a web-app</p>
+        </li>
+      </ol>
+      <h2 class=""> Proposed deep-link management flow</h2>
+      <ol>
+        <li>
+          <p class="paragraph">Business evaluates the new feature and decides that it's good to have a deep-link to it.</p>
+        </li>
+        <li>
+          <p class="paragraph">The web and mobile teams implement the feature</p>
+        </li>
+        <li>
+          <p class="paragraph">The web team reports a link on the product site to become a deep-link to be opened in application</p>
+        </li>
+        <li>
+          <p class="paragraph">The deep-link supporting team implements the new <code class="lang-kotlin">Action</code> definition in the link registry.</p>
+        </li>
+        <li>
+          <p class="paragraph">The new version of the deep-link library is distributed among teams.</p>
+        </li>
+        <li>
+          <p class="paragraph">Mobile teams adjust their routers to support the link.</p>
+        </li>
+        <li>
+          <p class="paragraph">Backend programmers build links with the library in backend to frontend data export.</p>
+        </li>
+        <li>
+          <p class="paragraph">The new generated documentation is supplied to marketing team to plan advertising campaigns.</p>
+        </li>
+      </ol>
+      <p class="paragraph">See the <a href="https://github.com/motorro/CommonStateMachine.git">library repository</a> for implementation details</p>
     </div>
     <h2 class="">All modules:</h2>
     <div class="table"><a data-name="-915188177%2FMain%2F0" anchor-label="deeplink" id="-915188177%2FMain%2F0" data-filterable-set=""></a>

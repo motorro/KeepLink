@@ -7,7 +7,7 @@ class [Search](index.md)(val type: [TransportType](../../../com.motorro.keeplink
 
 Travel search with custom data types:
 
-`/open/search?type={type}&from={from}&to={to}&date={date}`
+`/search?type={type}&from={from}&to={to}&date={date}`
 
 ## Constructors
 
