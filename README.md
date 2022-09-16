@@ -8,7 +8,7 @@ Features:
 * Code completion on all platforms
 * Auto-generating documentation always in-line with the implementation
 
-API documentation is available in [doc](doc/gfm/deeplink/index.md) folder.
+API documentation is available in [doc](doc/index.md) folder.
 
 ## Motivation
 

@@ -123,7 +123,7 @@ tasks {
         includes.from("moduledoc.md")
     }
     dokkaGfmMultiModule {
-        outputDirectory.set(docDir.resolve("gfm"))
+        outputDirectory.set(docDir)
         includes.from("moduledoc.md")
     }
 }
