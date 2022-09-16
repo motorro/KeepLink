@@ -1,4 +1,4 @@
-# KeepLink [![Check](https://github.com/motorro/KeepLink/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/motorro/KeepLink/actions/workflows/check.yml) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.motorro.keeplink/deeplink/badge.png)](https://repo1.maven.org/maven2/com/motorro/keeplink/deeplink/)
+do# KeepLink [![Check](https://github.com/motorro/KeepLink/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/motorro/KeepLink/actions/workflows/check.yml) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.motorro.keeplink/deeplink/badge.png)](https://repo1.maven.org/maven2/com/motorro/keeplink/deeplink/)
 Kotlin multiplatform deep-link definition, parsing and creation library.
 
 Features:
@@ -8,7 +8,7 @@ Features:
 * Code completion on all platforms
 * Auto-generating documentation always in-line with the implementation
 
-API documentation is available in [doc](doc/index.md) folder.
+API documentation is available at [Github Pages](https://motorro.github.io/KeepLink/) folder.
 
 ## Motivation
 
@@ -143,7 +143,7 @@ js(IR) {
 
 ### Build documentation
 Add a [Dokka](https://github.com/Kotlin/dokka) task to your project to build the documentation. Then you could ship int 
-to your fellow developers and marketing team to keep a [link registry](doc/gfm/testaction/index.md) actual:
+to your fellow developers and marketing team to keep a [link registry](https://motorro.github.io/KeepLink/testaction/index.html) actual:
 ```kotlin
 subprojects {
     tasks {
