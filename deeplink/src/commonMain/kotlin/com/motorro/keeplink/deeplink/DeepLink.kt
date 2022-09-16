@@ -53,7 +53,7 @@ class DeepLink<out A : Action>(override val action: A, val utm: Utm) : WithActio
     /**
      * Combined URI search component
      *
-     * `/open/search?type=CHARTER&from=MOSCOW&to=PARIS&date=2021-01-28`
+     * `/open/search?type=TRAIN&from=MOSCOW&to=PARIS&date=2021-01-28`
      */
     override fun getSearch(): Array<Param> = action.getSearch() + utm.getSearch()
 

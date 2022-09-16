@@ -13,6 +13,7 @@
 
 package com.motorro.keeplink.uri.data
 
+import com.motorro.keeplink.mocks.EMPTY_UTM_COMPONENTS
 import com.motorro.keeplink.mocks.UTM
 import com.motorro.keeplink.mocks.UTM_COMPONENTS
 import kotlin.test.Test
@@ -30,5 +31,10 @@ class UtmTest {
         assertTrue {
             UTM_COMPONENTS.getSearch().contentEquals(UTM.getSearch())
         }
+    }
+
+    @Test
+    fun returnsEmptyComponentsForEmptyUtm() {
+        assertTrue { EMPTY_UTM_COMPONENTS.getSearch().isEmpty() }
     }
 }

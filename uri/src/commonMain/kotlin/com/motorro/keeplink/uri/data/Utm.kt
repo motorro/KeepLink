@@ -42,6 +42,7 @@ data class Utm(
     @SerialName(UTM_TERM) val utmTerm: String?,
     @SerialName(UTM_CONTENT) val utmContent: String?
 ): SearchComponent {
+
     internal companion object {
         const val UTM_SOURCE = "utm_source"
         const val UTM_MEDIUM = "utm_medium"
@@ -55,12 +56,16 @@ data class Utm(
      *
      * `/open/search?type=CHARTER&from=MOSCOW&to=PARIS&date=2021-01-28`
      */
-    override fun getSearch(): Array<Param> = mutableListOf(UTM_SOURCE of utmSource).apply {
-        utmMedium?.let { add(UTM_MEDIUM of it) }
-        utmCampaign?.let { add(UTM_CAMPAIGN of it) }
-        utmTerm?.let { add(UTM_TERM of it) }
-        utmContent?.let { add(UTM_CONTENT of it) }
-    }.toTypedArray()
+    override fun getSearch(): Array<Param> = if (utmSource.isNotBlank()) {
+        mutableListOf(UTM_SOURCE of utmSource).apply {
+            utmMedium?.let { add(UTM_MEDIUM of it) }
+            utmCampaign?.let { add(UTM_CAMPAIGN of it) }
+            utmTerm?.let { add(UTM_TERM of it) }
+            utmContent?.let { add(UTM_CONTENT of it) }
+        }.toTypedArray()
+    } else {
+        emptyArray()
+    }
 
     /**
      * Adds `utm_medium` value

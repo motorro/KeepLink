@@ -35,6 +35,8 @@ val UTM_COMPONENTS = searchComponentOf(
     "utm_content" to "banner"
 )
 
+val EMPTY_UTM_COMPONENTS = searchComponentOf()
+
 val UTM = Utm(
     utmSource = "motorro",
     utmMedium = "cpc",
