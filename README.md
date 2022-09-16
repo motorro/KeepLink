@@ -1,4 +1,4 @@
-do# KeepLink [![Check](https://github.com/motorro/KeepLink/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/motorro/KeepLink/actions/workflows/check.yml) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.motorro.keeplink/deeplink/badge.png)](https://repo1.maven.org/maven2/com/motorro/keeplink/deeplink/)
+# KeepLink [![Check](https://github.com/motorro/KeepLink/actions/workflows/check.yml/badge.svg?branch=master)](https://github.com/motorro/KeepLink/actions/workflows/check.yml) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.motorro.keeplink/deeplink/badge.png)](https://repo1.maven.org/maven2/com/motorro/keeplink/deeplink/)
 Kotlin multiplatform deep-link definition, parsing and creation library.
 
 Features:
