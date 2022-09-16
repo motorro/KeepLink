@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>All modules</title>
+    <link href="images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
+<link href="styles/style.css" rel="Stylesheet">
+<link href="styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="styles/main.css" rel="Stylesheet">
+<link href="styles/prism.css" rel="Stylesheet">
+<link href="styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="scripts/prism.js" async="async"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="index.html">
+                    <span>keeplink</span>
+            </a>
+    </div>
+    <div>
+1.0.2    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="keeplink::.ext/allModules///PointingToDeclaration//0">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <div class="cover ">
+      <h1 class="">KeepLink</h1>
+      <p class="paragraph">Kotlin multiplatform deep-link definition, parsing and creation library.</p>
+      <h2 class=""> Features:</h2>
+      <ul>
+        <li>
+          <p class="paragraph">Create sealed deep-link hierarchy to exactly define each link once for server and client</p>
+        </li>
+        <li>
+          <p class="paragraph">Build, parse and route in a type-safe way</p>
+        </li>
+        <li>
+          <p class="paragraph">Code completion on all platforms</p>
+        </li>
+        <li>
+          <p class="paragraph">Auto-generating documentation always in-line with the implementation</p>
+        </li>
+      </ul>
+      <h2 class=""> Motivation</h2>
+      <ol>
+        <li>
+          <p class="paragraph">As a business user I want an application to perform a certain action (open a page, update some data) by clicking     a hyper-text link on a web page or in a message.</p>
+        </li>
+        <li>
+          <p class="paragraph">As a business user I want to be able to push a link to a client device. For example in a marketing campaign.</p>
+        </li>
+        <li>
+          <p class="paragraph">As a business user I want to share a link through third-party sources (email, social network, etc).</p>
+        </li>
+        <li>
+          <p class="paragraph">As a marketing campaign operator I want app links to be well-documented across all platforms when building messages     for clients.</p>
+        </li>
+        <li>
+          <p class="paragraph">As a backend programmer I want to push actions to do to clients in a platform-independent way.</p>
+        </li>
+        <li>
+          <p class="paragraph">As a backend programmer I want to build supported deep-links as fast as possible without searching through     documentation too much. I want some help from programming tools (IDE) to build those links.</p>
+        </li>
+        <li>
+          <p class="paragraph">As a client-side programmer I want a link to be parsed on a client-side with parameters checked.</p>
+        </li>
+        <li>
+          <p class="paragraph">As a client-side programmer I want to know things to do when push-message arrives. A deep-link to action when parsed     will give me all needed data.</p>
+        </li>
+        <li>
+          <p class="paragraph">As a QA engineer I want deep-links to be documented to check if application fulfills the action it is intended to.</p>
+        </li>
+        <li>
+          <p class="paragraph">As an end-user I want to share a link to some page result, especially in a web-app</p>
+        </li>
+      </ol>
+      <h2 class=""> Proposed deep-link management flow</h2>
+      <ol>
+        <li>
+          <p class="paragraph">Business evaluates the new feature and decides that it's good to have a deep-link to it.</p>
+        </li>
+        <li>
+          <p class="paragraph">The web and mobile teams implement the feature</p>
+        </li>
+        <li>
+          <p class="paragraph">The web team reports a link on the product site to become a deep-link to be opened in application</p>
+        </li>
+        <li>
+          <p class="paragraph">The deep-link supporting team implements the new <code class="lang-kotlin">Action</code> definition in the link registry.</p>
+        </li>
+        <li>
+          <p class="paragraph">The new version of the deep-link library is distributed among teams.</p>
+        </li>
+        <li>
+          <p class="paragraph">Mobile teams adjust their routers to support the link.</p>
+        </li>
+        <li>
+          <p class="paragraph">Backend programmers build links with the library in backend to frontend data export.</p>
+        </li>
+        <li>
+          <p class="paragraph">The new generated documentation is supplied to marketing team to plan advertising campaigns.</p>
+        </li>
+      </ol>
+      <p class="paragraph">See the <a href="https://github.com/motorro/CommonStateMachine.git">library repository</a> for implementation details</p>
+    </div>
+    <h2 class="">All modules:</h2>
+    <div class="table"><a data-name="-915188177%2FMain%2F0" anchor-label="deeplink" id="-915188177%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="deeplink/index.html">deeplink</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-915188177%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Build a typesafe deep-link hierarchy with sealed classes</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-440823173%2FMain%2F0" anchor-label="push" id="-440823173%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="push/index.html">push</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-440823173%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Some data types and utilities to build cross-platform pushes with actions</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1292187917%2FMain%2F0" anchor-label="testaction" id="1292187917%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="testaction/index.html">testaction</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1292187917%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Sample deep-link structure and actions</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-1836919903%2FMain%2F0" anchor-label="uri" id="-1836919903%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="uri/index.html">uri</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1836919903%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Provides cross-platform URI parsing and building</p>
+            </span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

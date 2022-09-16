@@ -116,10 +116,10 @@ nexusPublishing {
     }
 }
 
-val docDir = projectDir.resolve("doc")
+val docDir = projectDir.resolve("docs")
 tasks {
     dokkaHtmlMultiModule {
-        outputDirectory.set(docDir.resolve("html"))
+        outputDirectory.set(docDir)
         includes.from("moduledoc.md")
     }
     dokkaGfmMultiModule {
