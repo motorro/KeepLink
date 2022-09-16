@@ -11,11 +11,8 @@
  * limitations under the License.
  */
 
-(function (_) {
-  'use strict';
-  //region block: pre-declaration
-  //endregion
-  return _;
-}(module.exports));
+const chai = require("chai");
+const chaiAsPromised = require("chai-as-promised");
 
-//# sourceMappingURL=mocks.js.map
+chai.should();
+chai.use(chaiAsPromised);

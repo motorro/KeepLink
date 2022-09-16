@@ -1,3 +1,16 @@
+/*
+ * Copyright 2022 Nikolai Kotchetkov.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 (function (_, kotlin_kotlin, kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core) {
   'use strict';
   //region block: imports
@@ -19,6 +32,7 @@
   var throwMissingFieldException = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.l;
   var contentToString = kotlin_kotlin.$_$.v1;
   var get_nullable = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.f;
+  var isBlank = kotlin_kotlin.$_$.j3;
   var mutableListOf = kotlin_kotlin.$_$.g2;
   var copyToArray = kotlin_kotlin.$_$.w1;
   var charSequenceLength = kotlin_kotlin.$_$.s2;
@@ -32,7 +46,6 @@
   var collectionSizeOrDefault = kotlin_kotlin.$_$.s1;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.h;
   var indexOf$default = kotlin_kotlin.$_$.f;
-  var isBlank = kotlin_kotlin.$_$.j3;
   //endregion
   //region block: pre-declaration
   UriComponents.prototype = Object.create(PshComponents.prototype);
@@ -583,83 +596,98 @@
     return this.ui_1;
   };
   Utm.prototype.getSearch = function () {
-    var tmp$ret$8;
+    var tmp;
+    var tmp$ret$0;
     {
-      var tmp$ret$7;
+      var tmp0_isNotBlank = this.qi_1;
+      tmp$ret$0 = !isBlank(tmp0_isNotBlank);
+    }
+    if (tmp$ret$0) {
+      var tmp$ret$9;
       {
-        Companion_getInstance_0();
-        var tmp0_apply = mutableListOf([of('utm_source', this.qi_1)]);
+        var tmp$ret$8;
         {
-        }
-        {
-          var tmp0_safe_receiver = this.ri_1;
-          if (tmp0_safe_receiver == null)
-            null;
-          else {
-            var tmp$ret$1;
-            {
-              {
-              }
-              var tmp$ret$0;
-              {
-                Companion_getInstance_0();
-                tmp$ret$0 = tmp0_apply.b(of('utm_medium', tmp0_safe_receiver));
-              }
-              tmp$ret$1 = tmp$ret$0;
-            }
+          Companion_getInstance_0();
+          var tmp1_apply = mutableListOf([of('utm_source', this.qi_1)]);
+          {
           }
-          var tmp1_safe_receiver = this.si_1;
-          if (tmp1_safe_receiver == null)
-            null;
-          else {
-            var tmp$ret$3;
-            {
-              {
-              }
+          {
+            var tmp0_safe_receiver = this.ri_1;
+            if (tmp0_safe_receiver == null)
+              null;
+            else {
               var tmp$ret$2;
               {
-                Companion_getInstance_0();
-                tmp$ret$2 = tmp0_apply.b(of('utm_campaign', tmp1_safe_receiver));
+                {
+                }
+                var tmp$ret$1;
+                {
+                  Companion_getInstance_0();
+                  tmp$ret$1 = tmp1_apply.b(of('utm_medium', tmp0_safe_receiver));
+                }
+                tmp$ret$2 = tmp$ret$1;
               }
-              tmp$ret$3 = tmp$ret$2;
             }
-          }
-          var tmp2_safe_receiver = this.ti_1;
-          if (tmp2_safe_receiver == null)
-            null;
-          else {
-            var tmp$ret$5;
-            {
-              {
-              }
+            var tmp1_safe_receiver = this.si_1;
+            if (tmp1_safe_receiver == null)
+              null;
+            else {
               var tmp$ret$4;
               {
-                Companion_getInstance_0();
-                tmp$ret$4 = tmp0_apply.b(of('utm_term', tmp2_safe_receiver));
+                {
+                }
+                var tmp$ret$3;
+                {
+                  Companion_getInstance_0();
+                  tmp$ret$3 = tmp1_apply.b(of('utm_campaign', tmp1_safe_receiver));
+                }
+                tmp$ret$4 = tmp$ret$3;
               }
-              tmp$ret$5 = tmp$ret$4;
             }
-          }
-          var tmp3_safe_receiver = this.ui_1;
-          if (tmp3_safe_receiver == null)
-            null;
-          else {
-            var tmp$ret$6;
-            {
+            var tmp2_safe_receiver = this.ti_1;
+            if (tmp2_safe_receiver == null)
+              null;
+            else {
+              var tmp$ret$6;
               {
+                {
+                }
+                var tmp$ret$5;
+                {
+                  Companion_getInstance_0();
+                  tmp$ret$5 = tmp1_apply.b(of('utm_term', tmp2_safe_receiver));
+                }
+                tmp$ret$6 = tmp$ret$5;
               }
-              Companion_getInstance_0();
-              tmp0_apply.b(of('utm_content', tmp3_safe_receiver));
-              tmp$ret$6 = Unit_getInstance();
+            }
+            var tmp3_safe_receiver = this.ui_1;
+            if (tmp3_safe_receiver == null)
+              null;
+            else {
+              var tmp$ret$7;
+              {
+                {
+                }
+                Companion_getInstance_0();
+                tmp1_apply.b(of('utm_content', tmp3_safe_receiver));
+                tmp$ret$7 = Unit_getInstance();
+              }
             }
           }
+          tmp$ret$8 = tmp1_apply;
         }
-        tmp$ret$7 = tmp0_apply;
+        var tmp2_toTypedArray = tmp$ret$8;
+        tmp$ret$9 = copyToArray(tmp2_toTypedArray);
       }
-      var tmp1_toTypedArray = tmp$ret$7;
-      tmp$ret$8 = copyToArray(tmp1_toTypedArray);
+      tmp = tmp$ret$9;
+    } else {
+      var tmp$ret$10;
+      {
+        tmp$ret$10 = [];
+      }
+      tmp = tmp$ret$10;
     }
-    return tmp$ret$8;
+    return tmp;
   };
   Utm.prototype.medium = function (value) {
     return this.bj(null, value, null, null, null, 29, null);

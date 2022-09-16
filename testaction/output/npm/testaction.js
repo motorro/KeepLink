@@ -1,3 +1,16 @@
+/*
+ * Copyright 2022 Nikolai Kotchetkov.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 (function (_, kotlin_kotlin, kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core, kotlin_com_motorro_keeplink_uri, kotlin_com_motorro_keeplink_deeplink) {
   'use strict';
   //region block: imports
@@ -1099,6 +1112,12 @@
   function toDate(localDateFields) {
     return new Date(localDateFields.ql_1, localDateFields.rl_1 - 1 | 0, localDateFields.sl_1);
   }
+  function magicLink(token) {
+    return new Magic(token);
+  }
+  function search(type, from, to, date) {
+    return new Search(type, from, to, fromDate(date));
+  }
   //region block: exports
   function $jsExportAll$(_) {
     var $com = _.com || (_.com = {});
@@ -1161,6 +1180,12 @@
     var $com$motorro$keeplink$testaction$data = $com$motorro$keeplink$testaction.data || ($com$motorro$keeplink$testaction.data = {});
     $com$motorro$keeplink$testaction$data.fromDate = fromDate;
     $com$motorro$keeplink$testaction$data.toDate = toDate;
+    var $com = _.com || (_.com = {});
+    var $com$motorro = $com.motorro || ($com.motorro = {});
+    var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
+    var $com$motorro$keeplink$testaction = $com$motorro$keeplink.testaction || ($com$motorro$keeplink.testaction = {});
+    $com$motorro$keeplink$testaction.magicLink = magicLink;
+    $com$motorro$keeplink$testaction.search = search;
   }
   $jsExportAll$(_);
   kotlin_com_motorro_keeplink_uri.$jsExportAll$(_);

@@ -280,6 +280,7 @@ object LinkBuilders {
 That's basically it. Now build your project and assemble the output artifacts.
 
 ## Consuming deep-links
+
 Add your artifacts to the target project. Use a pre-defined parser to parse your deep-link:
 ```kotlin
 val parser = LinkParsers.MOTORRO
@@ -303,25 +304,32 @@ when(link.action) {
 ```
 
 ## Create deep-links
-Imagine you have a `Node.js` backend that provides data to your UI. Let's create a link for them:
+
+Imagine you have a `Node` backend that provides data to your UI. Let's create a link for them:
 ```typescript
 // Select the builder scheme
 const builder = LinkBuilders.MOTORRO;
+
 // Create an action
-const action = new Action.Login.Magic("123");
+const action = new TestAction.Login.Magic("123");
 // Create a deep-link, possibly adding some Urchin
 const link = deepLink(action).withUtm(utm("test"));
 
-// Build an URI string
+// Build the URI string
 const linkStr = builder.build(link);
 ```
 
+Check-out the complete `Node` [example](testaction/nodeexample/index.ts) and [tests](testaction/nodeexample/test/index.spec.ts) 
+to learn more.
+
 ## Some handy parsers included
+
 The library comes with some handy parsers if you like. Although you are not required to use them, they could potentially 
 speed up your parsing and build parsers in more or less declarative way. See the [complete parser setup](testaction/src/commonMain/kotlin/com/motorro/keeplink/testaction/testActionParsers.kt) 
 in the `testaction` project.
 
 ### SegmentCheckParser
+
 Checks that current segment being parsed matches your string and calls the next parser.
 Used to traverse your path:
 ```kotlin
@@ -336,6 +344,7 @@ internal val MagicLinkParser = SegmentCheckParser(
 The parser checks for correct segment (that is `/login/magic/`) and passes control to the [token parser](#create-parsers).
 
 ### DefaultActionParser
+
 This one is simple. It just returns the action you produce in `action` parameter. May be used to return the action to 
 some intermediate segment if all it's children do not match (see `BranchActionParser` below):
 ```kotlin
@@ -349,6 +358,7 @@ internal val ProfileParser = SegmentCheckParser(
 ```
 
 ### BranchActionParser
+
 Iterates its children to find the first that returns a non-null result. If none answers positive - runs the `default` 
 fallback:
 ```kotlin
@@ -374,6 +384,7 @@ val RootActionParser = BranchActionParser(rootParsers) { components, _ ->
 ```
 
 ## Conclusion
+
 I hope someone finds the given approach (and the library) to deep-link management handy. As for me, it gives a more or 
 less complete solution to both the world of developers and the management. The proposed way aims to be a single source 
 of truth for deep-links in your project providing a write-once solution for both the coding and the documenting tasks.

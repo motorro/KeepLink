@@ -11,11 +11,11 @@
  * limitations under the License.
  */
 
-(function (_) {
-  'use strict';
-  //region block: pre-declaration
-  //endregion
-  return _;
-}(module.exports));
+import {Nullable} from "testaction";
 
-//# sourceMappingURL=mocks.js.map
+export function assertNonNull<T>(value: Nullable<T>): asserts value is T {
+    if (value === null || value === undefined) {
+        throw Error("Unexpected null value");
+    }
+}
+
