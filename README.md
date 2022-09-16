@@ -9,6 +9,29 @@ Features:
 * Auto-generating documentation always in-line with the implementation
 
 API documentation is available at [Github Pages](https://motorro.github.io/KeepLink/) folder.
+## Contents
+
+<!-- toc -->
+
+- [Motivation](#motivation)
+- [Proposed deep-link management flow](#proposed-deep-link-management-flow)
+- [Link structure](#link-structure)
+- [Link definition](#link-definition)
+- [Building your links](#building-your-links)
+  * [Dependencies and project setup](#dependencies-and-project-setup)
+  * [Build documentation](#build-documentation)
+  * [Build your link structure](#build-your-link-structure)
+  * [Create parsers](#create-parsers)
+  * [Bind your schemes](#bind-your-schemes)
+- [Consuming deep-links](#consuming-deep-links)
+- [Create deep-links](#create-deep-links)
+- [Some handy parsers included](#some-handy-parsers-included)
+  * [SegmentCheckParser](#segmentcheckparser)
+  * [DefaultActionParser](#defaultactionparser)
+  * [BranchActionParser](#branchactionparser)
+- [Conclusion](#conclusion)
+
+<!-- tocstop -->
 
 ## Motivation
 
