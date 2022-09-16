@@ -108,6 +108,8 @@ $dokka.location:com.motorro.keeplink.testaction.data/TransportTypes/FLIGHT/#/Poi
 $dokka.location:com.motorro.keeplink.testaction.data/TransportTypes/TRAIN/#/PointingToDeclaration/testaction/testaction/com.motorro.keeplink.testaction.data/-transport-types/-t-r-a-i-n.md
 $dokka.location:com.motorro.keeplink.testaction////PointingToDeclaration/testaction/testaction/com.motorro.keeplink.testaction/index.md
 $dokka.location:com.motorro.keeplink.testaction//RootActionParser/#/PointingToDeclaration/testaction/testaction/com.motorro.keeplink.testaction/-root-action-parser.md
+$dokka.location:com.motorro.keeplink.testaction//magicLink/#kotlin.String/PointingToDeclaration/testaction/testaction/com.motorro.keeplink.testaction/magic-link.md
+$dokka.location:com.motorro.keeplink.testaction//search/#com.motorro.keeplink.testaction.data.TransportType#kotlin.String#kotlin.String#kotlin.js.Date/PointingToDeclaration/testaction/testaction/com.motorro.keeplink.testaction/search.md
 $dokka.location:com.motorro.keeplink.testaction/LinkBuilders///PointingToDeclaration/testaction/testaction/com.motorro.keeplink.testaction/-link-builders/index.md
 $dokka.location:com.motorro.keeplink.testaction/LinkBuilders/LOCALHOST_8080/#/PointingToDeclaration/testaction/testaction/com.motorro.keeplink.testaction/-link-builders/-l-o-c-a-l-h-o-s-t_8080.md
 $dokka.location:com.motorro.keeplink.testaction/LinkBuilders/MOTORRO/#/PointingToDeclaration/testaction/testaction/com.motorro.keeplink.testaction/-link-builders/-m-o-t-o-r-r-o.md

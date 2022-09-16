@@ -7,4 +7,4 @@ open override fun [getSearch](get-search.md)(): [Array](https://kotlinlang.org/a
 
 Combined URI search component
 
-`/open/search?type=CHARTER&from=MOSCOW&to=PARIS&date=2021-01-28`
+`/open/search?type=TRAIN&from=MOSCOW&to=PARIS&date=2021-01-28`

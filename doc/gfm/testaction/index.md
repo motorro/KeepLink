@@ -5,6 +5,28 @@
 [common, ios, js, jvm]\
 Sample deep-link structure and actions
 
+Supported actions:
+
+```kotlin
+TestAction
+    |
+    --- Invalid (parse failed)
+    |
+    --- Unknown (Parsed but not any of known actions)
+    |
+    --- Root (default action)
+    |
+    --- Profile
+    |  
+    --- Login
+    |   |
+    |   --- Magic-link(hash)
+    |       /login/magic/{token:String}
+    |
+    --- Search
+        /search?type={type}&from={from}&to={to}&date={date}
+```
+
 ## Packages
 
 | Name |
