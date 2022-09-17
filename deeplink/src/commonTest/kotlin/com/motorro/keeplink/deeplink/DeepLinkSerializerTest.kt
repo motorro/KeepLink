@@ -47,8 +47,8 @@ internal class DeepLinkSerializerTest {
         )
     }
 
-    private val builder = LinkBuilder<TestAction>("motorro", "")
-    private val parser = LinkParser(RootActionParser, "motorro", "")
+    private val builder = SchemeHostLinkBuilder<TestAction>("motorro", "")
+    private val parser = SchemeHostLinkParser(RootActionParser, "motorro", "")
     private val serializer = DeepLinkSerializer(builder, parser)
 
     @Serializable

@@ -1,16 +1,3 @@
-/*
- * Copyright 2022 Nikolai Kotchetkov.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *    http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 (function (_, kotlin_kotlin, kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core, kotlin_com_motorro_keeplink_uri, kotlin_com_motorro_keeplink_deeplink) {
   'use strict';
   //region block: imports
@@ -50,8 +37,8 @@
   var BranchActionParser_init_$Create$ = kotlin_com_motorro_keeplink_deeplink.$_$.i;
   var DefaultActionParser = kotlin_com_motorro_keeplink_deeplink.$_$.d;
   var listOf_0 = kotlin_kotlin.$_$.d2;
-  var LinkParser = kotlin_com_motorro_keeplink_deeplink.$_$.f;
-  var LinkBuilder = kotlin_com_motorro_keeplink_deeplink.$_$.e;
+  var SchemeHostLinkParser = kotlin_com_motorro_keeplink_deeplink.$_$.f;
+  var SchemeHostLinkBuilder = kotlin_com_motorro_keeplink_deeplink.$_$.e;
   //endregion
   //region block: pre-declaration
   TestAction.prototype = Object.create(Action.prototype);
@@ -1056,8 +1043,8 @@
   }
   function LinkParsers() {
     LinkParsers_instance = this;
-    this.jm_1 = new LinkParser(get_RootActionParser(), 'motorro', '');
-    this.km_1 = new LinkParser(get_RootActionParser(), 'http', 'localhost:8080');
+    this.jm_1 = new SchemeHostLinkParser(get_RootActionParser(), 'motorro', '');
+    this.km_1 = new SchemeHostLinkParser(get_RootActionParser(), 'http', 'localhost:8080');
   }
   LinkParsers.prototype.lm = function () {
     return this.jm_1;
@@ -1082,8 +1069,8 @@
   }
   function LinkBuilders() {
     LinkBuilders_instance = this;
-    this.nm_1 = new LinkBuilder('motorro', '');
-    this.om_1 = new LinkBuilder('http', 'localhost:8080');
+    this.nm_1 = new SchemeHostLinkBuilder('motorro', '');
+    this.om_1 = new SchemeHostLinkBuilder('http', 'localhost:8080');
   }
   LinkBuilders.prototype.lm = function () {
     return this.nm_1;

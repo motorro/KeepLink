@@ -22,7 +22,23 @@ import kotlin.js.JsExport
 import kotlin.js.JsName
 
 /**
- * Deep-link parser
+ * Parses a deep-link from string
+ */
+@JsExport
+@OptIn(ExperimentalJsExport::class)
+@Suppress("NON_EXPORTABLE_TYPE")
+interface LinkParser<A : Action> {
+    /**
+     * Tries to parse a deep-link from string
+     * @param uri Deep-link URI
+     * @return Returns a deeplink or `null` in case parsing fails
+     */
+    @JsName("parse")
+    fun parse(uri: String): DeepLink<A>?
+}
+
+/**
+ * Deep-link parser with pre-defined intended `scheme` and `host`
  * @param parser Action parser
  * @param targetScheme Intended scheme component
  * @param targetHost Intended host component
@@ -30,11 +46,11 @@ import kotlin.js.JsName
 @JsExport
 @OptIn(ExperimentalJsExport::class)
 @Suppress("NON_EXPORTABLE_TYPE")
-open class LinkParser<A : Action>(
+class SchemeHostLinkParser<A : Action>(
     private val parser: ActionParser<A>,
     private val targetScheme: String,
     private val targetHost: String
-) {
+) : LinkParser<A> {
     /**
      * Validates base deep-link components against target values
      * - scheme
@@ -59,6 +75,5 @@ open class LinkParser<A : Action>(
      * @param uri Deep-link URI
      * @return Returns a deeplink or `null` in case parsing fails
      */
-    @JsName("parse")
-    fun parse(uri: String): DeepLink<A>? = parseUri(uri)?.let(::parseLink)
+    override fun parse(uri: String): DeepLink<A>? = parseUri(uri)?.let(::parseLink)
 }

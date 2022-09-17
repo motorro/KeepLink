@@ -1,6 +1,6 @@
 {
   "name": "testaction",
-  "version": "0.0.4",
+  "version": "1.0.3",
   "main": "testaction.js",
   "types": "testaction.d.ts",
   "devDependencies": {

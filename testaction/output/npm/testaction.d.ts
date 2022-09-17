@@ -1,16 +1,3 @@
-/*
- * Copyright 2022 Nikolai Kotchetkov.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *    http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 type Nullable<T> = T | null | undefined
 declare const __doNotImplementIt: unique symbol
 type __doNotImplementIt = typeof __doNotImplementIt
@@ -155,15 +142,25 @@ export namespace com.motorro.keeplink.deeplink {
     }
 }
 export namespace com.motorro.keeplink.deeplink {
-    class LinkBuilder<A> {
+    interface LinkBuilder<A> {
+        build(link: com.motorro.keeplink.deeplink.DeepLink<A>): string;
+        readonly __doNotUseIt: __doNotImplementIt;
+    }
+    class SchemeHostLinkBuilder<A> implements com.motorro.keeplink.deeplink.LinkBuilder<A> {
         constructor(targetScheme: string, targetHost: string);
         build(link: com.motorro.keeplink.deeplink.DeepLink<A>): string;
+        readonly __doNotUseIt: __doNotImplementIt;
     }
 }
 export namespace com.motorro.keeplink.deeplink {
-    class LinkParser<A> {
+    interface LinkParser<A> {
+        parse(uri: string): Nullable<com.motorro.keeplink.deeplink.DeepLink<A>>;
+        readonly __doNotUseIt: __doNotImplementIt;
+    }
+    class SchemeHostLinkParser<A> implements com.motorro.keeplink.deeplink.LinkParser<A> {
         constructor(parser: any/* com.motorro.keeplink.deeplink.ActionParser<A> */, targetScheme: string, targetHost: string);
         parse(uri: string): Nullable<com.motorro.keeplink.deeplink.DeepLink<A>>;
+        readonly __doNotUseIt: __doNotImplementIt;
     }
 }
 export namespace com.motorro.keeplink.deeplink {
@@ -264,12 +261,12 @@ export namespace com.motorro.keeplink.testaction.data {
 }
 export namespace com.motorro.keeplink.testaction {
     const LinkParsers: {
-        get MOTORRO(): com.motorro.keeplink.deeplink.LinkParser<com.motorro.keeplink.testaction.TestAction>;
-        get LOCALHOST_8080(): com.motorro.keeplink.deeplink.LinkParser<com.motorro.keeplink.testaction.TestAction>;
+        get MOTORRO(): com.motorro.keeplink.deeplink.SchemeHostLinkParser<com.motorro.keeplink.testaction.TestAction>;
+        get LOCALHOST_8080(): com.motorro.keeplink.deeplink.SchemeHostLinkParser<com.motorro.keeplink.testaction.TestAction>;
     };
     const LinkBuilders: {
-        get MOTORRO(): com.motorro.keeplink.deeplink.LinkBuilder<com.motorro.keeplink.testaction.TestAction>;
-        get LOCALHOST_8080(): com.motorro.keeplink.deeplink.LinkBuilder<com.motorro.keeplink.testaction.TestAction>;
+        get MOTORRO(): com.motorro.keeplink.deeplink.SchemeHostLinkBuilder<com.motorro.keeplink.testaction.TestAction>;
+        get LOCALHOST_8080(): com.motorro.keeplink.deeplink.SchemeHostLinkBuilder<com.motorro.keeplink.testaction.TestAction>;
     };
 }
 export namespace com.motorro.keeplink.testaction.data {

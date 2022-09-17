@@ -20,6 +20,21 @@ import kotlin.js.JsExport
 import kotlin.js.JsName
 
 /**
+ * Builds a deep-link to string
+ */
+@JsExport
+@OptIn(ExperimentalJsExport::class)
+@Suppress("NON_EXPORTABLE_TYPE")
+interface LinkBuilder<in A: Action> {
+    /**
+     * Builds a deep-link
+     * @param link Path/search/hash components to embed
+     */
+    @JsName("build")
+    fun build(link: DeepLink<A>): String
+}
+
+/**
  * Builds deep-link with predefined `scheme` and `host` components
  * @param targetScheme Intended scheme component
  * @param targetHost Intended host component
@@ -27,11 +42,13 @@ import kotlin.js.JsName
 @JsExport
 @OptIn(ExperimentalJsExport::class)
 @Suppress("NON_EXPORTABLE_TYPE")
-open class LinkBuilder<in A : Action>(private val targetScheme: String, private val targetHost: String) {
+open class SchemeHostLinkBuilder<in A : Action>(
+    private val targetScheme: String,
+    private val targetHost: String
+) : LinkBuilder<A> {
     /**
      * Builds a deep-link
      * @param link Path/search/hash components to embed
      */
-    @JsName("build")
-    fun build(link: DeepLink<A>): String = UriComponents(targetScheme, targetHost, link).build()
+    override fun build(link: DeepLink<A>): String = UriComponents(targetScheme, targetHost, link).build()
 }

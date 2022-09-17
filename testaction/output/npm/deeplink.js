@@ -1,16 +1,3 @@
-/*
- * Copyright 2022 Nikolai Kotchetkov.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *    http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 (function (_, kotlin_kotlin, kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core, kotlin_com_motorro_keeplink_uri) {
   'use strict';
   //region block: imports
@@ -408,14 +395,20 @@
     return this.ak_1();
   };
   DefaultActionParser.$metadata$ = classMeta('DefaultActionParser', [ActionParser]);
-  function LinkBuilder(targetScheme, targetHost) {
+  function LinkBuilder() {
+  }
+  LinkBuilder.$metadata$ = interfaceMeta('LinkBuilder');
+  function SchemeHostLinkBuilder(targetScheme, targetHost) {
     this.bk_1 = targetScheme;
     this.ck_1 = targetHost;
   }
-  LinkBuilder.prototype.build = function (link) {
+  SchemeHostLinkBuilder.prototype.build = function (link) {
     return build(UriComponents_init_$Create$(this.bk_1, this.ck_1, link));
   };
-  LinkBuilder.$metadata$ = classMeta('LinkBuilder');
+  SchemeHostLinkBuilder.$metadata$ = classMeta('SchemeHostLinkBuilder', [LinkBuilder]);
+  function LinkParser() {
+  }
+  LinkParser.$metadata$ = interfaceMeta('LinkParser');
   function isTargetUri(_this__u8e3s4, $this) {
     return _this__u8e3s4.ah_1 === $this.ek_1 ? _this__u8e3s4.bh_1 === $this.fk_1 : false;
   }
@@ -502,12 +495,12 @@
     }
     return tmp;
   }
-  function LinkParser(parser, targetScheme, targetHost) {
+  function SchemeHostLinkParser(parser, targetScheme, targetHost) {
     this.dk_1 = parser;
     this.ek_1 = targetScheme;
     this.fk_1 = targetHost;
   }
-  LinkParser.prototype.parse = function (uri) {
+  SchemeHostLinkParser.prototype.parse = function (uri) {
     var tmp0_safe_receiver = parseUri(this, uri);
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -523,7 +516,7 @@
     }
     return tmp;
   };
-  LinkParser.$metadata$ = classMeta('LinkParser');
+  SchemeHostLinkParser.$metadata$ = classMeta('SchemeHostLinkParser', [LinkParser]);
   function SegmentCheckParser(segment, next) {
     this.gk_1 = segment;
     this.hk_1 = next;
@@ -569,12 +562,12 @@
     var $com$motorro = $com.motorro || ($com.motorro = {});
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
     var $com$motorro$keeplink$deeplink = $com$motorro$keeplink.deeplink || ($com$motorro$keeplink.deeplink = {});
-    $com$motorro$keeplink$deeplink.LinkBuilder = LinkBuilder;
+    $com$motorro$keeplink$deeplink.SchemeHostLinkBuilder = SchemeHostLinkBuilder;
     var $com = _.com || (_.com = {});
     var $com$motorro = $com.motorro || ($com.motorro = {});
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
     var $com$motorro$keeplink$deeplink = $com$motorro$keeplink.deeplink || ($com$motorro$keeplink.deeplink = {});
-    $com$motorro$keeplink$deeplink.LinkParser = LinkParser;
+    $com$motorro$keeplink$deeplink.SchemeHostLinkParser = SchemeHostLinkParser;
     var $com = _.com || (_.com = {});
     var $com$motorro = $com.motorro || ($com.motorro = {});
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
@@ -587,8 +580,8 @@
   _.$_$.b = Action;
   _.$_$.c = BranchActionParser;
   _.$_$.d = DefaultActionParser;
-  _.$_$.e = LinkBuilder;
-  _.$_$.f = LinkParser;
+  _.$_$.e = SchemeHostLinkBuilder;
+  _.$_$.f = SchemeHostLinkParser;
   _.$_$.g = SegmentCheckParser;
   _.$_$.h = Action_init_$Init$;
   _.$_$.i = BranchActionParser_init_$Create$;
