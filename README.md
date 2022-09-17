@@ -282,7 +282,7 @@ object LinkParsers {
      *
      * `motorro:/profile/chats/123`
      */
-    val MOTORRO = SchemeHostLinkParser(RootActionParser, "motorro", "")
+    val MOTORRO: LinkParser<TestAction> = SchemeHostLinkParser(RootActionParser, "motorro", "")
 }
 
 /**
@@ -296,7 +296,7 @@ object LinkBuilders {
      *
      * `motorro:/profile/chats/123`
      */
-    val MOTORRO = SchemeHostLinkBuilder<TestAction>("motorro", "")
+    val MOTORRO: LinkBuilder<TestAction> = SchemeHostLinkBuilder("motorro", "")
 }
 ```
 

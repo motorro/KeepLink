@@ -13,9 +13,7 @@
 
 package com.motorro.keeplink.testaction
 
-import com.motorro.keeplink.deeplink.DeepLinkSerializer
-import com.motorro.keeplink.deeplink.SchemeHostLinkBuilder
-import com.motorro.keeplink.deeplink.SchemeHostLinkParser
+import com.motorro.keeplink.deeplink.*
 import kotlin.js.ExperimentalJsExport
 import kotlin.js.JsExport
 
@@ -30,14 +28,14 @@ object LinkParsers {
      *
      * `motorro:/profile/chats/123`
      */
-    val MOTORRO = SchemeHostLinkParser(RootActionParser, "motorro", "")
+    val MOTORRO: LinkParser<TestAction> = SchemeHostLinkParser(RootActionParser, "motorro", "")
 
     /**
      * Deep-link for URIs to `http://localhost:8080`:
      *
      * `https://localhost:8080/profile/chats/123`
      */
-    val LOCALHOST_8080 = SchemeHostLinkParser(RootActionParser, "http", "localhost:8080")
+    val LOCALHOST_8080: LinkParser<TestAction> = SchemeHostLinkParser(RootActionParser, "http", "localhost:8080")
 }
 
 /**
@@ -51,14 +49,14 @@ object LinkBuilders {
      *
      * `motorro:/profile/chats/123`
      */
-    val MOTORRO = SchemeHostLinkBuilder<TestAction>("motorro", "")
+    val MOTORRO: LinkBuilder<TestAction> = SchemeHostLinkBuilder("motorro", "")
 
     /**
      * Deep-link for URIs to `http://localhost:8080`:
      *
      * `https://localhost:8080/open/chats/123`
      */
-    val LOCALHOST_8080 = SchemeHostLinkBuilder<TestAction>("http", "localhost:8080")
+    val LOCALHOST_8080: LinkBuilder<TestAction> = SchemeHostLinkBuilder("http", "localhost:8080")
 }
 
 /**
