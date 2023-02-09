@@ -1,11 +1,12 @@
 [versions]
-kotlin = "1.7.10"
-serialization = "1.4.0"
+kotlin = "1.8.10"
+dokka = "1.7.20"
+serialization = "1.4.1"
 
 [plugins]
 kotlin_multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin_serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-kotlin_dokka = { id = "org.jetbrains.dokka", version.ref = "kotlin" }
+kotlin_dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 git = { id = "org.ajoberstar.grgit", version = "3.0.0" }
 nexus_publish = { id = "io.github.gradle-nexus.publish-plugin", version = "1.0.0" }
 
