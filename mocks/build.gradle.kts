@@ -11,7 +11,7 @@
  * limitations under the License.
  */
 
-@file:Suppress("UNUSED_VARIABLE", "EXPERIMENTAL_API_USAGE")
+@file:Suppress("EXPERIMENTAL_API_USAGE")
 
 plugins {
     id("org.jetbrains.kotlin.multiplatform")
@@ -32,7 +32,7 @@ kotlin {
 
     jvm {
         compilations.all {
-            kotlinOptions.jvmTarget = "1.8"
+            kotlinOptions.jvmTarget = "17"
             kotlinOptions.freeCompilerArgs += listOf(
                 "-Xuse-ir"
             )
@@ -52,18 +52,18 @@ kotlin {
         binaries.library()
         useCommonJs()
         nodejs {
-            testTask {
+            testTask(Action {
                 useMocha {
                     timeout = "10s"
                 }
-            }
+            })
         }
         browser {
-            testTask {
+            testTask(Action {
                 useMocha {
                     timeout = "10s"
                 }
-            }
+            })
         }
     }
 

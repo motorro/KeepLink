@@ -20,7 +20,6 @@ pluginManagement {
         mavenCentral()
     }
 }
-enableFeaturePreview("VERSION_CATALOGS")
 dependencyResolutionManagement {
     repositories {
         mavenLocal()

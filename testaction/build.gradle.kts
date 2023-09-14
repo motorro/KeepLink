@@ -11,7 +11,7 @@
  * limitations under the License.
  */
 
-@file:Suppress("UNUSED_VARIABLE", "EXPERIMENTAL_API_USAGE", "OPT_IN_IS_NOT_ENABLED")
+@file:Suppress("EXPERIMENTAL_API_USAGE")
 
 import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalDistributionDsl
 
@@ -54,7 +54,7 @@ kotlin {
 
     jvm {
         compilations.all {
-            kotlinOptions.jvmTarget = "1.8"
+            kotlinOptions.jvmTarget = "17"
             kotlinOptions.freeCompilerArgs += listOf(
                 "-Xuse-ir"
             )
@@ -74,24 +74,24 @@ kotlin {
         binaries.library()
         useCommonJs()
         nodejs {
-            testTask {
+            testTask(Action {
                 useMocha {
                     timeout = "10s"
                 }
-            }
+            })
             // On customizing JS builds and distribution:
             // https://kotlinlang.org/docs/reference/js-project-setup.html#choosing-execution-environment
             @OptIn(ExperimentalDistributionDsl::class)
-            distribution {
-                directory = file("$projectDir/output/npm")
-            }
+            distribution(Action {
+                outputDirectory.set(file("$projectDir/output/npm"))
+            })
         }
         browser {
-            testTask {
+            testTask(Action {
                 useMocha {
                     timeout = "10s"
                 }
-            }
+            })
         }
     }
 

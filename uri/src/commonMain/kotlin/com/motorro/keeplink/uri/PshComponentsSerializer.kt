@@ -33,7 +33,6 @@ import kotlinx.serialization.encoding.Encoder
 /**
  * Serializes [PshComponents]
  */
-@Serializer(forClass = PshComponents::class)
 @OptIn(ExperimentalSerializationApi::class)
 object PshComponentsSerializer : KSerializer<PshComponents> {
     /**
