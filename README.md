@@ -146,6 +146,7 @@ js(IR) {
             "-opt-in=kotlin.js.ExperimentalJsExport"
         )
     }
+    generateTypeScriptDefinitions()
     binaries.library()
     useCommonJs()
     nodejs {
@@ -158,7 +159,7 @@ js(IR) {
         // https://kotlinlang.org/docs/reference/js-project-setup.html#choosing-execution-environment
         @OptIn(ExperimentalDistributionDsl::class)
         distribution {
-            directory = file("$projectDir/output/npm")
+            outputDirectory.set(file("$projectDir/output/npm"))
         }
     }
 }
