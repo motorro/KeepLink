@@ -2,510 +2,298 @@
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var objectMeta = kotlin_kotlin.$_$.c3;
-  var Unit_getInstance = kotlin_kotlin.$_$.l1;
-  var classMeta = kotlin_kotlin.$_$.t2;
+  var protoOf = kotlin_kotlin.$_$.z2;
+  var objectMeta = kotlin_kotlin.$_$.y2;
+  var setMetadataFor = kotlin_kotlin.$_$.a3;
+  var classMeta = kotlin_kotlin.$_$.o2;
   var getKClass = kotlin_kotlin.$_$.b;
   var SealedClassSerializer_init_$Create$ = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.b;
+  var VOID = kotlin_kotlin.$_$.c;
   var of = kotlin_com_motorro_keeplink_uri.$_$.d;
-  var LazyThreadSafetyMode_PUBLICATION_getInstance = kotlin_kotlin.$_$.c;
-  var lazy = kotlin_kotlin.$_$.y3;
-  var SerializerFactory = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.k;
-  var Action_init_$Init$ = kotlin_com_motorro_keeplink_deeplink.$_$.h;
-  var Action = kotlin_com_motorro_keeplink_deeplink.$_$.b;
-  var Regex_init_$Create$ = kotlin_kotlin.$_$.o;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.q;
+  var LazyThreadSafetyMode_PUBLICATION_getInstance = kotlin_kotlin.$_$.d;
+  var lazy = kotlin_kotlin.$_$.e4;
+  var Action = kotlin_com_motorro_keeplink_deeplink.$_$.a;
+  var defineProp = kotlin_kotlin.$_$.p2;
+  var Regex_init_$Create$ = kotlin_kotlin.$_$.l;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.m;
   var toInt = kotlin_kotlin.$_$.n3;
-  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.u;
-  var padStart = kotlin_kotlin.$_$.l3;
-  var THROW_CCE = kotlin_kotlin.$_$.u3;
+  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.p;
+  var padStart = kotlin_kotlin.$_$.k3;
+  var THROW_CCE = kotlin_kotlin.$_$.s3;
   var ComponentValue = kotlin_com_motorro_keeplink_uri.$_$.a;
-  var getStringHashCode = kotlin_kotlin.$_$.x2;
-  var ActionParser = kotlin_com_motorro_keeplink_deeplink.$_$.a;
-  var getOrNull = kotlin_kotlin.$_$.a2;
-  var isBlank = kotlin_kotlin.$_$.j3;
-  var Companion_getInstance = kotlin_kotlin.$_$.k1;
+  var getStringHashCode = kotlin_kotlin.$_$.t2;
+  var getOrNull = kotlin_kotlin.$_$.v1;
+  var isBlank = kotlin_kotlin.$_$.i3;
+  var Companion_instance = kotlin_kotlin.$_$.f1;
   var getValue = kotlin_com_motorro_keeplink_uri.$_$.c;
-  var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.w;
-  var createFailure = kotlin_kotlin.$_$.w3;
-  var _Result___get_value__impl__bjfvqg = kotlin_kotlin.$_$.y;
-  var isObject = kotlin_kotlin.$_$.b3;
-  var _Result___get_isFailure__impl__jpiriv = kotlin_kotlin.$_$.x;
-  var listOf = kotlin_kotlin.$_$.c2;
-  var BranchActionParser = kotlin_com_motorro_keeplink_deeplink.$_$.c;
-  var SegmentCheckParser = kotlin_com_motorro_keeplink_deeplink.$_$.g;
-  var BranchActionParser_init_$Create$ = kotlin_com_motorro_keeplink_deeplink.$_$.i;
-  var DefaultActionParser = kotlin_com_motorro_keeplink_deeplink.$_$.d;
-  var listOf_0 = kotlin_kotlin.$_$.d2;
-  var SchemeHostLinkParser = kotlin_com_motorro_keeplink_deeplink.$_$.f;
-  var SchemeHostLinkBuilder = kotlin_com_motorro_keeplink_deeplink.$_$.e;
+  var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.r;
+  var createFailure = kotlin_kotlin.$_$.c4;
+  var _Result___get_value__impl__bjfvqg = kotlin_kotlin.$_$.t;
+  var _Result___get_isFailure__impl__jpiriv = kotlin_kotlin.$_$.s;
+  var Unit_instance = kotlin_kotlin.$_$.k1;
+  var listOf = kotlin_kotlin.$_$.z1;
+  var BranchActionParser = kotlin_com_motorro_keeplink_deeplink.$_$.b;
+  var SegmentCheckParser = kotlin_com_motorro_keeplink_deeplink.$_$.f;
+  var BranchActionParser_init_$Create$ = kotlin_com_motorro_keeplink_deeplink.$_$.g;
+  var DefaultActionParser = kotlin_com_motorro_keeplink_deeplink.$_$.c;
+  var listOf_0 = kotlin_kotlin.$_$.a2;
+  var SchemeHostLinkParser = kotlin_com_motorro_keeplink_deeplink.$_$.e;
+  var SchemeHostLinkBuilder = kotlin_com_motorro_keeplink_deeplink.$_$.d;
   //endregion
   //region block: pre-declaration
-  TestAction.prototype = Object.create(Action.prototype);
-  TestAction.prototype.constructor = TestAction;
-  Login.prototype = Object.create(TestAction.prototype);
-  Login.prototype.constructor = Login;
-  Magic.prototype = Object.create(Login.prototype);
-  Magic.prototype.constructor = Magic;
-  Invalid.prototype = Object.create(TestAction.prototype);
-  Invalid.prototype.constructor = Invalid;
-  Unknown.prototype = Object.create(TestAction.prototype);
-  Unknown.prototype.constructor = Unknown;
-  Root.prototype = Object.create(TestAction.prototype);
-  Root.prototype.constructor = Root;
-  Profile.prototype = Object.create(TestAction.prototype);
-  Profile.prototype.constructor = Profile;
-  Search.prototype = Object.create(TestAction.prototype);
-  Search.prototype.constructor = Search;
+  setMetadataFor(Companion, 'Companion', objectMeta);
+  setMetadataFor(Companion_0, 'Companion', objectMeta);
+  setMetadataFor(Companion_1, 'Companion', objectMeta);
+  setMetadataFor(Companion_2, 'Companion', objectMeta);
+  setMetadataFor(Companion_3, 'Companion', objectMeta);
+  setMetadataFor(TestAction, 'TestAction', classMeta, Action, VOID, VOID, VOID, {0: Companion_getInstance_5});
+  setMetadataFor(Login, 'Login', classMeta, TestAction);
+  setMetadataFor(Magic, 'Magic', classMeta, Login);
+  setMetadataFor(Companion_4, 'Companion', objectMeta);
+  setMetadataFor(Invalid, 'Invalid', classMeta, TestAction);
+  setMetadataFor(Unknown, 'Unknown', classMeta, TestAction);
+  setMetadataFor(Root, 'Root', classMeta, TestAction, VOID, Root);
+  setMetadataFor(Profile, 'Profile', classMeta, TestAction, VOID, Profile);
+  setMetadataFor(Search, 'Search', classMeta, TestAction);
+  setMetadataFor(Companion_5, 'Companion', objectMeta);
+  setMetadataFor(Companion_6, 'Companion', objectMeta);
+  setMetadataFor(LocalDateFields, 'LocalDateFields', classMeta, VOID, [ComponentValue]);
+  setMetadataFor(Companion_7, 'Companion', objectMeta);
+  setMetadataFor(TransportType, 'TransportType', classMeta, VOID, [ComponentValue]);
+  setMetadataFor(TransportTypes, 'TransportTypes', objectMeta);
+  setMetadataFor(sam$com_motorro_keeplink_deeplink_ActionParser$0, 'sam$com_motorro_keeplink_deeplink_ActionParser$0', classMeta);
+  setMetadataFor(sam$com_motorro_keeplink_deeplink_ActionParser$0_0, 'sam$com_motorro_keeplink_deeplink_ActionParser$0', classMeta);
+  setMetadataFor(sam$com_motorro_keeplink_deeplink_ActionParser$0_1, 'sam$com_motorro_keeplink_deeplink_ActionParser$0', classMeta);
+  setMetadataFor(sam$com_motorro_keeplink_deeplink_ActionParser$0_2, 'sam$com_motorro_keeplink_deeplink_ActionParser$0', classMeta);
+  setMetadataFor(LinkParsers, 'LinkParsers', objectMeta);
+  setMetadataFor(LinkBuilders, 'LinkBuilders', objectMeta);
   //endregion
   function Companion() {
-    Companion_instance = this;
-    this.ik_1 = new Invalid();
-  }
-  Companion.$metadata$ = objectMeta('Companion');
-  var Companion_instance;
-  function Companion_getInstance_0() {
-    if (Companion_instance == null)
-      new Companion();
-    return Companion_instance;
-  }
-  function Companion_0() {
     Companion_instance_0 = this;
-    this.jk_1 = '';
+    this.nj_1 = new Invalid();
   }
-  Companion_0.$metadata$ = objectMeta('Companion');
   var Companion_instance_0;
-  function Companion_getInstance_1() {
+  function Companion_getInstance() {
     if (Companion_instance_0 == null)
-      new Companion_0();
+      new Companion();
     return Companion_instance_0;
   }
-  function Companion_1() {
-    Companion_instance_1 = this;
-    this.kk_1 = 'profile';
+  function Companion_0() {
+    this.oj_1 = '';
   }
-  Companion_1.$metadata$ = objectMeta('Companion');
   var Companion_instance_1;
-  function Companion_getInstance_2() {
-    if (Companion_instance_1 == null)
-      new Companion_1();
+  function Companion_getInstance_0() {
     return Companion_instance_1;
   }
-  function Companion_2() {
-    Companion_instance_2 = this;
-    this.lk_1 = 'magic';
+  function Companion_1() {
+    this.pj_1 = 'profile';
   }
-  Companion_2.$metadata$ = objectMeta('Companion');
   var Companion_instance_2;
-  function Companion_getInstance_3() {
-    if (Companion_instance_2 == null)
-      new Companion_2();
+  function Companion_getInstance_1() {
     return Companion_instance_2;
   }
-  function Companion_3() {
-    Companion_instance_3 = this;
-    this.mk_1 = 'login';
+  function Companion_2() {
+    this.qj_1 = 'magic';
   }
-  Companion_3.$metadata$ = objectMeta('Companion');
   var Companion_instance_3;
-  function Companion_getInstance_4() {
-    if (Companion_instance_3 == null)
-      new Companion_3();
+  function Companion_getInstance_2() {
     return Companion_instance_3;
   }
-  function Magic(token) {
-    Companion_getInstance_3();
-    Login.call(this);
-    this.ok_1 = token;
+  function Companion_3() {
+    this.rj_1 = 'login';
   }
-  Magic.prototype.pk = function () {
-    return this.ok_1;
-  };
-  Magic.prototype.getPath = function () {
-    var tmp$ret$9;
-    {
-      var tmp$ret$4;
-      {
-        var tmp0_plus = Login.prototype.getPath.call(this);
-        Companion_getInstance_3();
-        var tmp1_plus = 'magic';
-        var tmp$ret$0;
-        {
-          tmp$ret$0 = tmp0_plus;
-        }
-        var tmp$ret$3;
-        {
-          var tmp$ret$2;
-          {
-            var tmp$ret$1;
-            {
-              tmp$ret$1 = [tmp1_plus];
-            }
-            tmp$ret$2 = tmp$ret$1;
-          }
-          tmp$ret$3 = tmp$ret$2;
-        }
-        tmp$ret$4 = tmp$ret$0.concat(tmp$ret$3);
-      }
-      var tmp2_plus = tmp$ret$4;
-      var tmp3_plus = this.ok_1;
-      var tmp$ret$5;
-      {
-        tmp$ret$5 = tmp2_plus;
-      }
-      var tmp$ret$8;
-      {
-        var tmp$ret$7;
-        {
-          var tmp$ret$6;
-          {
-            tmp$ret$6 = [tmp3_plus];
-          }
-          tmp$ret$7 = tmp$ret$6;
-        }
-        tmp$ret$8 = tmp$ret$7;
-      }
-      tmp$ret$9 = tmp$ret$5.concat(tmp$ret$8);
-    }
-    return tmp$ret$9;
-  };
-  Magic.$metadata$ = classMeta('Magic', undefined, undefined, undefined, undefined, Login.prototype);
-  Object.defineProperty(Magic.prototype, 'token', {
-    configurable: true,
-    get: Magic.prototype.pk
-  });
-  function Companion_4() {
-    Companion_instance_4 = this;
-    this.qk_1 = 'search';
-    this.rk_1 = 'type';
-    this.sk_1 = 'from';
-    this.tk_1 = 'to';
-    this.uk_1 = 'date';
-  }
-  Companion_4.prototype.vk = function () {
-    return this.qk_1;
-  };
-  Companion_4.prototype.wk = function () {
-    return this.rk_1;
-  };
-  Companion_4.prototype.xk = function () {
-    return this.sk_1;
-  };
-  Companion_4.prototype.yk = function () {
-    return this.tk_1;
-  };
-  Companion_4.prototype.zk = function () {
-    return this.uk_1;
-  };
-  Companion_4.$metadata$ = objectMeta('Companion');
   var Companion_instance_4;
-  function Companion_getInstance_5() {
-    if (Companion_instance_4 == null)
-      new Companion_4();
+  function Companion_getInstance_3() {
     return Companion_instance_4;
   }
-  function TestAction$Companion$$cachedSerializer$delegate$_anonymous__3c5otu() {
-    return function () {
-      var tmp = getKClass(TestAction);
-      var tmp$ret$2;
-      {
-        var tmp$ret$1;
-        {
-          var tmp$ret$0;
-          {
-            tmp$ret$0 = [];
-          }
-          tmp$ret$1 = tmp$ret$0;
-        }
-        tmp$ret$2 = tmp$ret$1;
-      }
-      var tmp_0 = tmp$ret$2;
-      var tmp$ret$5;
-      {
-        var tmp$ret$4;
-        {
-          var tmp$ret$3;
-          {
-            tmp$ret$3 = [];
-          }
-          tmp$ret$4 = tmp$ret$3;
-        }
-        tmp$ret$5 = tmp$ret$4;
-      }
-      var tmp_1 = tmp$ret$5;
-      var tmp$ret$8;
-      {
-        var tmp$ret$7;
-        {
-          var tmp$ret$6;
-          {
-            tmp$ret$6 = [];
-          }
-          tmp$ret$7 = tmp$ret$6;
-        }
-        tmp$ret$8 = tmp$ret$7;
-      }
-      return SealedClassSerializer_init_$Create$('com.motorro.keeplink.testaction.TestAction', tmp, tmp_0, tmp_1, tmp$ret$8);
-    };
+  function Magic(token) {
+    Login.call(this);
+    this.token = token;
   }
-  function Invalid() {
-    Companion_getInstance_0();
-    TestAction.call(this);
-    this.bl_1 = false;
+  protoOf(Magic).tj = function () {
+    return this.token;
+  };
+  protoOf(Magic).getPath = function () {
+    // Inline function 'kotlin.collections.plus' call
+    // Inline function 'kotlin.collections.plus' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp$ret$0 = protoOf(Login).getPath.call(this);
+    // Inline function 'kotlin.arrayOf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp$ret$3 = ['magic'];
+    var this_0 = tmp$ret$0.concat(tmp$ret$3);
+    // Inline function 'kotlin.js.asDynamic' call
+    // Inline function 'kotlin.arrayOf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp$ret$8 = [this.token];
+    return this_0.concat(tmp$ret$8);
+  };
+  function Companion_4() {
+    this.uj_1 = 'search';
+    this.vj_1 = 'type';
+    this.wj_1 = 'from';
+    this.xj_1 = 'to';
+    this.yj_1 = 'date';
   }
-  Invalid.prototype.gj = function () {
-    return this.bl_1;
-  };
-  Invalid.$metadata$ = classMeta('Invalid', undefined, undefined, undefined, undefined, TestAction.prototype);
-  function Unknown(components) {
-    TestAction.call(this);
-    this.dl_1 = components;
-    this.el_1 = false;
-  }
-  Unknown.prototype.getPath = function () {
-    return this.dl_1.getPath();
-  };
-  Unknown.prototype.getSearch = function () {
-    return this.dl_1.getSearch();
-  };
-  Unknown.prototype.getHash = function () {
-    return this.dl_1.getHash();
-  };
-  Unknown.prototype.gj = function () {
-    return this.el_1;
-  };
-  Unknown.$metadata$ = classMeta('Unknown', undefined, undefined, undefined, undefined, TestAction.prototype);
-  function Root() {
-    Companion_getInstance_1();
-    TestAction.call(this);
-  }
-  Root.prototype.getPath = function () {
-    var tmp$ret$4;
-    {
-      var tmp0_plus = TestAction.prototype.getPath.call(this);
-      Companion_getInstance_1();
-      var tmp1_plus = '';
-      var tmp$ret$0;
-      {
-        tmp$ret$0 = tmp0_plus;
-      }
-      var tmp$ret$3;
-      {
-        var tmp$ret$2;
-        {
-          var tmp$ret$1;
-          {
-            tmp$ret$1 = [tmp1_plus];
-          }
-          tmp$ret$2 = tmp$ret$1;
-        }
-        tmp$ret$3 = tmp$ret$2;
-      }
-      tmp$ret$4 = tmp$ret$0.concat(tmp$ret$3);
-    }
-    return tmp$ret$4;
-  };
-  Root.$metadata$ = classMeta('Root', undefined, undefined, undefined, undefined, TestAction.prototype);
-  function Profile() {
-    Companion_getInstance_2();
-    TestAction.call(this);
-  }
-  Profile.prototype.getPath = function () {
-    var tmp$ret$4;
-    {
-      var tmp0_plus = TestAction.prototype.getPath.call(this);
-      Companion_getInstance_2();
-      var tmp1_plus = 'profile';
-      var tmp$ret$0;
-      {
-        tmp$ret$0 = tmp0_plus;
-      }
-      var tmp$ret$3;
-      {
-        var tmp$ret$2;
-        {
-          var tmp$ret$1;
-          {
-            tmp$ret$1 = [tmp1_plus];
-          }
-          tmp$ret$2 = tmp$ret$1;
-        }
-        tmp$ret$3 = tmp$ret$2;
-      }
-      tmp$ret$4 = tmp$ret$0.concat(tmp$ret$3);
-    }
-    return tmp$ret$4;
-  };
-  Profile.$metadata$ = classMeta('Profile', undefined, undefined, undefined, undefined, TestAction.prototype);
-  function Login() {
-    Companion_getInstance_4();
-    TestAction.call(this);
-  }
-  Login.prototype.getPath = function () {
-    var tmp$ret$4;
-    {
-      var tmp0_plus = TestAction.prototype.getPath.call(this);
-      Companion_getInstance_4();
-      var tmp1_plus = 'login';
-      var tmp$ret$0;
-      {
-        tmp$ret$0 = tmp0_plus;
-      }
-      var tmp$ret$3;
-      {
-        var tmp$ret$2;
-        {
-          var tmp$ret$1;
-          {
-            tmp$ret$1 = [tmp1_plus];
-          }
-          tmp$ret$2 = tmp$ret$1;
-        }
-        tmp$ret$3 = tmp$ret$2;
-      }
-      tmp$ret$4 = tmp$ret$0.concat(tmp$ret$3);
-    }
-    return tmp$ret$4;
-  };
-  Login.$metadata$ = classMeta('Login', undefined, undefined, undefined, undefined, TestAction.prototype);
-  function Search(type, from, to, date) {
-    Companion_getInstance_5();
-    TestAction.call(this);
-    this.gl_1 = type;
-    this.hl_1 = from;
-    this.il_1 = to;
-    this.jl_1 = date;
-  }
-  Search.prototype.kl = function () {
-    return this.gl_1;
-  };
-  Search.prototype.ll = function () {
-    return this.hl_1;
-  };
-  Search.prototype.ml = function () {
-    return this.il_1;
-  };
-  Search.prototype.nl = function () {
-    return this.jl_1;
-  };
-  Search.prototype.getPath = function () {
-    var tmp$ret$4;
-    {
-      var tmp0_plus = TestAction.prototype.getPath.call(this);
-      Companion_getInstance_5();
-      var tmp1_plus = 'search';
-      var tmp$ret$0;
-      {
-        tmp$ret$0 = tmp0_plus;
-      }
-      var tmp$ret$3;
-      {
-        var tmp$ret$2;
-        {
-          var tmp$ret$1;
-          {
-            tmp$ret$1 = [tmp1_plus];
-          }
-          tmp$ret$2 = tmp$ret$1;
-        }
-        tmp$ret$3 = tmp$ret$2;
-      }
-      tmp$ret$4 = tmp$ret$0.concat(tmp$ret$3);
-    }
-    return tmp$ret$4;
-  };
-  Search.prototype.getSearch = function () {
-    var tmp$ret$4;
-    {
-      var tmp1_plus = TestAction.prototype.getSearch.call(this);
-      var tmp$ret$2;
-      {
-        Companion_getInstance_5();
-        var tmp = of('type', this.gl_1.toComponentValue());
-        Companion_getInstance_5();
-        var tmp_0 = of('from', this.hl_1);
-        Companion_getInstance_5();
-        var tmp_1 = of('to', this.il_1);
-        Companion_getInstance_5();
-        var tmp0_arrayOf = [tmp, tmp_0, tmp_1, of('date', this.jl_1.toComponentValue())];
-        var tmp$ret$1;
-        {
-          var tmp$ret$0;
-          {
-            tmp$ret$0 = tmp0_arrayOf;
-          }
-          tmp$ret$1 = tmp$ret$0;
-        }
-        tmp$ret$2 = tmp$ret$1;
-      }
-      var tmp2_plus = tmp$ret$2;
-      var tmp$ret$3;
-      {
-        tmp$ret$3 = tmp1_plus;
-      }
-      tmp$ret$4 = tmp$ret$3.concat(tmp2_plus);
-    }
-    return tmp$ret$4;
-  };
-  Search.$metadata$ = classMeta('Search', undefined, undefined, undefined, undefined, TestAction.prototype);
-  Object.defineProperty(Search.prototype, 'type', {
-    configurable: true,
-    get: Search.prototype.kl
-  });
-  Object.defineProperty(Search.prototype, 'from', {
-    configurable: true,
-    get: Search.prototype.ll
-  });
-  Object.defineProperty(Search.prototype, 'to', {
-    configurable: true,
-    get: Search.prototype.ml
-  });
-  Object.defineProperty(Search.prototype, 'date', {
-    configurable: true,
-    get: Search.prototype.nl
-  });
-  function Companion_5() {
-    Companion_instance_5 = this;
-    var tmp = this;
-    var tmp_0 = LazyThreadSafetyMode_PUBLICATION_getInstance();
-    tmp.ol_1 = lazy(tmp_0, TestAction$Companion$$cachedSerializer$delegate$_anonymous__3c5otu());
-  }
-  Companion_5.prototype.serializer = function () {
-    return this.ol_1.n1();
-  };
-  Companion_5.prototype.ej = function (typeParamsSerializers) {
-    return this.serializer();
-  };
-  Companion_5.$metadata$ = objectMeta('Companion', [SerializerFactory]);
   var Companion_instance_5;
-  function Companion_getInstance_6() {
-    if (Companion_instance_5 == null)
-      new Companion_5();
+  function Companion_getInstance_4() {
     return Companion_instance_5;
   }
-  function TestAction_init_$Init$(seen1, isValid, serializationConstructorMarker, $this) {
-    Action_init_$Init$(seen1, isValid, serializationConstructorMarker, $this);
-    return $this;
+  function _get_$cachedSerializer__te6jhj($this) {
+    return $this.zj_1.f4();
   }
-  function TestAction_init_$Create$(seen1, isValid, serializationConstructorMarker) {
-    return TestAction_init_$Init$(seen1, isValid, serializationConstructorMarker, Object.create(TestAction.prototype));
+  function TestAction$Companion$_anonymous__lnvpp5() {
+    var tmp = getKClass(TestAction);
+    // Inline function 'kotlin.arrayOf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp_0 = [];
+    // Inline function 'kotlin.arrayOf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp_1 = [];
+    // Inline function 'kotlin.arrayOf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp$ret$8 = [];
+    return SealedClassSerializer_init_$Create$('com.motorro.keeplink.testaction.TestAction', tmp, tmp_0, tmp_1, tmp$ret$8);
   }
-  function TestAction() {
-    Companion_getInstance_6();
-    Action.call(this);
+  function Invalid() {
+    Companion_getInstance();
+    TestAction.call(this);
+    this.bk_1 = false;
   }
-  TestAction.$metadata$ = classMeta('TestAction', undefined, undefined, {0: Companion_getInstance_6}, undefined, Action.prototype);
-  function Companion_6() {
+  protoOf(Invalid).ki = function () {
+    return this.bk_1;
+  };
+  function Unknown(components) {
+    TestAction.call(this);
+    this.dk_1 = components;
+    this.ek_1 = false;
+  }
+  protoOf(Unknown).getPath = function () {
+    return this.dk_1.getPath();
+  };
+  protoOf(Unknown).getSearch = function () {
+    return this.dk_1.getSearch();
+  };
+  protoOf(Unknown).getHash = function () {
+    return this.dk_1.getHash();
+  };
+  protoOf(Unknown).ki = function () {
+    return this.ek_1;
+  };
+  function Root() {
+    TestAction.call(this);
+  }
+  protoOf(Root).getPath = function () {
+    // Inline function 'kotlin.collections.plus' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp$ret$0 = protoOf(TestAction).getPath.call(this);
+    // Inline function 'kotlin.arrayOf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp$ret$3 = [''];
+    return tmp$ret$0.concat(tmp$ret$3);
+  };
+  function Profile() {
+    TestAction.call(this);
+  }
+  protoOf(Profile).getPath = function () {
+    // Inline function 'kotlin.collections.plus' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp$ret$0 = protoOf(TestAction).getPath.call(this);
+    // Inline function 'kotlin.arrayOf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp$ret$3 = ['profile'];
+    return tmp$ret$0.concat(tmp$ret$3);
+  };
+  function Login() {
+    TestAction.call(this);
+  }
+  protoOf(Login).getPath = function () {
+    // Inline function 'kotlin.collections.plus' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp$ret$0 = protoOf(TestAction).getPath.call(this);
+    // Inline function 'kotlin.arrayOf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp$ret$3 = ['login'];
+    return tmp$ret$0.concat(tmp$ret$3);
+  };
+  function Search(type, from, to, date) {
+    TestAction.call(this);
+    this.type = type;
+    this.from = from;
+    this.to = to;
+    this.date = date;
+  }
+  protoOf(Search).gk = function () {
+    return this.type;
+  };
+  protoOf(Search).hk = function () {
+    return this.from;
+  };
+  protoOf(Search).ik = function () {
+    return this.to;
+  };
+  protoOf(Search).jk = function () {
+    return this.date;
+  };
+  protoOf(Search).getPath = function () {
+    // Inline function 'kotlin.collections.plus' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp$ret$0 = protoOf(TestAction).getPath.call(this);
+    // Inline function 'kotlin.arrayOf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp$ret$3 = ['search'];
+    return tmp$ret$0.concat(tmp$ret$3);
+  };
+  protoOf(Search).getSearch = function () {
+    // Inline function 'kotlin.collections.plus' call
+    var this_0 = protoOf(TestAction).getSearch.call(this);
+    // Inline function 'kotlin.arrayOf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var elements = [of('type', this.type.toComponentValue()), of('from', this.from), of('to', this.to), of('date', this.date.toComponentValue())];
+    // Inline function 'kotlin.js.asDynamic' call
+    return this_0.concat(elements);
+  };
+  function Companion_5() {
     Companion_instance_6 = this;
     var tmp = this;
-    var tmp$ret$0;
-    {
-      tmp$ret$0 = Regex_init_$Create$('^(\\d{4})-(\\d{2})-(\\d{2})$');
-    }
-    tmp.pl_1 = tmp$ret$0;
+    var tmp_0 = LazyThreadSafetyMode_PUBLICATION_getInstance();
+    tmp.zj_1 = lazy(tmp_0, TestAction$Companion$_anonymous__lnvpp5);
   }
-  Companion_6.prototype.parse = function (componentValue) {
-    var tmp0_elvis_lhs = this.pl_1.lb(componentValue);
+  protoOf(Companion_5).ih = function () {
+    return _get_$cachedSerializer__te6jhj(this);
+  };
+  protoOf(Companion_5).ii = function (typeParamsSerializers) {
+    return this.ih();
+  };
+  var Companion_instance_6;
+  function Companion_getInstance_5() {
+    if (Companion_instance_6 == null)
+      new Companion_5();
+    return Companion_instance_6;
+  }
+  function TestAction() {
+    Companion_getInstance_5();
+    Action.call(this);
+  }
+  function Companion_6() {
+    Companion_instance_7 = this;
+    var tmp = this;
+    // Inline function 'kotlin.text.toRegex' call
+    var this_0 = '^(\\d{4})-(\\d{2})-(\\d{2})$';
+    tmp.kk_1 = Regex_init_$Create$(this_0);
+  }
+  protoOf(Companion_6).parse = function (componentValue) {
+    var tmp0_elvis_lhs = this.kk_1.z5(componentValue);
     var tmp;
     if (tmp0_elvis_lhs == null) {
       throw IllegalArgumentException_init_$Create$('Not a valid local date');
@@ -513,199 +301,143 @@
       tmp = tmp0_elvis_lhs;
     }
     var match = tmp;
-    var tmp$ret$1;
-    {
-      var tmp0_run = match.v3();
-      {
-      }
-      var tmp$ret$0;
-      {
-        tmp$ret$0 = new LocalDateFields(toInt(tmp0_run.l(1)), toInt(tmp0_run.l(2)), toInt(tmp0_run.l(3)));
-      }
-      tmp$ret$1 = tmp$ret$0;
-    }
-    return tmp$ret$1;
+    // Inline function 'kotlin.run' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'com.motorro.keeplink.testaction.data.Companion.parse.<anonymous>' call
+    var $this$run = match.o6();
+    return new LocalDateFields(toInt($this$run.w(1)), toInt($this$run.w(2)), toInt($this$run.w(3)));
   };
-  Companion_6.$metadata$ = objectMeta('Companion');
-  var Companion_instance_6;
-  function Companion_getInstance_7() {
-    if (Companion_instance_6 == null)
+  var Companion_instance_7;
+  function Companion_getInstance_6() {
+    if (Companion_instance_7 == null)
       new Companion_6();
-    return Companion_instance_6;
+    return Companion_instance_7;
   }
   function LocalDateFields(year, month, day) {
-    Companion_getInstance_7();
-    this.ql_1 = year;
-    this.rl_1 = month;
-    this.sl_1 = day;
+    Companion_getInstance_6();
+    this.year = year;
+    this.month = month;
+    this.day = day;
   }
-  LocalDateFields.prototype.tl = function () {
-    return this.ql_1;
+  protoOf(LocalDateFields).lk = function () {
+    return this.year;
   };
-  LocalDateFields.prototype.ul = function () {
-    return this.rl_1;
+  protoOf(LocalDateFields).mk = function () {
+    return this.month;
   };
-  LocalDateFields.prototype.vl = function () {
-    return this.sl_1;
+  protoOf(LocalDateFields).nk = function () {
+    return this.day;
   };
-  LocalDateFields.prototype.toComponentValue = function () {
-    return '' + this.ql_1 + '-' + padStart(this.rl_1.toString(), 2, _Char___init__impl__6a9atx(48)) + '-' + padStart(this.sl_1.toString(), 2, _Char___init__impl__6a9atx(48));
+  protoOf(LocalDateFields).toComponentValue = function () {
+    return '' + this.year + '-' + padStart(this.month.toString(), 2, _Char___init__impl__6a9atx(48)) + '-' + padStart(this.day.toString(), 2, _Char___init__impl__6a9atx(48));
   };
-  LocalDateFields.prototype.component1 = function () {
-    return this.ql_1;
+  protoOf(LocalDateFields).o9 = function () {
+    return this.year;
   };
-  LocalDateFields.prototype.component2 = function () {
-    return this.rl_1;
+  protoOf(LocalDateFields).p9 = function () {
+    return this.month;
   };
-  LocalDateFields.prototype.component3 = function () {
-    return this.sl_1;
+  protoOf(LocalDateFields).di = function () {
+    return this.day;
   };
-  LocalDateFields.prototype.copy = function (year, month, day) {
-    return this.wl(year === void 1 ? this.ql_1 : year, month === void 1 ? this.rl_1 : month, day === void 1 ? this.sl_1 : day);
-  };
-  LocalDateFields.prototype.wl = function (year, month, day) {
+  protoOf(LocalDateFields).ok = function (year, month, day) {
     return new LocalDateFields(year, month, day);
   };
-  LocalDateFields.prototype.xl = function (year, month, day, $mask0, $handler) {
-    if (!(($mask0 & 1) === 0))
-      year = this.ql_1;
-    if (!(($mask0 & 2) === 0))
-      month = this.rl_1;
-    if (!(($mask0 & 4) === 0))
-      day = this.sl_1;
-    return this.wl(year, month, day);
+  protoOf(LocalDateFields).copy = function (year, month, day, $super) {
+    year = year === VOID ? this.year : year;
+    month = month === VOID ? this.month : month;
+    day = day === VOID ? this.day : day;
+    return this.ok(year, month, day);
   };
-  LocalDateFields.prototype.toString = function () {
-    return 'LocalDateFields(year=' + this.ql_1 + ', month=' + this.rl_1 + ', day=' + this.sl_1 + ')';
+  protoOf(LocalDateFields).toString = function () {
+    return 'LocalDateFields(year=' + this.year + ', month=' + this.month + ', day=' + this.day + ')';
   };
-  LocalDateFields.prototype.hashCode = function () {
-    var result = this.ql_1;
-    result = imul(result, 31) + this.rl_1 | 0;
-    result = imul(result, 31) + this.sl_1 | 0;
+  protoOf(LocalDateFields).hashCode = function () {
+    var result = this.year;
+    result = imul(result, 31) + this.month | 0;
+    result = imul(result, 31) + this.day | 0;
     return result;
   };
-  LocalDateFields.prototype.equals = function (other) {
+  protoOf(LocalDateFields).equals = function (other) {
     if (this === other)
       return true;
     if (!(other instanceof LocalDateFields))
       return false;
     var tmp0_other_with_cast = other instanceof LocalDateFields ? other : THROW_CCE();
-    if (!(this.ql_1 === tmp0_other_with_cast.ql_1))
+    if (!(this.year === tmp0_other_with_cast.year))
       return false;
-    if (!(this.rl_1 === tmp0_other_with_cast.rl_1))
+    if (!(this.month === tmp0_other_with_cast.month))
       return false;
-    if (!(this.sl_1 === tmp0_other_with_cast.sl_1))
+    if (!(this.day === tmp0_other_with_cast.day))
       return false;
     return true;
   };
-  LocalDateFields.$metadata$ = classMeta('LocalDateFields', [ComponentValue]);
-  Object.defineProperty(LocalDateFields.prototype, 'year', {
-    configurable: true,
-    get: LocalDateFields.prototype.tl
-  });
-  Object.defineProperty(LocalDateFields.prototype, 'month', {
-    configurable: true,
-    get: LocalDateFields.prototype.ul
-  });
-  Object.defineProperty(LocalDateFields.prototype, 'day', {
-    configurable: true,
-    get: LocalDateFields.prototype.vl
-  });
   function Companion_7() {
-    Companion_instance_7 = this;
   }
-  Companion_7.prototype.parse = function (componentValue) {
-    var tmp$ret$1;
-    {
-      var tmp$ret$0;
-      {
-        tmp$ret$0 = componentValue;
-      }
-      tmp$ret$1 = tmp$ret$0.toUpperCase();
-    }
-    var tmp0_subject = tmp$ret$1;
+  protoOf(Companion_7).parse = function (componentValue) {
+    // Inline function 'kotlin.text.uppercase' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp0_subject = componentValue.toUpperCase();
     var tmp;
-    if (tmp0_subject === TransportTypes_getInstance().yl_1.am_1) {
-      tmp = TransportTypes_getInstance().yl_1;
-    } else if (tmp0_subject === TransportTypes_getInstance().zl_1.am_1) {
-      tmp = TransportTypes_getInstance().zl_1;
+    if (tmp0_subject === TransportTypes_getInstance().FLIGHT.value) {
+      tmp = TransportTypes_getInstance().FLIGHT;
+    } else if (tmp0_subject === TransportTypes_getInstance().TRAIN.value) {
+      tmp = TransportTypes_getInstance().TRAIN;
     } else {
       throw IllegalArgumentException_init_$Create$('Unknown charter type: ' + componentValue);
     }
     return tmp;
   };
-  Companion_7.$metadata$ = objectMeta('Companion');
-  var Companion_instance_7;
-  function Companion_getInstance_8() {
-    if (Companion_instance_7 == null)
-      new Companion_7();
-    return Companion_instance_7;
+  var Companion_instance_8;
+  function Companion_getInstance_7() {
+    return Companion_instance_8;
   }
   function TransportType(value) {
-    Companion_getInstance_8();
-    this.am_1 = value;
+    this.value = value;
   }
-  TransportType.prototype.n1 = function () {
-    return this.am_1;
+  protoOf(TransportType).f4 = function () {
+    return this.value;
   };
-  TransportType.prototype.toComponentValue = function () {
-    return this.am_1;
+  protoOf(TransportType).toComponentValue = function () {
+    return this.value;
   };
-  TransportType.prototype.component1 = function () {
-    return this.am_1;
+  protoOf(TransportType).o9 = function () {
+    return this.value;
   };
-  TransportType.prototype.copy = function (value) {
-    return this.bm(value === void 1 ? this.am_1 : value);
-  };
-  TransportType.prototype.bm = function (value) {
+  protoOf(TransportType).pk = function (value) {
     return new TransportType(value);
   };
-  TransportType.prototype.cm = function (value, $mask0, $handler) {
-    if (!(($mask0 & 1) === 0))
-      value = this.am_1;
-    return this.bm(value);
+  protoOf(TransportType).copy = function (value, $super) {
+    value = value === VOID ? this.value : value;
+    return this.pk(value);
   };
-  TransportType.prototype.toString = function () {
-    return 'TransportType(value=' + this.am_1 + ')';
+  protoOf(TransportType).toString = function () {
+    return 'TransportType(value=' + this.value + ')';
   };
-  TransportType.prototype.hashCode = function () {
-    return getStringHashCode(this.am_1);
+  protoOf(TransportType).hashCode = function () {
+    return getStringHashCode(this.value);
   };
-  TransportType.prototype.equals = function (other) {
+  protoOf(TransportType).equals = function (other) {
     if (this === other)
       return true;
     if (!(other instanceof TransportType))
       return false;
     var tmp0_other_with_cast = other instanceof TransportType ? other : THROW_CCE();
-    if (!(this.am_1 === tmp0_other_with_cast.am_1))
+    if (!(this.value === tmp0_other_with_cast.value))
       return false;
     return true;
   };
-  TransportType.$metadata$ = classMeta('TransportType', [ComponentValue]);
-  Object.defineProperty(TransportType.prototype, 'value', {
-    configurable: true,
-    get: TransportType.prototype.n1
-  });
   function TransportTypes() {
     TransportTypes_instance = this;
-    this.yl_1 = new TransportType('FLIGHT');
-    this.zl_1 = new TransportType('TRAIN');
+    this.FLIGHT = new TransportType('FLIGHT');
+    this.TRAIN = new TransportType('TRAIN');
   }
-  TransportTypes.prototype.dm = function () {
-    return this.yl_1;
+  protoOf(TransportTypes).qk = function () {
+    return this.FLIGHT;
   };
-  TransportTypes.prototype.em = function () {
-    return this.zl_1;
+  protoOf(TransportTypes).rk = function () {
+    return this.TRAIN;
   };
-  TransportTypes.$metadata$ = objectMeta('TransportTypes');
-  Object.defineProperty(TransportTypes.prototype, 'FLIGHT', {
-    configurable: true,
-    get: TransportTypes.prototype.dm
-  });
-  Object.defineProperty(TransportTypes.prototype, 'TRAIN', {
-    configurable: true,
-    get: TransportTypes.prototype.em
-  });
   var TransportTypes_instance;
   function TransportTypes_getInstance() {
     if (TransportTypes_instance == null)
@@ -713,354 +445,262 @@
     return TransportTypes_instance;
   }
   function get_MagicLinkHashParser() {
-    init_properties_testActionParsers_kt_r3bh60();
+    _init_properties_testActionParsers_kt__q0ar6u();
     return MagicLinkHashParser;
   }
   var MagicLinkHashParser;
   function get_MagicLinkParser() {
-    init_properties_testActionParsers_kt_r3bh60();
+    _init_properties_testActionParsers_kt__q0ar6u();
     return MagicLinkParser;
   }
   var MagicLinkParser;
   function get_LoginParser() {
-    init_properties_testActionParsers_kt_r3bh60();
+    _init_properties_testActionParsers_kt__q0ar6u();
     return LoginParser;
   }
   var LoginParser;
   function get_SearchParser() {
-    init_properties_testActionParsers_kt_r3bh60();
+    _init_properties_testActionParsers_kt__q0ar6u();
     return SearchParser;
   }
   var SearchParser;
   function get_ProfileParser() {
-    init_properties_testActionParsers_kt_r3bh60();
+    _init_properties_testActionParsers_kt__q0ar6u();
     return ProfileParser;
   }
   var ProfileParser;
   function get_rootParsers() {
-    init_properties_testActionParsers_kt_r3bh60();
+    _init_properties_testActionParsers_kt__q0ar6u();
     return rootParsers;
   }
   var rootParsers;
   function get_RootActionParser() {
-    init_properties_testActionParsers_kt_r3bh60();
+    _init_properties_testActionParsers_kt__q0ar6u();
     return RootActionParser;
   }
   var RootActionParser;
   function sam$com_motorro_keeplink_deeplink_ActionParser$0(function_0) {
-    this.fm_1 = function_0;
+    this.sk_1 = function_0;
   }
-  sam$com_motorro_keeplink_deeplink_ActionParser$0.prototype.hj = function (components, pathIndex) {
-    return this.fm_1(components, pathIndex);
+  protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0).mi = function (components, pathIndex) {
+    return this.sk_1(components, pathIndex);
   };
-  sam$com_motorro_keeplink_deeplink_ActionParser$0.$metadata$ = classMeta('sam$com_motorro_keeplink_deeplink_ActionParser$0', [ActionParser]);
   function sam$com_motorro_keeplink_deeplink_ActionParser$0_0(function_0) {
-    this.gm_1 = function_0;
+    this.tk_1 = function_0;
   }
-  sam$com_motorro_keeplink_deeplink_ActionParser$0_0.prototype.hj = function (components, pathIndex) {
-    return this.gm_1(components, pathIndex);
+  protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_0).mi = function (components, pathIndex) {
+    return this.tk_1(components, pathIndex);
   };
-  sam$com_motorro_keeplink_deeplink_ActionParser$0_0.$metadata$ = classMeta('sam$com_motorro_keeplink_deeplink_ActionParser$0', [ActionParser]);
   function sam$com_motorro_keeplink_deeplink_ActionParser$0_1(function_0) {
-    this.hm_1 = function_0;
+    this.uk_1 = function_0;
   }
-  sam$com_motorro_keeplink_deeplink_ActionParser$0_1.prototype.hj = function (components, pathIndex) {
-    return this.hm_1(components, pathIndex);
+  protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_1).mi = function (components, pathIndex) {
+    return this.uk_1(components, pathIndex);
   };
-  sam$com_motorro_keeplink_deeplink_ActionParser$0_1.$metadata$ = classMeta('sam$com_motorro_keeplink_deeplink_ActionParser$0', [ActionParser]);
   function sam$com_motorro_keeplink_deeplink_ActionParser$0_2(function_0) {
-    this.im_1 = function_0;
+    this.vk_1 = function_0;
   }
-  sam$com_motorro_keeplink_deeplink_ActionParser$0_2.prototype.hj = function (components, pathIndex) {
-    return this.im_1(components, pathIndex);
+  protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_2).mi = function (components, pathIndex) {
+    return this.vk_1(components, pathIndex);
   };
-  sam$com_motorro_keeplink_deeplink_ActionParser$0_2.$metadata$ = classMeta('sam$com_motorro_keeplink_deeplink_ActionParser$0', [ActionParser]);
-  function MagicLinkHashParser$lambda() {
-    return function (components, pathIndex) {
-      var tmp0_safe_receiver = getOrNull(components.getPath(), pathIndex);
-      var tmp;
-      if (tmp0_safe_receiver == null) {
-        tmp = null;
+  function MagicLinkHashParser$lambda(components, pathIndex) {
+    _init_properties_testActionParsers_kt__q0ar6u();
+    var tmp0_safe_receiver = getOrNull(components.getPath(), pathIndex);
+    var tmp;
+    if (tmp0_safe_receiver == null) {
+      tmp = null;
+    } else {
+      // Inline function 'kotlin.takeIf' call
+      // Inline function 'kotlin.contracts.contract' call
+      var tmp_0;
+      // Inline function 'com.motorro.keeplink.testaction.MagicLinkHashParser.<anonymous>.<anonymous>' call
+      // Inline function 'kotlin.text.isNotBlank' call
+      if (!isBlank(tmp0_safe_receiver)) {
+        tmp_0 = tmp0_safe_receiver;
       } else {
-        var tmp$ret$2;
-        {
-          {
-          }
-          var tmp_0;
-          var tmp$ret$1;
-          {
-            var tmp$ret$0;
-            {
-              tmp$ret$0 = !isBlank(tmp0_safe_receiver);
-            }
-            tmp$ret$1 = tmp$ret$0;
-          }
-          if (tmp$ret$1) {
-            tmp_0 = tmp0_safe_receiver;
-          } else {
-            tmp_0 = null;
-          }
-          tmp$ret$2 = tmp_0;
-        }
-        tmp = tmp$ret$2;
+        tmp_0 = null;
       }
-      var tmp1_safe_receiver = tmp;
-      var tmp_1;
-      if (tmp1_safe_receiver == null) {
-        tmp_1 = null;
-      } else {
-        var tmp$ret$4;
-        {
-          {
-          }
-          var tmp$ret$3;
-          {
-            tmp$ret$3 = new Magic(tmp1_safe_receiver);
-          }
-          tmp$ret$4 = tmp$ret$3;
-        }
-        tmp_1 = tmp$ret$4;
-      }
-      return tmp_1;
-    };
+      tmp = tmp_0;
+    }
+    var tmp1_safe_receiver = tmp;
+    var tmp_1;
+    if (tmp1_safe_receiver == null) {
+      tmp_1 = null;
+    } else {
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'com.motorro.keeplink.testaction.MagicLinkHashParser.<anonymous>.<anonymous>' call
+      tmp_1 = new Magic(tmp1_safe_receiver);
+    }
+    return tmp_1;
   }
-  function MagicLinkParser$lambda() {
-    return function (_anonymous_parameter_0__qggqh8, _anonymous_parameter_1__qggqgd) {
-      return Companion_getInstance_0().ik_1;
-    };
+  function MagicLinkParser$lambda(_anonymous_parameter_0__qggqh8, _anonymous_parameter_1__qggqgd) {
+    _init_properties_testActionParsers_kt__q0ar6u();
+    return Companion_getInstance().nj_1;
   }
-  function SearchParser$lambda($tmp0_with) {
+  function SearchParser$lambda($$this$with) {
     return function (components, _anonymous_parameter_1__qggqgd) {
-      var tmp$ret$6;
-      {
-        var tmp$ret$5;
-        {
-          var tmp;
-          try {
-            var tmp$ret$3;
-            {
-              var tmp0_success = Companion_getInstance();
-              var tmp$ret$2;
-              {
-                var tmp0_safe_receiver = getValue(components.getSearch(), 'type');
-                var tmp_0;
-                if (tmp0_safe_receiver == null) {
-                  tmp_0 = null;
-                } else {
-                  var tmp$ret$1;
-                  {
-                    {
-                    }
-                    var tmp$ret$0;
-                    {
-                      tmp$ret$0 = Companion_getInstance_8().parse(tmp0_safe_receiver);
-                    }
-                    tmp$ret$1 = tmp$ret$0;
-                  }
-                  tmp_0 = tmp$ret$1;
-                }
-                tmp$ret$2 = tmp_0;
-              }
-              var tmp1_success = tmp$ret$2;
-              tmp$ret$3 = _Result___init__impl__xyqfz8(tmp1_success);
-            }
-            tmp = tmp$ret$3;
-          } catch ($p) {
-            var tmp_1;
-            if ($p instanceof Error) {
-              var tmp$ret$4;
-              {
-                var tmp2_failure = Companion_getInstance();
-                tmp$ret$4 = _Result___init__impl__xyqfz8(createFailure($p));
-              }
-              tmp_1 = tmp$ret$4;
-            } else {
-              throw $p;
-            }
-            tmp = tmp_1;
-          }
-          tmp$ret$5 = tmp;
-        }
-        var tmp0_getOrNull = tmp$ret$5;
-        var tmp_2;
-        if (_Result___get_isFailure__impl__jpiriv(tmp0_getOrNull)) {
-          tmp_2 = null;
+      // Inline function 'kotlin.Result.getOrNull' call
+      // Inline function 'kotlin.runCatching' call
+      var tmp;
+      try {
+        // Inline function 'kotlin.Companion.success' call
+        // Inline function 'com.motorro.keeplink.testaction.SearchParser.<anonymous>.<anonymous>.<anonymous>' call
+        var tmp_0 = components.getSearch();
+        var tmp0_safe_receiver = getValue(tmp_0, 'type');
+        var tmp_1;
+        if (tmp0_safe_receiver == null) {
+          tmp_1 = null;
         } else {
-          var tmp_3 = _Result___get_value__impl__bjfvqg(tmp0_getOrNull);
-          tmp_2 = (tmp_3 == null ? true : isObject(tmp_3)) ? tmp_3 : THROW_CCE();
+          // Inline function 'kotlin.let' call
+          // Inline function 'kotlin.contracts.contract' call
+          // Inline function 'com.motorro.keeplink.testaction.SearchParser.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
+          tmp_1 = Companion_instance_8.parse(tmp0_safe_receiver);
         }
-        tmp$ret$6 = tmp_2;
+        var value = tmp_1;
+        tmp = _Result___init__impl__xyqfz8(value);
+      } catch ($p) {
+        var tmp_2;
+        if ($p instanceof Error) {
+          var e = $p;
+          // Inline function 'kotlin.Companion.failure' call
+          tmp_2 = _Result___init__impl__xyqfz8(createFailure(e));
+        } else {
+          throw $p;
+        }
+        tmp = tmp_2;
       }
-      var tmp0_elvis_lhs = tmp$ret$6;
-      var tmp_4;
+      var this_0 = tmp;
+      var tmp_3;
+      if (_Result___get_isFailure__impl__jpiriv(this_0)) {
+        tmp_3 = null;
+      } else {
+        var tmp_4 = _Result___get_value__impl__bjfvqg(this_0);
+        tmp_3 = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
+      }
+      var tmp0_elvis_lhs = tmp_3;
+      var tmp_5;
       if (tmp0_elvis_lhs == null) {
         return null;
       } else {
-        tmp_4 = tmp0_elvis_lhs;
+        tmp_5 = tmp0_elvis_lhs;
       }
-      var type = tmp_4;
-      var tmp1_elvis_lhs = getValue(components.getSearch(), 'from');
-      var tmp_5;
+      var type = tmp_5;
+      var tmp_6 = components.getSearch();
+      var tmp1_elvis_lhs = getValue(tmp_6, 'from');
+      var tmp_7;
       if (tmp1_elvis_lhs == null) {
         return null;
       } else {
-        tmp_5 = tmp1_elvis_lhs;
+        tmp_7 = tmp1_elvis_lhs;
       }
-      var from = tmp_5;
-      var tmp2_elvis_lhs = getValue(components.getSearch(), 'to');
-      var tmp_6;
+      var from = tmp_7;
+      var tmp_8 = components.getSearch();
+      var tmp2_elvis_lhs = getValue(tmp_8, 'to');
+      var tmp_9;
       if (tmp2_elvis_lhs == null) {
         return null;
       } else {
-        tmp_6 = tmp2_elvis_lhs;
+        tmp_9 = tmp2_elvis_lhs;
       }
-      var to = tmp_6;
-      var tmp$ret$13;
-      {
-        var tmp$ret$12;
-        {
-          var tmp_7;
-          try {
-            var tmp$ret$10;
-            {
-              var tmp0_success_0 = Companion_getInstance();
-              var tmp$ret$9;
-              {
-                var tmp0_safe_receiver_0 = getValue(components.getSearch(), 'date');
-                var tmp_8;
-                if (tmp0_safe_receiver_0 == null) {
-                  tmp_8 = null;
-                } else {
-                  var tmp$ret$8;
-                  {
-                    {
-                    }
-                    var tmp$ret$7;
-                    {
-                      tmp$ret$7 = Companion_getInstance_7().parse(tmp0_safe_receiver_0);
-                    }
-                    tmp$ret$8 = tmp$ret$7;
-                  }
-                  tmp_8 = tmp$ret$8;
-                }
-                tmp$ret$9 = tmp_8;
-              }
-              var tmp1_success_0 = tmp$ret$9;
-              tmp$ret$10 = _Result___init__impl__xyqfz8(tmp1_success_0);
-            }
-            tmp_7 = tmp$ret$10;
-          } catch ($p) {
-            var tmp_9;
-            if ($p instanceof Error) {
-              var tmp$ret$11;
-              {
-                var tmp2_failure_0 = Companion_getInstance();
-                tmp$ret$11 = _Result___init__impl__xyqfz8(createFailure($p));
-              }
-              tmp_9 = tmp$ret$11;
-            } else {
-              throw $p;
-            }
-            tmp_7 = tmp_9;
-          }
-          tmp$ret$12 = tmp_7;
-        }
-        var tmp1_getOrNull = tmp$ret$12;
-        var tmp_10;
-        if (_Result___get_isFailure__impl__jpiriv(tmp1_getOrNull)) {
-          tmp_10 = null;
+      var to = tmp_9;
+      // Inline function 'kotlin.Result.getOrNull' call
+      // Inline function 'kotlin.runCatching' call
+      var tmp_10;
+      try {
+        // Inline function 'kotlin.Companion.success' call
+        // Inline function 'com.motorro.keeplink.testaction.SearchParser.<anonymous>.<anonymous>.<anonymous>' call
+        var tmp_11 = components.getSearch();
+        var tmp0_safe_receiver_0 = getValue(tmp_11, 'date');
+        var tmp_12;
+        if (tmp0_safe_receiver_0 == null) {
+          tmp_12 = null;
         } else {
-          var tmp_11 = _Result___get_value__impl__bjfvqg(tmp1_getOrNull);
-          tmp_10 = (tmp_11 == null ? true : isObject(tmp_11)) ? tmp_11 : THROW_CCE();
+          // Inline function 'kotlin.let' call
+          // Inline function 'kotlin.contracts.contract' call
+          // Inline function 'com.motorro.keeplink.testaction.SearchParser.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
+          tmp_12 = Companion_getInstance_6().parse(tmp0_safe_receiver_0);
         }
-        tmp$ret$13 = tmp_10;
+        var value_0 = tmp_12;
+        tmp_10 = _Result___init__impl__xyqfz8(value_0);
+      } catch ($p) {
+        var tmp_13;
+        if ($p instanceof Error) {
+          var e_0 = $p;
+          // Inline function 'kotlin.Companion.failure' call
+          tmp_13 = _Result___init__impl__xyqfz8(createFailure(e_0));
+        } else {
+          throw $p;
+        }
+        tmp_10 = tmp_13;
       }
-      var tmp3_elvis_lhs = tmp$ret$13;
-      var tmp_12;
+      var this_1 = tmp_10;
+      var tmp_14;
+      if (_Result___get_isFailure__impl__jpiriv(this_1)) {
+        tmp_14 = null;
+      } else {
+        var tmp_15 = _Result___get_value__impl__bjfvqg(this_1);
+        tmp_14 = (tmp_15 == null ? true : !(tmp_15 == null)) ? tmp_15 : THROW_CCE();
+      }
+      var tmp3_elvis_lhs = tmp_14;
+      var tmp_16;
       if (tmp3_elvis_lhs == null) {
         return null;
       } else {
-        tmp_12 = tmp3_elvis_lhs;
+        tmp_16 = tmp3_elvis_lhs;
       }
-      var date = tmp_12;
+      var date = tmp_16;
       return new Search(type, from, to, date);
     };
   }
   function ProfileParser$lambda() {
-    return function () {
-      return new Profile();
-    };
+    _init_properties_testActionParsers_kt__q0ar6u();
+    return new Profile();
   }
-  function RootActionParser$lambda() {
-    return function (components, _anonymous_parameter_1__qggqgd) {
-      var tmp;
-      var tmp$ret$0;
-      {
-        var tmp0_isEmpty = components.getPath();
-        tmp$ret$0 = tmp0_isEmpty.length === 0;
-      }
-      if (tmp$ret$0) {
-        tmp = new Root();
-      } else {
-        tmp = new Unknown(components);
-      }
-      return tmp;
-    };
+  function RootActionParser$lambda(components, _anonymous_parameter_1__qggqgd) {
+    _init_properties_testActionParsers_kt__q0ar6u();
+    var tmp;
+    // Inline function 'kotlin.collections.isEmpty' call
+    if (components.getPath().length === 0) {
+      tmp = new Root();
+    } else {
+      tmp = new Unknown(components);
+    }
+    return tmp;
   }
   var properties_initialized_testActionParsers_kt_dq8jr8;
-  function init_properties_testActionParsers_kt_r3bh60() {
-    if (properties_initialized_testActionParsers_kt_dq8jr8) {
-    } else {
+  function _init_properties_testActionParsers_kt__q0ar6u() {
+    if (!properties_initialized_testActionParsers_kt_dq8jr8) {
       properties_initialized_testActionParsers_kt_dq8jr8 = true;
-      var tmp = MagicLinkHashParser$lambda();
+      var tmp = MagicLinkHashParser$lambda;
       MagicLinkHashParser = new sam$com_motorro_keeplink_deeplink_ActionParser$0(tmp);
-      Companion_getInstance_3();
       var tmp_0 = listOf(get_MagicLinkHashParser());
-      var tmp_1 = MagicLinkParser$lambda();
+      var tmp_1 = MagicLinkParser$lambda;
       MagicLinkParser = new SegmentCheckParser('magic', new BranchActionParser(tmp_0, new sam$com_motorro_keeplink_deeplink_ActionParser$0_0(tmp_1)));
-      Companion_getInstance_4();
       LoginParser = new SegmentCheckParser('login', BranchActionParser_init_$Create$([get_MagicLinkParser()]));
-      var tmp$ret$1;
-      {
-        var tmp0_with = Companion_getInstance_5();
-        {
-        }
-        var tmp$ret$0;
-        {
-          var tmp_2 = SearchParser$lambda(tmp0_with);
-          tmp$ret$0 = new SegmentCheckParser('search', new sam$com_motorro_keeplink_deeplink_ActionParser$0_1(tmp_2));
-        }
-        tmp$ret$1 = tmp$ret$0;
-      }
-      SearchParser = tmp$ret$1;
-      Companion_getInstance_2();
-      ProfileParser = new SegmentCheckParser('profile', new DefaultActionParser(ProfileParser$lambda()));
+      // Inline function 'kotlin.with' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'com.motorro.keeplink.testaction.SearchParser.<anonymous>' call
+      var tmp_2 = SearchParser$lambda(Companion_instance_5);
+      SearchParser = new SegmentCheckParser('search', new sam$com_motorro_keeplink_deeplink_ActionParser$0_1(tmp_2));
+      ProfileParser = new SegmentCheckParser('profile', new DefaultActionParser(ProfileParser$lambda));
       rootParsers = listOf_0([get_ProfileParser(), get_LoginParser(), get_SearchParser()]);
       var tmp_3 = get_rootParsers();
-      var tmp_4 = RootActionParser$lambda();
+      var tmp_4 = RootActionParser$lambda;
       RootActionParser = new BranchActionParser(tmp_3, new sam$com_motorro_keeplink_deeplink_ActionParser$0_2(tmp_4));
     }
   }
   function LinkParsers() {
     LinkParsers_instance = this;
-    this.jm_1 = new SchemeHostLinkParser(get_RootActionParser(), 'motorro', '');
-    this.km_1 = new SchemeHostLinkParser(get_RootActionParser(), 'http', 'localhost:8080');
+    this.MOTORRO = new SchemeHostLinkParser(get_RootActionParser(), 'motorro', '');
+    this.LOCALHOST_8080 = new SchemeHostLinkParser(get_RootActionParser(), 'http', 'localhost:8080');
   }
-  LinkParsers.prototype.lm = function () {
-    return this.jm_1;
+  protoOf(LinkParsers).wk = function () {
+    return this.MOTORRO;
   };
-  LinkParsers.prototype.mm = function () {
-    return this.km_1;
+  protoOf(LinkParsers).xk = function () {
+    return this.LOCALHOST_8080;
   };
-  LinkParsers.$metadata$ = objectMeta('LinkParsers');
-  Object.defineProperty(LinkParsers.prototype, 'MOTORRO', {
-    configurable: true,
-    get: LinkParsers.prototype.lm
-  });
-  Object.defineProperty(LinkParsers.prototype, 'LOCALHOST_8080', {
-    configurable: true,
-    get: LinkParsers.prototype.mm
-  });
   var LinkParsers_instance;
   function LinkParsers_getInstance() {
     if (LinkParsers_instance == null)
@@ -1069,24 +709,15 @@
   }
   function LinkBuilders() {
     LinkBuilders_instance = this;
-    this.nm_1 = new SchemeHostLinkBuilder('motorro', '');
-    this.om_1 = new SchemeHostLinkBuilder('http', 'localhost:8080');
+    this.MOTORRO = new SchemeHostLinkBuilder('motorro', '');
+    this.LOCALHOST_8080 = new SchemeHostLinkBuilder('http', 'localhost:8080');
   }
-  LinkBuilders.prototype.lm = function () {
-    return this.nm_1;
+  protoOf(LinkBuilders).wk = function () {
+    return this.MOTORRO;
   };
-  LinkBuilders.prototype.mm = function () {
-    return this.om_1;
+  protoOf(LinkBuilders).xk = function () {
+    return this.LOCALHOST_8080;
   };
-  LinkBuilders.$metadata$ = objectMeta('LinkBuilders');
-  Object.defineProperty(LinkBuilders.prototype, 'MOTORRO', {
-    configurable: true,
-    get: LinkBuilders.prototype.lm
-  });
-  Object.defineProperty(LinkBuilders.prototype, 'LOCALHOST_8080', {
-    configurable: true,
-    get: LinkBuilders.prototype.mm
-  });
   var LinkBuilders_instance;
   function LinkBuilders_getInstance() {
     if (LinkBuilders_instance == null)
@@ -1097,7 +728,7 @@
     return new LocalDateFields(date.getFullYear(), date.getMonth() + 1 | 0, date.getDate());
   }
   function toDate(localDateFields) {
-    return new Date(localDateFields.ql_1, localDateFields.rl_1 - 1 | 0, localDateFields.sl_1);
+    return new Date(localDateFields.year, localDateFields.month - 1 | 0, localDateFields.day);
   }
   function magicLink(token) {
     return new Magic(token);
@@ -1105,6 +736,14 @@
   function search(type, from, to, date) {
     return new Search(type, from, to, fromDate(date));
   }
+  //region block: init
+  Companion_instance_1 = new Companion_0();
+  Companion_instance_2 = new Companion_1();
+  Companion_instance_3 = new Companion_2();
+  Companion_instance_4 = new Companion_3();
+  Companion_instance_5 = new Companion_4();
+  Companion_instance_8 = new Companion_7();
+  //endregion
   //region block: exports
   function $jsExportAll$(_) {
     var $com = _.com || (_.com = {});
@@ -1112,11 +751,6 @@
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
     var $com$motorro$keeplink$testaction = $com$motorro$keeplink.testaction || ($com$motorro$keeplink.testaction = {});
     $com$motorro$keeplink$testaction.TestAction = TestAction;
-    $com$motorro$keeplink$testaction.TestAction.TestAction_init_$Create$ = TestAction_init_$Create$;
-    Object.defineProperty($com$motorro$keeplink$testaction.TestAction, 'Companion', {
-      configurable: true,
-      get: Companion_getInstance_6
-    });
     $com$motorro$keeplink$testaction.TestAction.Invalid = Invalid;
     $com$motorro$keeplink$testaction.TestAction.Unknown = Unknown;
     $com$motorro$keeplink$testaction.TestAction.Root = Root;
@@ -1124,42 +758,28 @@
     $com$motorro$keeplink$testaction.TestAction.Login = Login;
     $com$motorro$keeplink$testaction.TestAction.Login.Magic = Magic;
     $com$motorro$keeplink$testaction.TestAction.Search = Search;
+    defineProp($com$motorro$keeplink$testaction.TestAction, 'Companion', Companion_getInstance_5);
     var $com = _.com || (_.com = {});
     var $com$motorro = $com.motorro || ($com.motorro = {});
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
     var $com$motorro$keeplink$testaction = $com$motorro$keeplink.testaction || ($com$motorro$keeplink.testaction = {});
     var $com$motorro$keeplink$testaction$data = $com$motorro$keeplink$testaction.data || ($com$motorro$keeplink$testaction.data = {});
     $com$motorro$keeplink$testaction$data.LocalDateFields = LocalDateFields;
-    Object.defineProperty($com$motorro$keeplink$testaction$data.LocalDateFields, 'Companion', {
-      configurable: true,
-      get: Companion_getInstance_7
-    });
+    defineProp($com$motorro$keeplink$testaction$data.LocalDateFields, 'Companion', Companion_getInstance_6);
     var $com = _.com || (_.com = {});
     var $com$motorro = $com.motorro || ($com.motorro = {});
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
     var $com$motorro$keeplink$testaction = $com$motorro$keeplink.testaction || ($com$motorro$keeplink.testaction = {});
     var $com$motorro$keeplink$testaction$data = $com$motorro$keeplink$testaction.data || ($com$motorro$keeplink$testaction.data = {});
     $com$motorro$keeplink$testaction$data.TransportType = TransportType;
-    Object.defineProperty($com$motorro$keeplink$testaction$data.TransportType, 'Companion', {
-      configurable: true,
-      get: Companion_getInstance_8
-    });
-    Object.defineProperty($com$motorro$keeplink$testaction$data, 'TransportTypes', {
-      configurable: true,
-      get: TransportTypes_getInstance
-    });
+    defineProp($com$motorro$keeplink$testaction$data.TransportType, 'Companion', Companion_getInstance_7);
+    defineProp($com$motorro$keeplink$testaction$data, 'TransportTypes', TransportTypes_getInstance);
     var $com = _.com || (_.com = {});
     var $com$motorro = $com.motorro || ($com.motorro = {});
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
     var $com$motorro$keeplink$testaction = $com$motorro$keeplink.testaction || ($com$motorro$keeplink.testaction = {});
-    Object.defineProperty($com$motorro$keeplink$testaction, 'LinkParsers', {
-      configurable: true,
-      get: LinkParsers_getInstance
-    });
-    Object.defineProperty($com$motorro$keeplink$testaction, 'LinkBuilders', {
-      configurable: true,
-      get: LinkBuilders_getInstance
-    });
+    defineProp($com$motorro$keeplink$testaction, 'LinkParsers', LinkParsers_getInstance);
+    defineProp($com$motorro$keeplink$testaction, 'LinkBuilders', LinkBuilders_getInstance);
     var $com = _.com || (_.com = {});
     var $com$motorro = $com.motorro || ($com.motorro = {});
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
@@ -1179,6 +799,6 @@
   kotlin_com_motorro_keeplink_deeplink.$jsExportAll$(_);
   //endregion
   return _;
-}(module.exports, require('./kotlin-kotlin-stdlib-js-ir.js'), require('./kotlinx-serialization-kotlinx-serialization-core-js-ir.js'), require('./uri.js'), require('./deeplink.js')));
+}(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./kotlinx-serialization-kotlinx-serialization-core.js'), require('./uri.js'), require('./deeplink.js')));
 
 //# sourceMappingURL=testaction.js.map

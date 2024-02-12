@@ -2,80 +2,90 @@
   'use strict';
   //region block: imports
   var imul = Math.imul;
+  var protoOf = kotlin_kotlin.$_$.z2;
+  var objectCreate = kotlin_kotlin.$_$.x2;
   var getKClassFromExpression = kotlin_kotlin.$_$.a;
-  var THROW_CCE = kotlin_kotlin.$_$.u3;
-  var contentEquals = kotlin_kotlin.$_$.t1;
-  var getStringHashCode = kotlin_kotlin.$_$.x2;
-  var contentHashCode = kotlin_kotlin.$_$.u1;
-  var classMeta = kotlin_kotlin.$_$.t2;
-  var interfaceMeta = kotlin_kotlin.$_$.z2;
-  var objectMeta = kotlin_kotlin.$_$.c3;
-  var PluginGeneratedSerialDescriptor = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.j;
-  var StringSerializer_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.e;
-  var Unit_getInstance = kotlin_kotlin.$_$.l1;
-  var UnknownFieldException_init_$Create$ = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.c;
-  var typeParametersSerializers = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.h;
-  var GeneratedSerializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.i;
-  var throwMissingFieldException = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.l;
-  var contentToString = kotlin_kotlin.$_$.v1;
-  var get_nullable = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.f;
-  var isBlank = kotlin_kotlin.$_$.j3;
-  var mutableListOf = kotlin_kotlin.$_$.g2;
-  var copyToArray = kotlin_kotlin.$_$.w1;
-  var charSequenceLength = kotlin_kotlin.$_$.s2;
-  var toString = kotlin_kotlin.$_$.d3;
-  var dropLast = kotlin_kotlin.$_$.g3;
-  var joinToString$default = kotlin_kotlin.$_$.e;
-  var drop = kotlin_kotlin.$_$.h3;
-  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.u;
-  var charArrayOf = kotlin_kotlin.$_$.q2;
-  var split$default = kotlin_kotlin.$_$.g;
-  var collectionSizeOrDefault = kotlin_kotlin.$_$.s1;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.h;
-  var indexOf$default = kotlin_kotlin.$_$.f;
+  var THROW_CCE = kotlin_kotlin.$_$.s3;
+  var Unit_instance = kotlin_kotlin.$_$.k1;
+  var contentEquals = kotlin_kotlin.$_$.p1;
+  var getStringHashCode = kotlin_kotlin.$_$.t2;
+  var contentHashCode = kotlin_kotlin.$_$.q1;
+  var classMeta = kotlin_kotlin.$_$.o2;
+  var setMetadataFor = kotlin_kotlin.$_$.a3;
+  var interfaceMeta = kotlin_kotlin.$_$.v2;
+  var objectMeta = kotlin_kotlin.$_$.y2;
+  var PluginGeneratedSerialDescriptor = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.i;
+  var StringSerializer_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.d;
+  var typeParametersSerializers = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.g;
+  var GeneratedSerializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.h;
+  var VOID = kotlin_kotlin.$_$.c;
+  var defineProp = kotlin_kotlin.$_$.p2;
+  var contentToString = kotlin_kotlin.$_$.r1;
+  var get_nullable = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.e;
+  var isBlank = kotlin_kotlin.$_$.i3;
+  var mutableListOf = kotlin_kotlin.$_$.d2;
+  var copyToArray = kotlin_kotlin.$_$.s1;
+  var charSequenceLength = kotlin_kotlin.$_$.n2;
+  var toString = kotlin_kotlin.$_$.b3;
+  var dropLast = kotlin_kotlin.$_$.e3;
+  var joinToString = kotlin_kotlin.$_$.y1;
+  var drop = kotlin_kotlin.$_$.f3;
+  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.p;
+  var charArrayOf = kotlin_kotlin.$_$.l2;
+  var split = kotlin_kotlin.$_$.l3;
+  var collectionSizeOrDefault = kotlin_kotlin.$_$.o1;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.e;
+  var indexOf = kotlin_kotlin.$_$.h3;
   //endregion
   //region block: pre-declaration
-  UriComponents.prototype = Object.create(PshComponents.prototype);
-  UriComponents.prototype.constructor = UriComponents;
-  PshComponentsImpl.prototype = Object.create(PshComponents.prototype);
-  PshComponentsImpl.prototype.constructor = PshComponentsImpl;
+  setMetadataFor(PathComponent, 'PathComponent', interfaceMeta);
+  setMetadataFor(SearchComponent, 'SearchComponent', interfaceMeta);
+  setMetadataFor(HashComponent, 'HashComponent', interfaceMeta);
+  setMetadataFor(PshComponents, 'PshComponents', classMeta, VOID, [PathComponent, SearchComponent, HashComponent]);
+  setMetadataFor(UriComponents, 'UriComponents', classMeta, PshComponents);
+  setMetadataFor(ComponentValue, 'ComponentValue', interfaceMeta);
+  setMetadataFor(Companion, 'Companion', objectMeta);
+  setMetadataFor($serializer, '$serializer', objectMeta, VOID, [GeneratedSerializer]);
+  setMetadataFor(Param, 'Param', classMeta, VOID, VOID, VOID, VOID, {0: $serializer_getInstance});
+  setMetadataFor(PshComponentsImpl, 'PshComponentsImpl', classMeta, PshComponents, VOID, PshComponentsImpl);
+  setMetadataFor(Companion_0, 'Companion', objectMeta);
+  setMetadataFor($serializer_0, '$serializer', objectMeta, VOID, [GeneratedSerializer]);
+  setMetadataFor(Utm, 'Utm', classMeta, VOID, [SearchComponent], VOID, VOID, {0: $serializer_getInstance_0});
   //endregion
   function UriComponents_init_$Init$(scheme, host, actionComponents, $this) {
     UriComponents.call($this, scheme, host, actionComponents.getPath(), actionComponents.getSearch(), actionComponents.getHash());
     return $this;
   }
   function UriComponents_init_$Create$(scheme, host, actionComponents) {
-    return UriComponents_init_$Init$(scheme, host, actionComponents, Object.create(UriComponents.prototype));
+    return UriComponents_init_$Init$(scheme, host, actionComponents, objectCreate(protoOf(UriComponents)));
   }
   function UriComponents(scheme, host, path, search, hash) {
     PshComponents.call(this);
-    this.ah_1 = scheme;
-    this.bh_1 = host;
-    this.ch_1 = path;
-    this.dh_1 = search;
-    this.eh_1 = hash;
+    this.dh_1 = scheme;
+    this.eh_1 = host;
+    this.fh_1 = path;
+    this.gh_1 = search;
+    this.hh_1 = hash;
   }
-  UriComponents.prototype.getPath = function () {
-    return this.ch_1;
+  protoOf(UriComponents).getPath = function () {
+    return this.fh_1;
   };
-  UriComponents.prototype.getSearch = function () {
-    return this.dh_1;
+  protoOf(UriComponents).getSearch = function () {
+    return this.gh_1;
   };
-  UriComponents.prototype.getHash = function () {
-    return this.eh_1;
+  protoOf(UriComponents).getHash = function () {
+    return this.hh_1;
   };
-  UriComponents.prototype.equals = function (other) {
+  protoOf(UriComponents).equals = function (other) {
     if (this === other)
       return true;
     if (other == null ? true : !getKClassFromExpression(this).equals(getKClassFromExpression(other)))
       return false;
-    if (other instanceof UriComponents)
-      other;
-    else
+    if (!(other instanceof UriComponents))
       THROW_CCE();
-    if (!(this.ah_1 === other.ah_1))
+    if (!(this.dh_1 === other.dh_1))
       return false;
-    if (!(this.bh_1 === other.bh_1))
+    if (!(this.eh_1 === other.eh_1))
       return false;
     if (!contentEquals(this.getPath(), other.getPath()))
       return false;
@@ -85,198 +95,107 @@
       return false;
     return true;
   };
-  UriComponents.prototype.hashCode = function () {
-    var result = getStringHashCode(this.ah_1);
-    result = imul(31, result) + getStringHashCode(this.bh_1) | 0;
+  protoOf(UriComponents).hashCode = function () {
+    var result = getStringHashCode(this.dh_1);
+    result = imul(31, result) + getStringHashCode(this.eh_1) | 0;
     result = imul(31, result) + contentHashCode(this.getPath()) | 0;
     result = imul(31, result) + contentHashCode(this.getSearch()) | 0;
     result = imul(31, result) + getStringHashCode(this.getHash()) | 0;
     return result;
   };
-  UriComponents.$metadata$ = classMeta('UriComponents', undefined, undefined, undefined, undefined, PshComponents.prototype);
   function ComponentValue() {
   }
-  ComponentValue.$metadata$ = interfaceMeta('ComponentValue');
   function HashComponent() {
   }
-  HashComponent.$metadata$ = interfaceMeta('HashComponent');
   function Companion() {
-    Companion_instance = this;
   }
-  Companion.prototype.serializer = function () {
+  protoOf(Companion).ih = function () {
     return $serializer_getInstance();
   };
-  Companion.$metadata$ = objectMeta('Companion');
   var Companion_instance;
   function Companion_getInstance() {
-    if (Companion_instance == null)
-      new Companion();
     return Companion_instance;
   }
   function $serializer() {
     $serializer_instance = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.motorro.keeplink.uri.data.Param', this, 2);
-    tmp0_serialDesc.ng('name', false);
-    tmp0_serialDesc.ng('value', false);
-    this.fh_1 = tmp0_serialDesc;
+    tmp0_serialDesc.zf('name', false);
+    tmp0_serialDesc.zf('value', false);
+    this.jh_1 = tmp0_serialDesc;
   }
-  $serializer.prototype.ld = function () {
-    return this.fh_1;
+  protoOf($serializer).tc = function () {
+    return this.jh_1;
   };
-  $serializer.prototype.kg = function () {
-    var tmp$ret$2;
-    {
-      var tmp0_arrayOf = [StringSerializer_getInstance(), StringSerializer_getInstance()];
-      var tmp$ret$1;
-      {
-        var tmp$ret$0;
-        {
-          tmp$ret$0 = tmp0_arrayOf;
-        }
-        tmp$ret$1 = tmp$ret$0;
-      }
-      tmp$ret$2 = tmp$ret$1;
-    }
-    return tmp$ret$2;
+  protoOf($serializer).bg = function () {
+    // Inline function 'kotlin.arrayOf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return [StringSerializer_getInstance(), StringSerializer_getInstance()];
   };
-  $serializer.prototype.gh = function (decoder) {
-    var tmp0_desc = this.fh_1;
-    var tmp1_flag = true;
-    var tmp2_index = 0;
-    var tmp3_bitMask0 = 0;
-    var tmp4_local0 = null;
-    var tmp5_local1 = null;
-    var tmp6_input = decoder.hh(tmp0_desc);
-    if (tmp6_input.kh()) {
-      tmp4_local0 = tmp6_input.jh(tmp0_desc, 0);
-      tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp6_input.jh(tmp0_desc, 1);
-      tmp3_bitMask0 = tmp3_bitMask0 | 2;
-    } else
-      while (tmp1_flag) {
-        tmp2_index = tmp6_input.ih(tmp0_desc);
-        switch (tmp2_index) {
-          case -1:
-            tmp1_flag = false;
-            break;
-          case 0:
-            tmp4_local0 = tmp6_input.jh(tmp0_desc, 0);
-            tmp3_bitMask0 = tmp3_bitMask0 | 1;
-            break;
-          case 1:
-            tmp5_local1 = tmp6_input.jh(tmp0_desc, 1);
-            tmp3_bitMask0 = tmp3_bitMask0 | 2;
-            break;
-          default:
-            throw UnknownFieldException_init_$Create$(tmp2_index);
-        }
-      }
-    tmp6_input.lh(tmp0_desc);
-    return Param_init_$Create$(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
-  };
-  $serializer.prototype.mh = function (encoder, value) {
-    var tmp0_desc = this.fh_1;
-    var tmp1_output = encoder.hh(tmp0_desc);
-    tmp1_output.ph(tmp0_desc, 0, value.nh_1);
-    tmp1_output.ph(tmp0_desc, 1, value.oh_1);
-    tmp1_output.lh(tmp0_desc);
-  };
-  $serializer.prototype.qh = function (encoder, value) {
-    return this.mh(encoder, value instanceof Param ? value : THROW_CCE());
-  };
-  $serializer.$metadata$ = objectMeta('$serializer', [GeneratedSerializer]);
   var $serializer_instance;
   function $serializer_getInstance() {
     if ($serializer_instance == null)
       new $serializer();
     return $serializer_instance;
   }
-  function Param_init_$Init$(seen1, name, value, serializationConstructorMarker, $this) {
-    if (!(3 === (3 & seen1)))
-      throwMissingFieldException(seen1, 3, $serializer_getInstance().fh_1);
-    $this.nh_1 = name;
-    $this.oh_1 = value;
-    return $this;
-  }
-  function Param_init_$Create$(seen1, name, value, serializationConstructorMarker) {
-    return Param_init_$Init$(seen1, name, value, serializationConstructorMarker, Object.create(Param.prototype));
-  }
   function Param(name, value) {
-    Companion_getInstance();
-    this.nh_1 = name;
-    this.oh_1 = value;
+    this.name = name;
+    this.value = value;
   }
-  Param.prototype.rh = function () {
-    return this.nh_1;
+  protoOf(Param).kh = function () {
+    return this.name;
   };
-  Param.prototype.n1 = function () {
-    return this.oh_1;
+  protoOf(Param).f4 = function () {
+    return this.value;
   };
-  Param.prototype.component1 = function () {
-    return this.nh_1;
+  protoOf(Param).o9 = function () {
+    return this.name;
   };
-  Param.prototype.component2 = function () {
-    return this.oh_1;
+  protoOf(Param).p9 = function () {
+    return this.value;
   };
-  Param.prototype.copy = function (name, value) {
-    return this.sh(name === void 1 ? this.nh_1 : name, value === void 1 ? this.oh_1 : value);
-  };
-  Param.prototype.sh = function (name, value) {
+  protoOf(Param).lh = function (name, value) {
     return new Param(name, value);
   };
-  Param.prototype.th = function (name, value, $mask0, $handler) {
-    if (!(($mask0 & 1) === 0))
-      name = this.nh_1;
-    if (!(($mask0 & 2) === 0))
-      value = this.oh_1;
-    return this.sh(name, value);
+  protoOf(Param).copy = function (name, value, $super) {
+    name = name === VOID ? this.name : name;
+    value = value === VOID ? this.value : value;
+    return this.lh(name, value);
   };
-  Param.prototype.toString = function () {
-    return 'Param(name=' + this.nh_1 + ', value=' + this.oh_1 + ')';
+  protoOf(Param).toString = function () {
+    return 'Param(name=' + this.name + ', value=' + this.value + ')';
   };
-  Param.prototype.hashCode = function () {
-    var result = getStringHashCode(this.nh_1);
-    result = imul(result, 31) + getStringHashCode(this.oh_1) | 0;
+  protoOf(Param).hashCode = function () {
+    var result = getStringHashCode(this.name);
+    result = imul(result, 31) + getStringHashCode(this.value) | 0;
     return result;
   };
-  Param.prototype.equals = function (other) {
+  protoOf(Param).equals = function (other) {
     if (this === other)
       return true;
     if (!(other instanceof Param))
       return false;
     var tmp0_other_with_cast = other instanceof Param ? other : THROW_CCE();
-    if (!(this.nh_1 === tmp0_other_with_cast.nh_1))
+    if (!(this.name === tmp0_other_with_cast.name))
       return false;
-    if (!(this.oh_1 === tmp0_other_with_cast.oh_1))
+    if (!(this.value === tmp0_other_with_cast.value))
       return false;
     return true;
   };
-  Param.$metadata$ = classMeta('Param', undefined, undefined, {0: $serializer_getInstance});
-  Object.defineProperty(Param.prototype, 'name', {
-    configurable: true,
-    get: Param.prototype.rh
-  });
-  Object.defineProperty(Param.prototype, 'value', {
-    configurable: true,
-    get: Param.prototype.n1
-  });
   function of(_this__u8e3s4, value) {
     return new Param(_this__u8e3s4, value);
   }
   function getValue(_this__u8e3s4, name) {
     var tmp$ret$1;
     $l$block: {
-      var indexedObject = _this__u8e3s4;
+      // Inline function 'kotlin.collections.firstOrNull' call
       var inductionVariable = 0;
-      var last = indexedObject.length;
+      var last = _this__u8e3s4.length;
       while (inductionVariable < last) {
-        var element = indexedObject[inductionVariable];
+        var element = _this__u8e3s4[inductionVariable];
         inductionVariable = inductionVariable + 1 | 0;
-        var tmp$ret$0;
-        {
-          tmp$ret$0 = name === element.nh_1;
-        }
-        if (tmp$ret$0) {
+        // Inline function 'com.motorro.keeplink.uri.data.getValue.<anonymous>' call
+        if (name === element.name) {
           tmp$ret$1 = element;
           break $l$block;
         }
@@ -284,14 +203,13 @@
       tmp$ret$1 = null;
     }
     var tmp0_safe_receiver = tmp$ret$1;
-    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.oh_1;
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.value;
   }
   function PathComponent() {
   }
-  PathComponent.$metadata$ = interfaceMeta('PathComponent');
   function PshComponents() {
   }
-  PshComponents.prototype.equals = function (other) {
+  protoOf(PshComponents).equals = function (other) {
     if (this === other)
       return true;
     if (!(other instanceof PshComponents))
@@ -304,860 +222,484 @@
       return false;
     return true;
   };
-  PshComponents.prototype.hashCode = function () {
+  protoOf(PshComponents).hashCode = function () {
     var result = contentHashCode(this.getPath());
     result = imul(31, result) + contentHashCode(this.getSearch()) | 0;
     result = imul(31, result) + getStringHashCode(this.getHash()) | 0;
     return result;
   };
-  PshComponents.prototype.toString = function () {
+  protoOf(PshComponents).toString = function () {
     return 'Action(path=' + contentToString(this.getPath()) + ', search=' + contentToString(this.getSearch()) + ', hash=' + this.getHash() + '))';
   };
-  PshComponents.$metadata$ = classMeta('PshComponents', [PathComponent, SearchComponent, HashComponent]);
-  function PshComponentsImpl_init_$Init$(mPath, mSearch, mHash, $mask0, $marker, $this) {
-    if (!(($mask0 & 1) === 0))
-      mPath = null;
-    if (!(($mask0 & 2) === 0))
-      mSearch = null;
-    if (!(($mask0 & 4) === 0))
-      mHash = null;
-    PshComponentsImpl.call($this, mPath, mSearch, mHash);
-    return $this;
-  }
-  function PshComponentsImpl_init_$Create$(mPath, mSearch, mHash, $mask0, $marker) {
-    return PshComponentsImpl_init_$Init$(mPath, mSearch, mHash, $mask0, $marker, Object.create(PshComponentsImpl.prototype));
-  }
   function PshComponentsImpl(mPath, mSearch, mHash) {
-    var mPath_0 = mPath === void 1 ? null : mPath;
-    var mSearch_0 = mSearch === void 1 ? null : mSearch;
-    var mHash_0 = mHash === void 1 ? null : mHash;
+    mPath = mPath === VOID ? null : mPath;
+    mSearch = mSearch === VOID ? null : mSearch;
+    mHash = mHash === VOID ? null : mHash;
     PshComponents.call(this);
-    this.uh_1 = mPath_0;
-    this.vh_1 = mSearch_0;
-    this.wh_1 = mHash_0;
+    this.mPath = mPath;
+    this.mSearch = mSearch;
+    this.mHash = mHash;
   }
-  PshComponentsImpl.prototype.xh = function (_set____db54di) {
-    this.uh_1 = _set____db54di;
+  protoOf(PshComponentsImpl).mh = function (_set____db54di) {
+    this.mPath = _set____db54di;
   };
-  PshComponentsImpl.prototype.yh = function () {
-    return this.uh_1;
+  protoOf(PshComponentsImpl).nh = function () {
+    return this.mPath;
   };
-  PshComponentsImpl.prototype.zh = function (_set____db54di) {
-    this.vh_1 = _set____db54di;
+  protoOf(PshComponentsImpl).oh = function (_set____db54di) {
+    this.mSearch = _set____db54di;
   };
-  PshComponentsImpl.prototype.ai = function () {
-    return this.vh_1;
+  protoOf(PshComponentsImpl).ph = function () {
+    return this.mSearch;
   };
-  PshComponentsImpl.prototype.bi = function (_set____db54di) {
-    this.wh_1 = _set____db54di;
+  protoOf(PshComponentsImpl).qh = function (_set____db54di) {
+    this.mHash = _set____db54di;
   };
-  PshComponentsImpl.prototype.ci = function () {
-    return this.wh_1;
+  protoOf(PshComponentsImpl).rh = function () {
+    return this.mHash;
   };
-  PshComponentsImpl.prototype.getPath = function () {
-    var tmp0_elvis_lhs = this.uh_1;
+  protoOf(PshComponentsImpl).getPath = function () {
+    var tmp0_elvis_lhs = this.mPath;
     var tmp;
     if (tmp0_elvis_lhs == null) {
-      var tmp$ret$0;
-      {
-        tmp$ret$0 = [];
-      }
-      tmp = tmp$ret$0;
+      // Inline function 'kotlin.emptyArray' call
+      tmp = [];
     } else {
       tmp = tmp0_elvis_lhs;
     }
     return tmp;
   };
-  PshComponentsImpl.prototype.getSearch = function () {
-    var tmp0_elvis_lhs = this.vh_1;
+  protoOf(PshComponentsImpl).getSearch = function () {
+    var tmp0_elvis_lhs = this.mSearch;
     var tmp;
     if (tmp0_elvis_lhs == null) {
-      var tmp$ret$0;
-      {
-        tmp$ret$0 = [];
-      }
-      tmp = tmp$ret$0;
+      // Inline function 'kotlin.emptyArray' call
+      tmp = [];
     } else {
       tmp = tmp0_elvis_lhs;
     }
     return tmp;
   };
-  PshComponentsImpl.prototype.getHash = function () {
-    var tmp0_elvis_lhs = this.wh_1;
+  protoOf(PshComponentsImpl).getHash = function () {
+    var tmp0_elvis_lhs = this.mHash;
     return tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs;
   };
-  PshComponentsImpl.prototype.toString = function () {
-    var tmp0_safe_receiver = this.uh_1;
+  protoOf(PshComponentsImpl).toString = function () {
+    var tmp0_safe_receiver = this.mPath;
     var tmp = tmp0_safe_receiver == null ? null : contentToString(tmp0_safe_receiver);
-    var tmp1_safe_receiver = this.vh_1;
-    return 'PshComponentsImpl(mPath=' + tmp + ', mSearch=' + (tmp1_safe_receiver == null ? null : contentToString(tmp1_safe_receiver)) + ', mHash=' + this.wh_1 + ')';
+    var tmp1_safe_receiver = this.mSearch;
+    return 'PshComponentsImpl(mPath=' + tmp + ', mSearch=' + (tmp1_safe_receiver == null ? null : contentToString(tmp1_safe_receiver)) + ', mHash=' + this.mHash + ')';
   };
-  PshComponentsImpl.$metadata$ = classMeta('PshComponentsImpl', undefined, undefined, undefined, undefined, PshComponents.prototype);
-  Object.defineProperty(PshComponentsImpl.prototype, 'mPath', {
-    configurable: true,
-    get: PshComponentsImpl.prototype.yh,
-    set: PshComponentsImpl.prototype.xh
-  });
-  Object.defineProperty(PshComponentsImpl.prototype, 'mSearch', {
-    configurable: true,
-    get: PshComponentsImpl.prototype.ai,
-    set: PshComponentsImpl.prototype.zh
-  });
-  Object.defineProperty(PshComponentsImpl.prototype, 'mHash', {
-    configurable: true,
-    get: PshComponentsImpl.prototype.ci,
-    set: PshComponentsImpl.prototype.bi
-  });
   function SearchComponent() {
   }
-  SearchComponent.$metadata$ = interfaceMeta('SearchComponent');
   function Companion_0() {
-    Companion_instance_0 = this;
-    this.di_1 = 'utm_source';
-    this.ei_1 = 'utm_medium';
-    this.fi_1 = 'utm_campaign';
-    this.gi_1 = 'utm_term';
-    this.hi_1 = 'utm_content';
+    this.sh_1 = 'utm_source';
+    this.th_1 = 'utm_medium';
+    this.uh_1 = 'utm_campaign';
+    this.vh_1 = 'utm_term';
+    this.wh_1 = 'utm_content';
   }
-  Companion_0.prototype.ii = function () {
-    return this.di_1;
-  };
-  Companion_0.prototype.ji = function () {
-    return this.ei_1;
-  };
-  Companion_0.prototype.ki = function () {
-    return this.fi_1;
-  };
-  Companion_0.prototype.li = function () {
-    return this.gi_1;
-  };
-  Companion_0.prototype.mi = function () {
-    return this.hi_1;
-  };
-  Companion_0.$metadata$ = objectMeta('Companion');
   var Companion_instance_0;
   function Companion_getInstance_0() {
-    if (Companion_instance_0 == null)
-      new Companion_0();
     return Companion_instance_0;
   }
   function $serializer_0() {
     $serializer_instance_0 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.motorro.keeplink.uri.data.Utm', this, 5);
-    tmp0_serialDesc.ng('utm_source', false);
-    tmp0_serialDesc.ng('utm_medium', false);
-    tmp0_serialDesc.ng('utm_campaign', false);
-    tmp0_serialDesc.ng('utm_term', false);
-    tmp0_serialDesc.ng('utm_content', false);
-    this.ni_1 = tmp0_serialDesc;
+    tmp0_serialDesc.zf('utm_source', false);
+    tmp0_serialDesc.zf('utm_medium', false);
+    tmp0_serialDesc.zf('utm_campaign', false);
+    tmp0_serialDesc.zf('utm_term', false);
+    tmp0_serialDesc.zf('utm_content', false);
+    this.xh_1 = tmp0_serialDesc;
   }
-  $serializer_0.prototype.ld = function () {
-    return this.ni_1;
+  protoOf($serializer_0).tc = function () {
+    return this.xh_1;
   };
-  $serializer_0.prototype.kg = function () {
-    var tmp$ret$2;
-    {
-      var tmp0_arrayOf = [StringSerializer_getInstance(), get_nullable(StringSerializer_getInstance()), get_nullable(StringSerializer_getInstance()), get_nullable(StringSerializer_getInstance()), get_nullable(StringSerializer_getInstance())];
-      var tmp$ret$1;
-      {
-        var tmp$ret$0;
-        {
-          tmp$ret$0 = tmp0_arrayOf;
-        }
-        tmp$ret$1 = tmp$ret$0;
-      }
-      tmp$ret$2 = tmp$ret$1;
-    }
-    return tmp$ret$2;
+  protoOf($serializer_0).bg = function () {
+    // Inline function 'kotlin.arrayOf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return [StringSerializer_getInstance(), get_nullable(StringSerializer_getInstance()), get_nullable(StringSerializer_getInstance()), get_nullable(StringSerializer_getInstance()), get_nullable(StringSerializer_getInstance())];
   };
-  $serializer_0.prototype.gh = function (decoder) {
-    var tmp0_desc = this.ni_1;
-    var tmp1_flag = true;
-    var tmp2_index = 0;
-    var tmp3_bitMask0 = 0;
-    var tmp4_local0 = null;
-    var tmp5_local1 = null;
-    var tmp6_local2 = null;
-    var tmp7_local3 = null;
-    var tmp8_local4 = null;
-    var tmp9_input = decoder.hh(tmp0_desc);
-    if (tmp9_input.kh()) {
-      tmp4_local0 = tmp9_input.jh(tmp0_desc, 0);
-      tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp9_input.oi(tmp0_desc, 1, StringSerializer_getInstance(), tmp5_local1);
-      tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp9_input.oi(tmp0_desc, 2, StringSerializer_getInstance(), tmp6_local2);
-      tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp9_input.oi(tmp0_desc, 3, StringSerializer_getInstance(), tmp7_local3);
-      tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp9_input.oi(tmp0_desc, 4, StringSerializer_getInstance(), tmp8_local4);
-      tmp3_bitMask0 = tmp3_bitMask0 | 16;
-    } else
-      while (tmp1_flag) {
-        tmp2_index = tmp9_input.ih(tmp0_desc);
-        switch (tmp2_index) {
-          case -1:
-            tmp1_flag = false;
-            break;
-          case 0:
-            tmp4_local0 = tmp9_input.jh(tmp0_desc, 0);
-            tmp3_bitMask0 = tmp3_bitMask0 | 1;
-            break;
-          case 1:
-            tmp5_local1 = tmp9_input.oi(tmp0_desc, 1, StringSerializer_getInstance(), tmp5_local1);
-            tmp3_bitMask0 = tmp3_bitMask0 | 2;
-            break;
-          case 2:
-            tmp6_local2 = tmp9_input.oi(tmp0_desc, 2, StringSerializer_getInstance(), tmp6_local2);
-            tmp3_bitMask0 = tmp3_bitMask0 | 4;
-            break;
-          case 3:
-            tmp7_local3 = tmp9_input.oi(tmp0_desc, 3, StringSerializer_getInstance(), tmp7_local3);
-            tmp3_bitMask0 = tmp3_bitMask0 | 8;
-            break;
-          case 4:
-            tmp8_local4 = tmp9_input.oi(tmp0_desc, 4, StringSerializer_getInstance(), tmp8_local4);
-            tmp3_bitMask0 = tmp3_bitMask0 | 16;
-            break;
-          default:
-            throw UnknownFieldException_init_$Create$(tmp2_index);
-        }
-      }
-    tmp9_input.lh(tmp0_desc);
-    return Utm_init_$Create$(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, null);
-  };
-  $serializer_0.prototype.pi = function (encoder, value) {
-    var tmp0_desc = this.ni_1;
-    var tmp1_output = encoder.hh(tmp0_desc);
-    tmp1_output.ph(tmp0_desc, 0, value.qi_1);
-    tmp1_output.vi(tmp0_desc, 1, StringSerializer_getInstance(), value.ri_1);
-    tmp1_output.vi(tmp0_desc, 2, StringSerializer_getInstance(), value.si_1);
-    tmp1_output.vi(tmp0_desc, 3, StringSerializer_getInstance(), value.ti_1);
-    tmp1_output.vi(tmp0_desc, 4, StringSerializer_getInstance(), value.ui_1);
-    tmp1_output.lh(tmp0_desc);
-  };
-  $serializer_0.prototype.qh = function (encoder, value) {
-    return this.pi(encoder, value instanceof Utm ? value : THROW_CCE());
-  };
-  $serializer_0.$metadata$ = objectMeta('$serializer', [GeneratedSerializer]);
   var $serializer_instance_0;
   function $serializer_getInstance_0() {
     if ($serializer_instance_0 == null)
       new $serializer_0();
     return $serializer_instance_0;
   }
-  function Utm_init_$Init$(seen1, utmSource, utmMedium, utmCampaign, utmTerm, utmContent, serializationConstructorMarker, $this) {
-    if (!(31 === (31 & seen1)))
-      throwMissingFieldException(seen1, 31, $serializer_getInstance_0().ni_1);
-    $this.qi_1 = utmSource;
-    $this.ri_1 = utmMedium;
-    $this.si_1 = utmCampaign;
-    $this.ti_1 = utmTerm;
-    $this.ui_1 = utmContent;
-    return $this;
-  }
-  function Utm_init_$Create$(seen1, utmSource, utmMedium, utmCampaign, utmTerm, utmContent, serializationConstructorMarker) {
-    return Utm_init_$Init$(seen1, utmSource, utmMedium, utmCampaign, utmTerm, utmContent, serializationConstructorMarker, Object.create(Utm.prototype));
-  }
   function Utm(utmSource, utmMedium, utmCampaign, utmTerm, utmContent) {
-    Companion_getInstance_0();
-    this.qi_1 = utmSource;
-    this.ri_1 = utmMedium;
-    this.si_1 = utmCampaign;
-    this.ti_1 = utmTerm;
-    this.ui_1 = utmContent;
+    this.utmSource = utmSource;
+    this.utmMedium = utmMedium;
+    this.utmCampaign = utmCampaign;
+    this.utmTerm = utmTerm;
+    this.utmContent = utmContent;
   }
-  Utm.prototype.wi = function () {
-    return this.qi_1;
+  protoOf(Utm).yh = function () {
+    return this.utmSource;
   };
-  Utm.prototype.xi = function () {
-    return this.ri_1;
+  protoOf(Utm).zh = function () {
+    return this.utmMedium;
   };
-  Utm.prototype.yi = function () {
-    return this.si_1;
+  protoOf(Utm).ai = function () {
+    return this.utmCampaign;
   };
-  Utm.prototype.zi = function () {
-    return this.ti_1;
+  protoOf(Utm).bi = function () {
+    return this.utmTerm;
   };
-  Utm.prototype.aj = function () {
-    return this.ui_1;
+  protoOf(Utm).ci = function () {
+    return this.utmContent;
   };
-  Utm.prototype.getSearch = function () {
+  protoOf(Utm).getSearch = function () {
     var tmp;
-    var tmp$ret$0;
-    {
-      var tmp0_isNotBlank = this.qi_1;
-      tmp$ret$0 = !isBlank(tmp0_isNotBlank);
-    }
-    if (tmp$ret$0) {
-      var tmp$ret$9;
-      {
-        var tmp$ret$8;
-        {
-          Companion_getInstance_0();
-          var tmp1_apply = mutableListOf([of('utm_source', this.qi_1)]);
-          {
-          }
-          {
-            var tmp0_safe_receiver = this.ri_1;
-            if (tmp0_safe_receiver == null)
-              null;
-            else {
-              var tmp$ret$2;
-              {
-                {
-                }
-                var tmp$ret$1;
-                {
-                  Companion_getInstance_0();
-                  tmp$ret$1 = tmp1_apply.b(of('utm_medium', tmp0_safe_receiver));
-                }
-                tmp$ret$2 = tmp$ret$1;
-              }
-            }
-            var tmp1_safe_receiver = this.si_1;
-            if (tmp1_safe_receiver == null)
-              null;
-            else {
-              var tmp$ret$4;
-              {
-                {
-                }
-                var tmp$ret$3;
-                {
-                  Companion_getInstance_0();
-                  tmp$ret$3 = tmp1_apply.b(of('utm_campaign', tmp1_safe_receiver));
-                }
-                tmp$ret$4 = tmp$ret$3;
-              }
-            }
-            var tmp2_safe_receiver = this.ti_1;
-            if (tmp2_safe_receiver == null)
-              null;
-            else {
-              var tmp$ret$6;
-              {
-                {
-                }
-                var tmp$ret$5;
-                {
-                  Companion_getInstance_0();
-                  tmp$ret$5 = tmp1_apply.b(of('utm_term', tmp2_safe_receiver));
-                }
-                tmp$ret$6 = tmp$ret$5;
-              }
-            }
-            var tmp3_safe_receiver = this.ui_1;
-            if (tmp3_safe_receiver == null)
-              null;
-            else {
-              var tmp$ret$7;
-              {
-                {
-                }
-                Companion_getInstance_0();
-                tmp1_apply.b(of('utm_content', tmp3_safe_receiver));
-                tmp$ret$7 = Unit_getInstance();
-              }
-            }
-          }
-          tmp$ret$8 = tmp1_apply;
-        }
-        var tmp2_toTypedArray = tmp$ret$8;
-        tmp$ret$9 = copyToArray(tmp2_toTypedArray);
+    // Inline function 'kotlin.text.isNotBlank' call
+    var this_0 = this.utmSource;
+    if (!isBlank(this_0)) {
+      // Inline function 'kotlin.collections.toTypedArray' call
+      // Inline function 'kotlin.apply' call
+      var this_1 = mutableListOf([of('utm_source', this.utmSource)]);
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'com.motorro.keeplink.uri.data.Utm.getSearch.<anonymous>' call
+      var tmp0_safe_receiver = this.utmMedium;
+      if (tmp0_safe_receiver == null)
+        null;
+      else {
+        // Inline function 'kotlin.let' call
+        // Inline function 'kotlin.contracts.contract' call
+        // Inline function 'com.motorro.keeplink.uri.data.Utm.getSearch.<anonymous>.<anonymous>' call
+        this_1.k(of('utm_medium', tmp0_safe_receiver));
       }
-      tmp = tmp$ret$9;
+      var tmp1_safe_receiver = this.utmCampaign;
+      if (tmp1_safe_receiver == null)
+        null;
+      else {
+        // Inline function 'kotlin.let' call
+        // Inline function 'kotlin.contracts.contract' call
+        // Inline function 'com.motorro.keeplink.uri.data.Utm.getSearch.<anonymous>.<anonymous>' call
+        this_1.k(of('utm_campaign', tmp1_safe_receiver));
+      }
+      var tmp2_safe_receiver = this.utmTerm;
+      if (tmp2_safe_receiver == null)
+        null;
+      else {
+        // Inline function 'kotlin.let' call
+        // Inline function 'kotlin.contracts.contract' call
+        // Inline function 'com.motorro.keeplink.uri.data.Utm.getSearch.<anonymous>.<anonymous>' call
+        this_1.k(of('utm_term', tmp2_safe_receiver));
+      }
+      var tmp3_safe_receiver = this.utmContent;
+      if (tmp3_safe_receiver == null)
+        null;
+      else {
+        // Inline function 'kotlin.let' call
+        // Inline function 'kotlin.contracts.contract' call
+        this_1.k(of('utm_content', tmp3_safe_receiver));
+      }
+      tmp = copyToArray(this_1);
     } else {
-      var tmp$ret$10;
-      {
-        tmp$ret$10 = [];
-      }
-      tmp = tmp$ret$10;
+      // Inline function 'kotlin.emptyArray' call
+      tmp = [];
     }
     return tmp;
   };
-  Utm.prototype.medium = function (value) {
-    return this.bj(null, value, null, null, null, 29, null);
+  protoOf(Utm).medium = function (value) {
+    return this.copy(VOID, value);
   };
-  Utm.prototype.campaign = function (value) {
-    return this.bj(null, null, value, null, null, 27, null);
+  protoOf(Utm).campaign = function (value) {
+    return this.copy(VOID, VOID, value);
   };
-  Utm.prototype.term = function (value) {
-    return this.bj(null, null, null, value, null, 23, null);
+  protoOf(Utm).term = function (value) {
+    return this.copy(VOID, VOID, VOID, value);
   };
-  Utm.prototype.content = function (value) {
-    return this.bj(null, null, null, null, value, 15, null);
+  protoOf(Utm).content = function (value) {
+    return this.copy(VOID, VOID, VOID, VOID, value);
   };
-  Utm.prototype.component1 = function () {
-    return this.qi_1;
+  protoOf(Utm).o9 = function () {
+    return this.utmSource;
   };
-  Utm.prototype.component2 = function () {
-    return this.ri_1;
+  protoOf(Utm).p9 = function () {
+    return this.utmMedium;
   };
-  Utm.prototype.component3 = function () {
-    return this.si_1;
+  protoOf(Utm).di = function () {
+    return this.utmCampaign;
   };
-  Utm.prototype.component4 = function () {
-    return this.ti_1;
+  protoOf(Utm).ei = function () {
+    return this.utmTerm;
   };
-  Utm.prototype.component5 = function () {
-    return this.ui_1;
+  protoOf(Utm).fi = function () {
+    return this.utmContent;
   };
-  Utm.prototype.copy = function (utmSource, utmMedium, utmCampaign, utmTerm, utmContent) {
-    return this.cj(utmSource === void 1 ? this.qi_1 : utmSource, utmMedium === void 1 ? this.ri_1 : utmMedium, utmCampaign === void 1 ? this.si_1 : utmCampaign, utmTerm === void 1 ? this.ti_1 : utmTerm, utmContent === void 1 ? this.ui_1 : utmContent);
-  };
-  Utm.prototype.cj = function (utmSource, utmMedium, utmCampaign, utmTerm, utmContent) {
+  protoOf(Utm).gi = function (utmSource, utmMedium, utmCampaign, utmTerm, utmContent) {
     return new Utm(utmSource, utmMedium, utmCampaign, utmTerm, utmContent);
   };
-  Utm.prototype.bj = function (utmSource, utmMedium, utmCampaign, utmTerm, utmContent, $mask0, $handler) {
-    if (!(($mask0 & 1) === 0))
-      utmSource = this.qi_1;
-    if (!(($mask0 & 2) === 0))
-      utmMedium = this.ri_1;
-    if (!(($mask0 & 4) === 0))
-      utmCampaign = this.si_1;
-    if (!(($mask0 & 8) === 0))
-      utmTerm = this.ti_1;
-    if (!(($mask0 & 16) === 0))
-      utmContent = this.ui_1;
-    return this.cj(utmSource, utmMedium, utmCampaign, utmTerm, utmContent);
+  protoOf(Utm).copy = function (utmSource, utmMedium, utmCampaign, utmTerm, utmContent, $super) {
+    utmSource = utmSource === VOID ? this.utmSource : utmSource;
+    utmMedium = utmMedium === VOID ? this.utmMedium : utmMedium;
+    utmCampaign = utmCampaign === VOID ? this.utmCampaign : utmCampaign;
+    utmTerm = utmTerm === VOID ? this.utmTerm : utmTerm;
+    utmContent = utmContent === VOID ? this.utmContent : utmContent;
+    return this.gi(utmSource, utmMedium, utmCampaign, utmTerm, utmContent);
   };
-  Utm.prototype.toString = function () {
-    return 'Utm(utmSource=' + this.qi_1 + ', utmMedium=' + this.ri_1 + ', utmCampaign=' + this.si_1 + ', utmTerm=' + this.ti_1 + ', utmContent=' + this.ui_1 + ')';
+  protoOf(Utm).toString = function () {
+    return 'Utm(utmSource=' + this.utmSource + ', utmMedium=' + this.utmMedium + ', utmCampaign=' + this.utmCampaign + ', utmTerm=' + this.utmTerm + ', utmContent=' + this.utmContent + ')';
   };
-  Utm.prototype.hashCode = function () {
-    var result = getStringHashCode(this.qi_1);
-    result = imul(result, 31) + (this.ri_1 == null ? 0 : getStringHashCode(this.ri_1)) | 0;
-    result = imul(result, 31) + (this.si_1 == null ? 0 : getStringHashCode(this.si_1)) | 0;
-    result = imul(result, 31) + (this.ti_1 == null ? 0 : getStringHashCode(this.ti_1)) | 0;
-    result = imul(result, 31) + (this.ui_1 == null ? 0 : getStringHashCode(this.ui_1)) | 0;
+  protoOf(Utm).hashCode = function () {
+    var result = getStringHashCode(this.utmSource);
+    result = imul(result, 31) + (this.utmMedium == null ? 0 : getStringHashCode(this.utmMedium)) | 0;
+    result = imul(result, 31) + (this.utmCampaign == null ? 0 : getStringHashCode(this.utmCampaign)) | 0;
+    result = imul(result, 31) + (this.utmTerm == null ? 0 : getStringHashCode(this.utmTerm)) | 0;
+    result = imul(result, 31) + (this.utmContent == null ? 0 : getStringHashCode(this.utmContent)) | 0;
     return result;
   };
-  Utm.prototype.equals = function (other) {
+  protoOf(Utm).equals = function (other) {
     if (this === other)
       return true;
     if (!(other instanceof Utm))
       return false;
     var tmp0_other_with_cast = other instanceof Utm ? other : THROW_CCE();
-    if (!(this.qi_1 === tmp0_other_with_cast.qi_1))
+    if (!(this.utmSource === tmp0_other_with_cast.utmSource))
       return false;
-    if (!(this.ri_1 == tmp0_other_with_cast.ri_1))
+    if (!(this.utmMedium == tmp0_other_with_cast.utmMedium))
       return false;
-    if (!(this.si_1 == tmp0_other_with_cast.si_1))
+    if (!(this.utmCampaign == tmp0_other_with_cast.utmCampaign))
       return false;
-    if (!(this.ti_1 == tmp0_other_with_cast.ti_1))
+    if (!(this.utmTerm == tmp0_other_with_cast.utmTerm))
       return false;
-    if (!(this.ui_1 == tmp0_other_with_cast.ui_1))
+    if (!(this.utmContent == tmp0_other_with_cast.utmContent))
       return false;
     return true;
   };
-  Utm.$metadata$ = classMeta('Utm', [SearchComponent], undefined, {0: $serializer_getInstance_0});
-  Object.defineProperty(Utm.prototype, 'utmSource', {
-    configurable: true,
-    get: Utm.prototype.wi
-  });
-  Object.defineProperty(Utm.prototype, 'utmMedium', {
-    configurable: true,
-    get: Utm.prototype.xi
-  });
-  Object.defineProperty(Utm.prototype, 'utmCampaign', {
-    configurable: true,
-    get: Utm.prototype.yi
-  });
-  Object.defineProperty(Utm.prototype, 'utmTerm', {
-    configurable: true,
-    get: Utm.prototype.zi
-  });
-  Object.defineProperty(Utm.prototype, 'utmContent', {
-    configurable: true,
-    get: Utm.prototype.aj
-  });
   function utm(utmSource) {
     return new Utm(utmSource, null, null, null, null);
   }
   function parseUtm(searchComponent) {
-    var tmp$ret$1;
-    {
-      var tmp0_with = searchComponent.getSearch();
-      {
-      }
-      var tmp$ret$0;
-      {
-        Companion_getInstance_0();
-        var tmp0_elvis_lhs = getValue(tmp0_with, 'utm_source');
-        var tmp = tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs;
-        Companion_getInstance_0();
-        var tmp_0 = getValue(tmp0_with, 'utm_medium');
-        Companion_getInstance_0();
-        var tmp_1 = getValue(tmp0_with, 'utm_campaign');
-        Companion_getInstance_0();
-        var tmp_2 = getValue(tmp0_with, 'utm_term');
-        Companion_getInstance_0();
-        tmp$ret$0 = new Utm(tmp, tmp_0, tmp_1, tmp_2, getValue(tmp0_with, 'utm_content'));
-      }
-      tmp$ret$1 = tmp$ret$0;
-    }
-    return tmp$ret$1;
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'com.motorro.keeplink.uri.data.parseUtm.<anonymous>' call
+    var $this$with = searchComponent.getSearch();
+    var tmp0_elvis_lhs = getValue($this$with, 'utm_source');
+    return new Utm(tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs, getValue($this$with, 'utm_medium'), getValue($this$with, 'utm_campaign'), getValue($this$with, 'utm_term'), getValue($this$with, 'utm_content'));
   }
   function build(_this__u8e3s4) {
-    var base = _this__u8e3s4.ah_1 + ':';
-    var tmp$ret$0;
-    {
-      var tmp0_isNotEmpty = _this__u8e3s4.bh_1;
-      tmp$ret$0 = charSequenceLength(tmp0_isNotEmpty) > 0;
-    }
-    if (tmp$ret$0) {
-      base = base + ('//' + _this__u8e3s4.bh_1);
+    var base = _this__u8e3s4.dh_1 + ':';
+    // Inline function 'kotlin.text.isNotEmpty' call
+    var this_0 = _this__u8e3s4.eh_1;
+    if (charSequenceLength(this_0) > 0) {
+      base = base + ('//' + _this__u8e3s4.eh_1);
     }
     base = base + toPath(_this__u8e3s4.getPath());
-    var tmp$ret$1;
-    {
-      var tmp1_also = new URL(base);
-      {
-      }
-      {
-        tmp1_also.search = toSearch(_this__u8e3s4.getSearch());
-        tmp1_also.hash = toHash(_this__u8e3s4.getHash());
-      }
-      tmp$ret$1 = tmp1_also;
-    }
-    return toString(tmp$ret$1);
+    // Inline function 'kotlin.also' call
+    var this_1 = new URL(base);
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'com.motorro.keeplink.uri.build.<anonymous>' call
+    this_1.search = toSearch(_this__u8e3s4.getSearch());
+    this_1.hash = toHash(_this__u8e3s4.getHash());
+    return toString(this_1);
   }
   function toComponents(_this__u8e3s4) {
-    var tmp$ret$1;
-    {
-      var tmp0_with = new URL(_this__u8e3s4);
-      {
-      }
-      var tmp$ret$0;
-      {
-        tmp$ret$0 = new UriComponents(dropLast(tmp0_with.protocol, 1), tmp0_with.host, toPathComponent(tmp0_with.pathname), toSearchComponent(tmp0_with.search), toHashComponent(tmp0_with.hash));
-      }
-      tmp$ret$1 = tmp$ret$0;
-    }
-    return tmp$ret$1;
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'com.motorro.keeplink.uri.toComponents.<anonymous>' call
+    var $this$with = new URL(_this__u8e3s4);
+    return new UriComponents(dropLast($this$with.protocol, 1), $this$with.host, toPathComponent($this$with.pathname), toSearchComponent($this$with.search), toHashComponent($this$with.hash));
   }
   function toPath(_this__u8e3s4) {
-    return joinToString$default(_this__u8e3s4, '/', '/', null, 0, null, null, 60, null);
+    return joinToString(_this__u8e3s4, '/', '/');
   }
   function toSearch(_this__u8e3s4) {
-    return joinToString$default(_this__u8e3s4, '&', null, null, 0, null, toSearch$lambda(), 30, null);
+    return joinToString(_this__u8e3s4, '&', VOID, VOID, VOID, VOID, toSearch$lambda);
   }
   function toHash(_this__u8e3s4) {
-    var tmp$ret$2;
-    {
-      {
-      }
-      var tmp;
-      var tmp$ret$1;
-      {
-        var tmp$ret$0;
-        {
-          tmp$ret$0 = charSequenceLength(_this__u8e3s4) > 0;
-        }
-        tmp$ret$1 = tmp$ret$0;
-      }
-      if (tmp$ret$1) {
-        tmp = _this__u8e3s4;
-      } else {
-        tmp = null;
-      }
-      tmp$ret$2 = tmp;
+    // Inline function 'kotlin.takeIf' call
+    // Inline function 'kotlin.contracts.contract' call
+    var tmp;
+    // Inline function 'com.motorro.keeplink.uri.toHash.<anonymous>' call
+    // Inline function 'kotlin.text.isNotEmpty' call
+    if (charSequenceLength(_this__u8e3s4) > 0) {
+      tmp = _this__u8e3s4;
+    } else {
+      tmp = null;
     }
-    var tmp0_safe_receiver = tmp$ret$2;
+    var tmp0_safe_receiver = tmp;
     var tmp_0;
     if (tmp0_safe_receiver == null) {
       tmp_0 = null;
     } else {
-      var tmp$ret$4;
-      {
-        {
-        }
-        var tmp$ret$3;
-        {
-          tmp$ret$3 = '#' + encode(tmp0_safe_receiver);
-        }
-        tmp$ret$4 = tmp$ret$3;
-      }
-      tmp_0 = tmp$ret$4;
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'com.motorro.keeplink.uri.toHash.<anonymous>' call
+      tmp_0 = '#' + encode(tmp0_safe_receiver);
     }
     var tmp1_elvis_lhs = tmp_0;
     return tmp1_elvis_lhs == null ? '' : tmp1_elvis_lhs;
   }
   function toPathComponent(_this__u8e3s4) {
-    var tmp$ret$2;
-    {
-      {
-      }
-      var tmp;
-      var tmp$ret$1;
-      {
-        var tmp$ret$0;
-        {
-          tmp$ret$0 = charSequenceLength(_this__u8e3s4) > 0;
-        }
-        tmp$ret$1 = tmp$ret$0;
-      }
-      if (tmp$ret$1) {
-        tmp = _this__u8e3s4;
-      } else {
-        tmp = null;
-      }
-      tmp$ret$2 = tmp;
+    // Inline function 'kotlin.takeIf' call
+    // Inline function 'kotlin.contracts.contract' call
+    var tmp;
+    // Inline function 'com.motorro.keeplink.uri.toPathComponent.<anonymous>' call
+    // Inline function 'kotlin.text.isNotEmpty' call
+    if (charSequenceLength(_this__u8e3s4) > 0) {
+      tmp = _this__u8e3s4;
+    } else {
+      tmp = null;
     }
-    var tmp0_safe_receiver = tmp$ret$2;
+    var tmp0_safe_receiver = tmp;
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : drop(tmp0_safe_receiver, 1);
+    var tmp2_safe_receiver = tmp1_safe_receiver == null ? null : split(tmp1_safe_receiver, charArrayOf([_Char___init__impl__6a9atx(47)]));
     var tmp_0;
-    if (tmp1_safe_receiver == null) {
+    if (tmp2_safe_receiver == null) {
       tmp_0 = null;
     } else {
-      var tmp_1 = charArrayOf([_Char___init__impl__6a9atx(47)]);
-      tmp_0 = split$default(tmp1_safe_receiver, tmp_1, false, 0, 6, null);
+      // Inline function 'kotlin.collections.toTypedArray' call
+      tmp_0 = copyToArray(tmp2_safe_receiver);
     }
-    var tmp2_safe_receiver = tmp_0;
-    var tmp_2;
-    if (tmp2_safe_receiver == null) {
-      tmp_2 = null;
-    } else {
-      var tmp$ret$3;
-      {
-        tmp$ret$3 = copyToArray(tmp2_safe_receiver);
-      }
-      tmp_2 = tmp$ret$3;
-    }
-    var tmp3_elvis_lhs = tmp_2;
-    var tmp_3;
+    var tmp3_elvis_lhs = tmp_0;
+    var tmp_1;
     if (tmp3_elvis_lhs == null) {
-      var tmp$ret$4;
-      {
-        tmp$ret$4 = [];
-      }
-      tmp_3 = tmp$ret$4;
+      // Inline function 'kotlin.emptyArray' call
+      tmp_1 = [];
     } else {
-      tmp_3 = tmp3_elvis_lhs;
+      tmp_1 = tmp3_elvis_lhs;
     }
-    return tmp_3;
+    return tmp_1;
   }
   function toSearchComponent(_this__u8e3s4) {
-    var tmp$ret$2;
-    {
-      {
-      }
-      var tmp;
-      var tmp$ret$1;
-      {
-        var tmp$ret$0;
-        {
-          tmp$ret$0 = charSequenceLength(_this__u8e3s4) > 0;
-        }
-        tmp$ret$1 = tmp$ret$0;
-      }
-      if (tmp$ret$1) {
-        tmp = _this__u8e3s4;
-      } else {
-        tmp = null;
-      }
-      tmp$ret$2 = tmp;
+    // Inline function 'kotlin.takeIf' call
+    // Inline function 'kotlin.contracts.contract' call
+    var tmp;
+    // Inline function 'com.motorro.keeplink.uri.toSearchComponent.<anonymous>' call
+    // Inline function 'kotlin.text.isNotEmpty' call
+    if (charSequenceLength(_this__u8e3s4) > 0) {
+      tmp = _this__u8e3s4;
+    } else {
+      tmp = null;
     }
-    var tmp0_safe_receiver = tmp$ret$2;
+    var tmp0_safe_receiver = tmp;
     var tmp_0;
     if (tmp0_safe_receiver == null) {
       tmp_0 = null;
     } else {
-      var tmp$ret$3;
-      {
-        {
-        }
-        tmp$ret$3 = decode(tmp0_safe_receiver);
-      }
-      tmp_0 = tmp$ret$3;
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      tmp_0 = decode(tmp0_safe_receiver);
     }
     var tmp1_safe_receiver = tmp_0;
     var tmp2_safe_receiver = tmp1_safe_receiver == null ? null : drop(tmp1_safe_receiver, 1);
+    var tmp3_safe_receiver = tmp2_safe_receiver == null ? null : split(tmp2_safe_receiver, charArrayOf([_Char___init__impl__6a9atx(38)]));
     var tmp_1;
-    if (tmp2_safe_receiver == null) {
+    if (tmp3_safe_receiver == null) {
       tmp_1 = null;
     } else {
-      var tmp_2 = charArrayOf([_Char___init__impl__6a9atx(38)]);
-      tmp_1 = split$default(tmp2_safe_receiver, tmp_2, false, 0, 6, null);
-    }
-    var tmp3_safe_receiver = tmp_1;
-    var tmp_3;
-    if (tmp3_safe_receiver == null) {
-      tmp_3 = null;
-    } else {
-      var tmp$ret$10;
-      {
-        var tmp$ret$9;
-        {
-          var tmp0_mapTo = ArrayList_init_$Create$(collectionSizeOrDefault(tmp3_safe_receiver, 10));
-          var tmp0_iterator = tmp3_safe_receiver.g();
-          while (tmp0_iterator.i()) {
-            var item = tmp0_iterator.j();
-            var tmp$ret$8;
-            {
-              var tmp_4 = _Char___init__impl__6a9atx(61);
-              var idx = indexOf$default(item, tmp_4, 0, false, 6, null);
-              var tmp_5;
-              if (idx >= 0) {
-                var tmp$ret$5;
-                {
-                  var tmp$ret$4;
-                  {
-                    tmp$ret$4 = item;
-                  }
-                  tmp$ret$5 = tmp$ret$4.substring(0, idx);
-                }
-                var tmp_6 = tmp$ret$5;
-                var tmp$ret$7;
-                {
-                  var tmp0_substring = idx + 1 | 0;
-                  var tmp$ret$6;
-                  {
-                    tmp$ret$6 = item;
-                  }
-                  tmp$ret$7 = tmp$ret$6.substring(tmp0_substring);
-                }
-                tmp_5 = of(tmp_6, tmp$ret$7);
-              } else {
-                tmp_5 = of(item, '');
-              }
-              tmp$ret$8 = tmp_5;
-            }
-            tmp0_mapTo.b(tmp$ret$8);
-          }
-          tmp$ret$9 = tmp0_mapTo;
+      // Inline function 'kotlin.collections.map' call
+      // Inline function 'kotlin.collections.mapTo' call
+      var destination = ArrayList_init_$Create$(collectionSizeOrDefault(tmp3_safe_receiver, 10));
+      var tmp0_iterator = tmp3_safe_receiver.n();
+      while (tmp0_iterator.u()) {
+        var item = tmp0_iterator.v();
+        // Inline function 'com.motorro.keeplink.uri.toSearchComponent.<anonymous>' call
+        var idx = indexOf(item, _Char___init__impl__6a9atx(61));
+        var tmp_2;
+        if (idx >= 0) {
+          // Inline function 'kotlin.text.substring' call
+          // Inline function 'kotlin.js.asDynamic' call
+          var tmp_3 = item.substring(0, idx);
+          // Inline function 'kotlin.text.substring' call
+          var startIndex = idx + 1 | 0;
+          // Inline function 'kotlin.js.asDynamic' call
+          var tmp$ret$8 = item.substring(startIndex);
+          tmp_2 = of(tmp_3, tmp$ret$8);
+        } else {
+          tmp_2 = of(item, '');
         }
-        tmp$ret$10 = tmp$ret$9;
+        var tmp$ret$9 = tmp_2;
+        destination.k(tmp$ret$9);
       }
-      tmp_3 = tmp$ret$10;
+      tmp_1 = destination;
     }
-    var tmp4_safe_receiver = tmp_3;
-    var tmp_7;
+    var tmp4_safe_receiver = tmp_1;
+    var tmp_4;
     if (tmp4_safe_receiver == null) {
-      tmp_7 = null;
+      tmp_4 = null;
     } else {
-      var tmp$ret$11;
-      {
-        tmp$ret$11 = copyToArray(tmp4_safe_receiver);
-      }
-      tmp_7 = tmp$ret$11;
+      // Inline function 'kotlin.collections.toTypedArray' call
+      tmp_4 = copyToArray(tmp4_safe_receiver);
     }
-    var tmp5_elvis_lhs = tmp_7;
-    var tmp_8;
+    var tmp5_elvis_lhs = tmp_4;
+    var tmp_5;
     if (tmp5_elvis_lhs == null) {
-      var tmp$ret$12;
-      {
-        tmp$ret$12 = [];
-      }
-      tmp_8 = tmp$ret$12;
+      // Inline function 'kotlin.emptyArray' call
+      tmp_5 = [];
     } else {
-      tmp_8 = tmp5_elvis_lhs;
+      tmp_5 = tmp5_elvis_lhs;
     }
-    return tmp_8;
+    return tmp_5;
   }
   function toHashComponent(_this__u8e3s4) {
-    var tmp$ret$2;
-    {
-      {
-      }
-      var tmp;
-      var tmp$ret$1;
-      {
-        var tmp$ret$0;
-        {
-          tmp$ret$0 = charSequenceLength(_this__u8e3s4) > 0;
-        }
-        tmp$ret$1 = tmp$ret$0;
-      }
-      if (tmp$ret$1) {
-        tmp = _this__u8e3s4;
-      } else {
-        tmp = null;
-      }
-      tmp$ret$2 = tmp;
+    // Inline function 'kotlin.takeIf' call
+    // Inline function 'kotlin.contracts.contract' call
+    var tmp;
+    // Inline function 'com.motorro.keeplink.uri.toHashComponent.<anonymous>' call
+    // Inline function 'kotlin.text.isNotEmpty' call
+    if (charSequenceLength(_this__u8e3s4) > 0) {
+      tmp = _this__u8e3s4;
+    } else {
+      tmp = null;
     }
-    var tmp0_safe_receiver = tmp$ret$2;
+    var tmp0_safe_receiver = tmp;
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : drop(tmp0_safe_receiver, 1);
     var tmp_0;
     if (tmp1_safe_receiver == null) {
       tmp_0 = null;
     } else {
-      var tmp$ret$3;
-      {
-        {
-        }
-        tmp$ret$3 = decode(tmp1_safe_receiver);
-      }
-      tmp_0 = tmp$ret$3;
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      tmp_0 = decode(tmp1_safe_receiver);
     }
     var tmp2_elvis_lhs = tmp_0;
     return tmp2_elvis_lhs == null ? '' : tmp2_elvis_lhs;
   }
   function encode(string) {
-    var tmp$ret$0;
-    {
-      var tmp0_unsafeCast = encodeURIComponent(string);
-      tmp$ret$0 = tmp0_unsafeCast;
-    }
-    return tmp$ret$0;
+    // Inline function 'kotlin.js.unsafeCast' call
+    return encodeURIComponent(string);
   }
   function decode(string) {
-    var tmp$ret$0;
-    {
-      var tmp0_unsafeCast = decodeURIComponent(string);
-      tmp$ret$0 = tmp0_unsafeCast;
-    }
-    return tmp$ret$0;
+    // Inline function 'kotlin.js.unsafeCast' call
+    return decodeURIComponent(string);
   }
-  function toSearch$lambda() {
-    return function (_name_for_destructuring_parameter_0__wldtmu) {
-      var name = _name_for_destructuring_parameter_0__wldtmu.component1();
-      var value = _name_for_destructuring_parameter_0__wldtmu.component2();
-      var tmp$ret$2;
-      {
-        {
-        }
-        var tmp;
-        var tmp$ret$1;
-        {
-          var tmp$ret$0;
-          {
-            tmp$ret$0 = !isBlank(value);
-          }
-          tmp$ret$1 = tmp$ret$0;
-        }
-        if (tmp$ret$1) {
-          tmp = value;
-        } else {
-          tmp = null;
-        }
-        tmp$ret$2 = tmp;
-      }
-      var tmp0_safe_receiver = tmp$ret$2;
-      var tmp_0;
-      if (tmp0_safe_receiver == null) {
-        tmp_0 = null;
-      } else {
-        var tmp$ret$4;
-        {
-          {
-          }
-          var tmp$ret$3;
-          {
-            tmp$ret$3 = encode(name) + '=' + encode(tmp0_safe_receiver);
-          }
-          tmp$ret$4 = tmp$ret$3;
-        }
-        tmp_0 = tmp$ret$4;
-      }
-      var tmp1_elvis_lhs = tmp_0;
-      return tmp1_elvis_lhs == null ? encode(name) : tmp1_elvis_lhs;
-    };
+  function toSearch$lambda(_name_for_destructuring_parameter_0__wldtmu) {
+    var name = _name_for_destructuring_parameter_0__wldtmu.o9();
+    var value = _name_for_destructuring_parameter_0__wldtmu.p9();
+    // Inline function 'kotlin.takeIf' call
+    // Inline function 'kotlin.contracts.contract' call
+    var tmp;
+    // Inline function 'com.motorro.keeplink.uri.toSearch.<anonymous>.<anonymous>' call
+    // Inline function 'kotlin.text.isNotBlank' call
+    if (!isBlank(value)) {
+      tmp = value;
+    } else {
+      tmp = null;
+    }
+    var tmp0_safe_receiver = tmp;
+    var tmp_0;
+    if (tmp0_safe_receiver == null) {
+      tmp_0 = null;
+    } else {
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'com.motorro.keeplink.uri.toSearch.<anonymous>.<anonymous>' call
+      tmp_0 = encode(name) + '=' + encode(tmp0_safe_receiver);
+    }
+    var tmp1_elvis_lhs = tmp_0;
+    return tmp1_elvis_lhs == null ? encode(name) : tmp1_elvis_lhs;
   }
   //region block: post-declaration
-  $serializer.prototype.lg = typeParametersSerializers;
-  $serializer_0.prototype.lg = typeParametersSerializers;
+  protoOf($serializer).cg = typeParametersSerializers;
+  protoOf($serializer_0).cg = typeParametersSerializers;
+  //endregion
+  //region block: init
+  Companion_instance = new Companion();
+  Companion_instance_0 = new Companion_0();
   //endregion
   //region block: exports
   function $jsExportAll$(_) {
@@ -1177,15 +719,7 @@
     var $com$motorro$keeplink$uri = $com$motorro$keeplink.uri || ($com$motorro$keeplink.uri = {});
     var $com$motorro$keeplink$uri$data = $com$motorro$keeplink$uri.data || ($com$motorro$keeplink$uri.data = {});
     $com$motorro$keeplink$uri$data.Param = Param;
-    $com$motorro$keeplink$uri$data.Param.Param_init_$Create$ = Param_init_$Create$;
-    Object.defineProperty($com$motorro$keeplink$uri$data.Param, 'Companion', {
-      configurable: true,
-      get: Companion_getInstance
-    });
-    Object.defineProperty($com$motorro$keeplink$uri$data.Param, '$serializer', {
-      configurable: true,
-      get: $serializer_getInstance
-    });
+    defineProp($com$motorro$keeplink$uri$data.Param, 'Companion', Companion_getInstance);
     var $com = _.com || (_.com = {});
     var $com$motorro = $com.motorro || ($com.motorro = {});
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
@@ -1209,11 +743,6 @@
     var $com$motorro$keeplink$uri = $com$motorro$keeplink.uri || ($com$motorro$keeplink.uri = {});
     var $com$motorro$keeplink$uri$data = $com$motorro$keeplink$uri.data || ($com$motorro$keeplink$uri.data = {});
     $com$motorro$keeplink$uri$data.Utm = Utm;
-    $com$motorro$keeplink$uri$data.Utm.Utm_init_$Create$ = Utm_init_$Create$;
-    Object.defineProperty($com$motorro$keeplink$uri$data.Utm, '$serializer', {
-      configurable: true,
-      get: $serializer_getInstance_0
-    });
     $com$motorro$keeplink$uri$data.utm = utm;
   }
   $jsExportAll$(_);
@@ -1231,6 +760,6 @@
   _.$_$.j = $serializer_getInstance_0;
   //endregion
   return _;
-}(module.exports, require('./kotlin-kotlin-stdlib-js-ir.js'), require('./kotlinx-serialization-kotlinx-serialization-core-js-ir.js')));
+}(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./kotlinx-serialization-kotlinx-serialization-core.js')));
 
 //# sourceMappingURL=uri.js.map

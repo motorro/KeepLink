@@ -55,6 +55,7 @@ kotlin {
                 "-opt-in=kotlin.js.ExperimentalJsExport"
             )
         }
+        generateTypeScriptDefinitions()
         binaries.library()
         useCommonJs()
         nodejs {

@@ -32,7 +32,7 @@ kotlin {
     val iosX64 = iosX64("iosX64")
     configure(listOf(iosArm64, iosX64)) {
         binaries {
-            framework(listOf(RELEASE))
+            framework(listOf(RELEASE, DEBUG))
         }
     }
 
@@ -55,6 +55,7 @@ kotlin {
                 "-opt-in=kotlin.js.ExperimentalJsExport"
             )
         }
+        generateTypeScriptDefinitions()
         binaries.library()
         useCommonJs()
         nodejs {

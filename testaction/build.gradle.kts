@@ -71,6 +71,7 @@ kotlin {
                 "-opt-in=kotlin.js.ExperimentalJsExport"
             )
         }
+        generateTypeScriptDefinitions()
         binaries.library()
         useCommonJs()
         nodejs {
@@ -98,6 +99,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                implementation(project(":uri"))
                 implementation(project(":deeplink"))
                 implementation(project(":mocks"))
                 implementation(libs.kotlin.serialization.core)
