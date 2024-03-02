@@ -65,7 +65,7 @@ private fun String.toPathComponent(): Array<String> =
  * Builds path component
  */
 private fun Array<String>.toPath(): String =
-    joinToString("/", "/")
+    takeIf { it.isNotEmpty() }?.joinToString("/", "/") ?: "/"
 
 /**
  * Parses search parameters
