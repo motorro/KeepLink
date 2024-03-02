@@ -33,6 +33,11 @@ kotlin {
             framework(listOf(RELEASE))
         }
     }
+    iosSimulatorArm64("iosSimulatorArm64") {
+        binaries {
+            framework(listOf(DEBUG))
+        }
+    }
     val outputIos by tasks.creating(org.jetbrains.kotlin.gradle.tasks.FatFrameworkTask::class) {
         group = "output"
         destinationDir = file("$projectDir/output/ios/Fat")
@@ -114,17 +119,21 @@ kotlin {
         }
         val iosX64Main by sourceSets.getting
         val iosArm64Main by sourceSets.getting
+        val iosSimulatorArm64Main by sourceSets.getting
         val iosMain by sourceSets.creating {
             dependsOn(commonMain)
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
+            iosSimulatorArm64Main.dependsOn(this)
         }
         val iosX64Test by sourceSets.getting
         val iosArm64Test by sourceSets.getting
+        val iosSimulatorArm64Test by sourceSets.getting
         val iosTest by sourceSets.creating {
             dependsOn(commonTest)
             iosX64Test.dependsOn(this)
             iosArm64Test.dependsOn(this)
+            iosSimulatorArm64Test.dependsOn(this)
         }
         val jvmMain by getting
         val jvmTest by getting {
