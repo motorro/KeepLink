@@ -100,7 +100,7 @@ private fun String.splitCombinedHost(): Pair<String?, Int> =
  * Builds path component
  */
 private fun Array<String>.toPath(): String? =
-    takeIf { it.isNotEmpty() }?.joinToString("/", "/")
+    takeIf { it.isNotEmpty() }?.joinToString("/", "/") ?: "/"
 
 /**
  * Joins search parameters to search string
