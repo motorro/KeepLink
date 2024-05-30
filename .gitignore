@@ -47,3 +47,6 @@ build/
 node_modules/
 kotlin-js-store/
 
+# Kotlin
+.kotlin
+
