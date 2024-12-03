@@ -91,6 +91,7 @@ export declare namespace com.motorro.keeplink.uri.data {
     function utm(utmSource: string): com.motorro.keeplink.uri.data.Utm;
 }
 export declare namespace com.motorro.keeplink.deeplink {
+    /* @ts-ignore: https://github.com/microsoft/TypeScript/issues/4628 */
     abstract class Action extends com.motorro.keeplink.uri.data.PshComponents {
         constructor();
         getPath(): Array<string>;
@@ -102,6 +103,7 @@ export declare namespace com.motorro.keeplink.deeplink {
     }
 }
 export declare namespace com.motorro.keeplink.deeplink {
+    /* @ts-ignore: https://github.com/microsoft/TypeScript/issues/4628 */
     class DeepLink<A extends com.motorro.keeplink.deeplink.Action> extends com.motorro.keeplink.uri.data.PshComponents implements com.motorro.keeplink.deeplink.WithAction<A> {
         constructor(action: A, utm: com.motorro.keeplink.uri.data.Utm);
         get action(): A;
@@ -159,12 +161,14 @@ export declare namespace com.motorro.keeplink.deeplink {
     }
 }
 export declare namespace com.motorro.keeplink.testaction {
+    /* @ts-ignore: https://github.com/microsoft/TypeScript/issues/4628 */
     abstract class TestAction extends com.motorro.keeplink.deeplink.Action {
         protected constructor();
         static get Companion(): {
         } & any/* kotlinx.serialization.internal.SerializerFactory */;
     }
     namespace TestAction {
+        /* @ts-ignore: https://github.com/microsoft/TypeScript/issues/4628 */
         class Invalid extends com.motorro.keeplink.testaction.TestAction {
             private constructor();
             get isValid(): boolean;
@@ -176,25 +180,30 @@ export declare namespace com.motorro.keeplink.testaction {
             getHash(): string;
             get isValid(): boolean;
         }
+        /* @ts-ignore: https://github.com/microsoft/TypeScript/issues/4628 */
         class Root extends com.motorro.keeplink.testaction.TestAction {
             constructor();
             getPath(): Array<string>;
         }
+        /* @ts-ignore: https://github.com/microsoft/TypeScript/issues/4628 */
         class Profile extends com.motorro.keeplink.testaction.TestAction {
             constructor();
             getPath(): Array<string>;
         }
+        /* @ts-ignore: https://github.com/microsoft/TypeScript/issues/4628 */
         abstract class Login extends com.motorro.keeplink.testaction.TestAction {
             protected constructor();
             getPath(): Array<string>;
         }
         namespace Login {
+            /* @ts-ignore: https://github.com/microsoft/TypeScript/issues/4628 */
             class Magic extends com.motorro.keeplink.testaction.TestAction.Login {
                 constructor(token: string);
                 get token(): string;
                 getPath(): Array<string>;
             }
         }
+        /* @ts-ignore: https://github.com/microsoft/TypeScript/issues/4628 */
         class Search extends com.motorro.keeplink.testaction.TestAction {
             constructor(type: com.motorro.keeplink.testaction.data.TransportType, from: string, to: string, date: com.motorro.keeplink.testaction.data.LocalDateFields);
             get type(): com.motorro.keeplink.testaction.data.TransportType;

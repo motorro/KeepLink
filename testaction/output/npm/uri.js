@@ -3,54 +3,54 @@
   //region block: imports
   var imul = Math.imul;
   var protoOf = kotlin_kotlin.$_$.z2;
-  var objectCreate = kotlin_kotlin.$_$.x2;
+  var objectCreate = kotlin_kotlin.$_$.y2;
   var getKClassFromExpression = kotlin_kotlin.$_$.a;
-  var THROW_CCE = kotlin_kotlin.$_$.s3;
+  var THROW_CCE = kotlin_kotlin.$_$.q3;
   var Unit_instance = kotlin_kotlin.$_$.k1;
-  var contentEquals = kotlin_kotlin.$_$.p1;
-  var getStringHashCode = kotlin_kotlin.$_$.t2;
-  var contentHashCode = kotlin_kotlin.$_$.q1;
-  var classMeta = kotlin_kotlin.$_$.o2;
-  var setMetadataFor = kotlin_kotlin.$_$.a3;
-  var interfaceMeta = kotlin_kotlin.$_$.v2;
-  var objectMeta = kotlin_kotlin.$_$.y2;
+  var contentEquals = kotlin_kotlin.$_$.o1;
+  var getStringHashCode = kotlin_kotlin.$_$.r2;
+  var contentHashCode = kotlin_kotlin.$_$.p1;
+  var initMetadataForClass = kotlin_kotlin.$_$.t2;
+  var VOID = kotlin_kotlin.$_$.c;
+  var initMetadataForInterface = kotlin_kotlin.$_$.v2;
+  var initMetadataForCompanion = kotlin_kotlin.$_$.u2;
   var PluginGeneratedSerialDescriptor = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.i;
   var StringSerializer_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.d;
   var typeParametersSerializers = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.g;
   var GeneratedSerializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.h;
-  var VOID = kotlin_kotlin.$_$.c;
-  var defineProp = kotlin_kotlin.$_$.p2;
-  var contentToString = kotlin_kotlin.$_$.r1;
+  var initMetadataForObject = kotlin_kotlin.$_$.w2;
+  var defineProp = kotlin_kotlin.$_$.n2;
+  var contentToString = kotlin_kotlin.$_$.q1;
   var get_nullable = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.e;
-  var isBlank = kotlin_kotlin.$_$.i3;
-  var mutableListOf = kotlin_kotlin.$_$.d2;
-  var copyToArray = kotlin_kotlin.$_$.s1;
-  var charSequenceLength = kotlin_kotlin.$_$.n2;
-  var toString = kotlin_kotlin.$_$.b3;
-  var dropLast = kotlin_kotlin.$_$.e3;
-  var joinToString = kotlin_kotlin.$_$.y1;
-  var drop = kotlin_kotlin.$_$.f3;
+  var isBlank = kotlin_kotlin.$_$.h3;
+  var mutableListOf = kotlin_kotlin.$_$.c2;
+  var copyToArray = kotlin_kotlin.$_$.r1;
+  var charSequenceLength = kotlin_kotlin.$_$.m2;
+  var toString = kotlin_kotlin.$_$.a3;
+  var dropLast = kotlin_kotlin.$_$.d3;
+  var joinToString = kotlin_kotlin.$_$.x1;
+  var drop = kotlin_kotlin.$_$.e3;
   var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.p;
   var charArrayOf = kotlin_kotlin.$_$.l2;
-  var split = kotlin_kotlin.$_$.l3;
-  var collectionSizeOrDefault = kotlin_kotlin.$_$.o1;
+  var split = kotlin_kotlin.$_$.j3;
+  var collectionSizeOrDefault = kotlin_kotlin.$_$.n1;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.e;
-  var indexOf = kotlin_kotlin.$_$.h3;
+  var indexOf = kotlin_kotlin.$_$.g3;
   //endregion
   //region block: pre-declaration
-  setMetadataFor(PathComponent, 'PathComponent', interfaceMeta);
-  setMetadataFor(SearchComponent, 'SearchComponent', interfaceMeta);
-  setMetadataFor(HashComponent, 'HashComponent', interfaceMeta);
-  setMetadataFor(PshComponents, 'PshComponents', classMeta, VOID, [PathComponent, SearchComponent, HashComponent]);
-  setMetadataFor(UriComponents, 'UriComponents', classMeta, PshComponents);
-  setMetadataFor(ComponentValue, 'ComponentValue', interfaceMeta);
-  setMetadataFor(Companion, 'Companion', objectMeta);
-  setMetadataFor($serializer, '$serializer', objectMeta, VOID, [GeneratedSerializer]);
-  setMetadataFor(Param, 'Param', classMeta, VOID, VOID, VOID, VOID, {0: $serializer_getInstance});
-  setMetadataFor(PshComponentsImpl, 'PshComponentsImpl', classMeta, PshComponents, VOID, PshComponentsImpl);
-  setMetadataFor(Companion_0, 'Companion', objectMeta);
-  setMetadataFor($serializer_0, '$serializer', objectMeta, VOID, [GeneratedSerializer]);
-  setMetadataFor(Utm, 'Utm', classMeta, VOID, [SearchComponent], VOID, VOID, {0: $serializer_getInstance_0});
+  initMetadataForInterface(PathComponent, 'PathComponent');
+  initMetadataForInterface(SearchComponent, 'SearchComponent');
+  initMetadataForInterface(HashComponent, 'HashComponent');
+  initMetadataForClass(PshComponents, 'PshComponents', VOID, VOID, [PathComponent, SearchComponent, HashComponent]);
+  initMetadataForClass(UriComponents, 'UriComponents', VOID, PshComponents);
+  initMetadataForInterface(ComponentValue, 'ComponentValue');
+  initMetadataForCompanion(Companion);
+  initMetadataForObject($serializer, '$serializer', VOID, VOID, [GeneratedSerializer]);
+  initMetadataForClass(Param, 'Param', VOID, VOID, VOID, VOID, VOID, {0: $serializer_getInstance});
+  initMetadataForClass(PshComponentsImpl, 'PshComponentsImpl', PshComponentsImpl, PshComponents);
+  initMetadataForCompanion(Companion_0);
+  initMetadataForObject($serializer_0, '$serializer', VOID, VOID, [GeneratedSerializer]);
+  initMetadataForClass(Utm, 'Utm', VOID, VOID, [SearchComponent], VOID, VOID, {0: $serializer_getInstance_0});
   //endregion
   function UriComponents_init_$Init$(scheme, host, actionComponents, $this) {
     UriComponents.call($this, scheme, host, actionComponents.getPath(), actionComponents.getSearch(), actionComponents.getHash());
@@ -61,31 +61,31 @@
   }
   function UriComponents(scheme, host, path, search, hash) {
     PshComponents.call(this);
-    this.dh_1 = scheme;
-    this.eh_1 = host;
-    this.fh_1 = path;
-    this.gh_1 = search;
-    this.hh_1 = hash;
+    this.bi_1 = scheme;
+    this.ci_1 = host;
+    this.di_1 = path;
+    this.ei_1 = search;
+    this.fi_1 = hash;
   }
   protoOf(UriComponents).getPath = function () {
-    return this.fh_1;
+    return this.di_1;
   };
   protoOf(UriComponents).getSearch = function () {
-    return this.gh_1;
+    return this.ei_1;
   };
   protoOf(UriComponents).getHash = function () {
-    return this.hh_1;
+    return this.fi_1;
   };
   protoOf(UriComponents).equals = function (other) {
     if (this === other)
       return true;
-    if (other == null ? true : !getKClassFromExpression(this).equals(getKClassFromExpression(other)))
+    if (other == null || !getKClassFromExpression(this).equals(getKClassFromExpression(other)))
       return false;
     if (!(other instanceof UriComponents))
       THROW_CCE();
-    if (!(this.dh_1 === other.dh_1))
+    if (!(this.bi_1 === other.bi_1))
       return false;
-    if (!(this.eh_1 === other.eh_1))
+    if (!(this.ci_1 === other.ci_1))
       return false;
     if (!contentEquals(this.getPath(), other.getPath()))
       return false;
@@ -96,8 +96,8 @@
     return true;
   };
   protoOf(UriComponents).hashCode = function () {
-    var result = getStringHashCode(this.dh_1);
-    result = imul(31, result) + getStringHashCode(this.eh_1) | 0;
+    var result = getStringHashCode(this.bi_1);
+    result = imul(31, result) + getStringHashCode(this.ci_1) | 0;
     result = imul(31, result) + contentHashCode(this.getPath()) | 0;
     result = imul(31, result) + contentHashCode(this.getSearch()) | 0;
     result = imul(31, result) + getStringHashCode(this.getHash()) | 0;
@@ -109,7 +109,7 @@
   }
   function Companion() {
   }
-  protoOf(Companion).ih = function () {
+  protoOf(Companion).gi = function () {
     return $serializer_getInstance();
   };
   var Companion_instance;
@@ -119,14 +119,14 @@
   function $serializer() {
     $serializer_instance = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.motorro.keeplink.uri.data.Param', this, 2);
-    tmp0_serialDesc.zf('name', false);
-    tmp0_serialDesc.zf('value', false);
-    this.jh_1 = tmp0_serialDesc;
+    tmp0_serialDesc.xg('name', false);
+    tmp0_serialDesc.xg('value', false);
+    this.hi_1 = tmp0_serialDesc;
   }
-  protoOf($serializer).tc = function () {
-    return this.jh_1;
+  protoOf($serializer).qd = function () {
+    return this.hi_1;
   };
-  protoOf($serializer).bg = function () {
+  protoOf($serializer).zg = function () {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -142,25 +142,25 @@
     this.name = name;
     this.value = value;
   }
-  protoOf(Param).kh = function () {
+  protoOf(Param).ii = function () {
     return this.name;
   };
-  protoOf(Param).f4 = function () {
+  protoOf(Param).j1 = function () {
     return this.value;
   };
-  protoOf(Param).o9 = function () {
+  protoOf(Param).y9 = function () {
     return this.name;
   };
-  protoOf(Param).p9 = function () {
+  protoOf(Param).z9 = function () {
     return this.value;
   };
-  protoOf(Param).lh = function (name, value) {
+  protoOf(Param).ji = function (name, value) {
     return new Param(name, value);
   };
   protoOf(Param).copy = function (name, value, $super) {
     name = name === VOID ? this.name : name;
     value = value === VOID ? this.value : value;
-    return this.lh(name, value);
+    return this.ji(name, value);
   };
   protoOf(Param).toString = function () {
     return 'Param(name=' + this.name + ', value=' + this.value + ')';
@@ -240,22 +240,22 @@
     this.mSearch = mSearch;
     this.mHash = mHash;
   }
-  protoOf(PshComponentsImpl).mh = function (_set____db54di) {
+  protoOf(PshComponentsImpl).ki = function (_set____db54di) {
     this.mPath = _set____db54di;
   };
-  protoOf(PshComponentsImpl).nh = function () {
+  protoOf(PshComponentsImpl).li = function () {
     return this.mPath;
   };
-  protoOf(PshComponentsImpl).oh = function (_set____db54di) {
+  protoOf(PshComponentsImpl).mi = function (_set____db54di) {
     this.mSearch = _set____db54di;
   };
-  protoOf(PshComponentsImpl).ph = function () {
+  protoOf(PshComponentsImpl).ni = function () {
     return this.mSearch;
   };
-  protoOf(PshComponentsImpl).qh = function (_set____db54di) {
+  protoOf(PshComponentsImpl).oi = function (_set____db54di) {
     this.mHash = _set____db54di;
   };
-  protoOf(PshComponentsImpl).rh = function () {
+  protoOf(PshComponentsImpl).pi = function () {
     return this.mHash;
   };
   protoOf(PshComponentsImpl).getPath = function () {
@@ -293,11 +293,11 @@
   function SearchComponent() {
   }
   function Companion_0() {
-    this.sh_1 = 'utm_source';
-    this.th_1 = 'utm_medium';
-    this.uh_1 = 'utm_campaign';
-    this.vh_1 = 'utm_term';
-    this.wh_1 = 'utm_content';
+    this.qi_1 = 'utm_source';
+    this.ri_1 = 'utm_medium';
+    this.si_1 = 'utm_campaign';
+    this.ti_1 = 'utm_term';
+    this.ui_1 = 'utm_content';
   }
   var Companion_instance_0;
   function Companion_getInstance_0() {
@@ -306,17 +306,17 @@
   function $serializer_0() {
     $serializer_instance_0 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.motorro.keeplink.uri.data.Utm', this, 5);
-    tmp0_serialDesc.zf('utm_source', false);
-    tmp0_serialDesc.zf('utm_medium', false);
-    tmp0_serialDesc.zf('utm_campaign', false);
-    tmp0_serialDesc.zf('utm_term', false);
-    tmp0_serialDesc.zf('utm_content', false);
-    this.xh_1 = tmp0_serialDesc;
+    tmp0_serialDesc.xg('utm_source', false);
+    tmp0_serialDesc.xg('utm_medium', false);
+    tmp0_serialDesc.xg('utm_campaign', false);
+    tmp0_serialDesc.xg('utm_term', false);
+    tmp0_serialDesc.xg('utm_content', false);
+    this.vi_1 = tmp0_serialDesc;
   }
-  protoOf($serializer_0).tc = function () {
-    return this.xh_1;
+  protoOf($serializer_0).qd = function () {
+    return this.vi_1;
   };
-  protoOf($serializer_0).bg = function () {
+  protoOf($serializer_0).zg = function () {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -335,19 +335,19 @@
     this.utmTerm = utmTerm;
     this.utmContent = utmContent;
   }
-  protoOf(Utm).yh = function () {
+  protoOf(Utm).wi = function () {
     return this.utmSource;
   };
-  protoOf(Utm).zh = function () {
+  protoOf(Utm).xi = function () {
     return this.utmMedium;
   };
-  protoOf(Utm).ai = function () {
+  protoOf(Utm).yi = function () {
     return this.utmCampaign;
   };
-  protoOf(Utm).bi = function () {
+  protoOf(Utm).zi = function () {
     return this.utmTerm;
   };
-  protoOf(Utm).ci = function () {
+  protoOf(Utm).aj = function () {
     return this.utmContent;
   };
   protoOf(Utm).getSearch = function () {
@@ -355,46 +355,42 @@
     // Inline function 'kotlin.text.isNotBlank' call
     var this_0 = this.utmSource;
     if (!isBlank(this_0)) {
-      // Inline function 'kotlin.collections.toTypedArray' call
       // Inline function 'kotlin.apply' call
       var this_1 = mutableListOf([of('utm_source', this.utmSource)]);
-      // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.motorro.keeplink.uri.data.Utm.getSearch.<anonymous>' call
       var tmp0_safe_receiver = this.utmMedium;
       if (tmp0_safe_receiver == null)
         null;
       else {
         // Inline function 'kotlin.let' call
-        // Inline function 'kotlin.contracts.contract' call
         // Inline function 'com.motorro.keeplink.uri.data.Utm.getSearch.<anonymous>.<anonymous>' call
-        this_1.k(of('utm_medium', tmp0_safe_receiver));
+        this_1.e(of('utm_medium', tmp0_safe_receiver));
       }
       var tmp1_safe_receiver = this.utmCampaign;
       if (tmp1_safe_receiver == null)
         null;
       else {
         // Inline function 'kotlin.let' call
-        // Inline function 'kotlin.contracts.contract' call
         // Inline function 'com.motorro.keeplink.uri.data.Utm.getSearch.<anonymous>.<anonymous>' call
-        this_1.k(of('utm_campaign', tmp1_safe_receiver));
+        this_1.e(of('utm_campaign', tmp1_safe_receiver));
       }
       var tmp2_safe_receiver = this.utmTerm;
       if (tmp2_safe_receiver == null)
         null;
       else {
         // Inline function 'kotlin.let' call
-        // Inline function 'kotlin.contracts.contract' call
         // Inline function 'com.motorro.keeplink.uri.data.Utm.getSearch.<anonymous>.<anonymous>' call
-        this_1.k(of('utm_term', tmp2_safe_receiver));
+        this_1.e(of('utm_term', tmp2_safe_receiver));
       }
       var tmp3_safe_receiver = this.utmContent;
       if (tmp3_safe_receiver == null)
         null;
       else {
         // Inline function 'kotlin.let' call
-        // Inline function 'kotlin.contracts.contract' call
-        this_1.k(of('utm_content', tmp3_safe_receiver));
+        // Inline function 'com.motorro.keeplink.uri.data.Utm.getSearch.<anonymous>.<anonymous>' call
+        this_1.e(of('utm_content', tmp3_safe_receiver));
       }
+      // Inline function 'kotlin.collections.toTypedArray' call
       tmp = copyToArray(this_1);
     } else {
       // Inline function 'kotlin.emptyArray' call
@@ -414,22 +410,22 @@
   protoOf(Utm).content = function (value) {
     return this.copy(VOID, VOID, VOID, VOID, value);
   };
-  protoOf(Utm).o9 = function () {
+  protoOf(Utm).y9 = function () {
     return this.utmSource;
   };
-  protoOf(Utm).p9 = function () {
+  protoOf(Utm).z9 = function () {
     return this.utmMedium;
   };
-  protoOf(Utm).di = function () {
+  protoOf(Utm).bj = function () {
     return this.utmCampaign;
   };
-  protoOf(Utm).ei = function () {
+  protoOf(Utm).cj = function () {
     return this.utmTerm;
   };
-  protoOf(Utm).fi = function () {
+  protoOf(Utm).dj = function () {
     return this.utmContent;
   };
-  protoOf(Utm).gi = function (utmSource, utmMedium, utmCampaign, utmTerm, utmContent) {
+  protoOf(Utm).ej = function (utmSource, utmMedium, utmCampaign, utmTerm, utmContent) {
     return new Utm(utmSource, utmMedium, utmCampaign, utmTerm, utmContent);
   };
   protoOf(Utm).copy = function (utmSource, utmMedium, utmCampaign, utmTerm, utmContent, $super) {
@@ -438,7 +434,7 @@
     utmCampaign = utmCampaign === VOID ? this.utmCampaign : utmCampaign;
     utmTerm = utmTerm === VOID ? this.utmTerm : utmTerm;
     utmContent = utmContent === VOID ? this.utmContent : utmContent;
-    return this.gi(utmSource, utmMedium, utmCampaign, utmTerm, utmContent);
+    return this.ej(utmSource, utmMedium, utmCampaign, utmTerm, utmContent);
   };
   protoOf(Utm).toString = function () {
     return 'Utm(utmSource=' + this.utmSource + ', utmMedium=' + this.utmMedium + ', utmCampaign=' + this.utmCampaign + ', utmTerm=' + this.utmTerm + ', utmContent=' + this.utmContent + ')';
@@ -474,23 +470,21 @@
   }
   function parseUtm(searchComponent) {
     // Inline function 'kotlin.with' call
-    // Inline function 'kotlin.contracts.contract' call
     // Inline function 'com.motorro.keeplink.uri.data.parseUtm.<anonymous>' call
     var $this$with = searchComponent.getSearch();
     var tmp0_elvis_lhs = getValue($this$with, 'utm_source');
     return new Utm(tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs, getValue($this$with, 'utm_medium'), getValue($this$with, 'utm_campaign'), getValue($this$with, 'utm_term'), getValue($this$with, 'utm_content'));
   }
   function build(_this__u8e3s4) {
-    var base = _this__u8e3s4.dh_1 + ':';
+    var base = _this__u8e3s4.bi_1 + ':';
     // Inline function 'kotlin.text.isNotEmpty' call
-    var this_0 = _this__u8e3s4.eh_1;
+    var this_0 = _this__u8e3s4.ci_1;
     if (charSequenceLength(this_0) > 0) {
-      base = base + ('//' + _this__u8e3s4.eh_1);
+      base = base + ('//' + _this__u8e3s4.ci_1);
     }
     base = base + toPath(_this__u8e3s4.getPath());
     // Inline function 'kotlin.also' call
     var this_1 = new URL(base);
-    // Inline function 'kotlin.contracts.contract' call
     // Inline function 'com.motorro.keeplink.uri.build.<anonymous>' call
     this_1.search = toSearch(_this__u8e3s4.getSearch());
     this_1.hash = toHash(_this__u8e3s4.getHash());
@@ -498,20 +492,30 @@
   }
   function toComponents(_this__u8e3s4) {
     // Inline function 'kotlin.with' call
-    // Inline function 'kotlin.contracts.contract' call
     // Inline function 'com.motorro.keeplink.uri.toComponents.<anonymous>' call
     var $this$with = new URL(_this__u8e3s4);
     return new UriComponents(dropLast($this$with.protocol, 1), $this$with.host, toPathComponent($this$with.pathname), toSearchComponent($this$with.search), toHashComponent($this$with.hash));
   }
   function toPath(_this__u8e3s4) {
-    return joinToString(_this__u8e3s4, '/', '/');
+    // Inline function 'kotlin.takeIf' call
+    var tmp;
+    // Inline function 'com.motorro.keeplink.uri.toPath.<anonymous>' call
+    // Inline function 'kotlin.collections.isNotEmpty' call
+    // Inline function 'kotlin.collections.isEmpty' call
+    if (!(_this__u8e3s4.length === 0)) {
+      tmp = _this__u8e3s4;
+    } else {
+      tmp = null;
+    }
+    var tmp0_safe_receiver = tmp;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : joinToString(tmp0_safe_receiver, '/', '/');
+    return tmp1_elvis_lhs == null ? '/' : tmp1_elvis_lhs;
   }
   function toSearch(_this__u8e3s4) {
     return joinToString(_this__u8e3s4, '&', VOID, VOID, VOID, VOID, toSearch$lambda);
   }
   function toHash(_this__u8e3s4) {
     // Inline function 'kotlin.takeIf' call
-    // Inline function 'kotlin.contracts.contract' call
     var tmp;
     // Inline function 'com.motorro.keeplink.uri.toHash.<anonymous>' call
     // Inline function 'kotlin.text.isNotEmpty' call
@@ -526,7 +530,6 @@
       tmp_0 = null;
     } else {
       // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.motorro.keeplink.uri.toHash.<anonymous>' call
       tmp_0 = '#' + encode(tmp0_safe_receiver);
     }
@@ -535,7 +538,6 @@
   }
   function toPathComponent(_this__u8e3s4) {
     // Inline function 'kotlin.takeIf' call
-    // Inline function 'kotlin.contracts.contract' call
     var tmp;
     // Inline function 'com.motorro.keeplink.uri.toPathComponent.<anonymous>' call
     // Inline function 'kotlin.text.isNotEmpty' call
@@ -566,7 +568,6 @@
   }
   function toSearchComponent(_this__u8e3s4) {
     // Inline function 'kotlin.takeIf' call
-    // Inline function 'kotlin.contracts.contract' call
     var tmp;
     // Inline function 'com.motorro.keeplink.uri.toSearchComponent.<anonymous>' call
     // Inline function 'kotlin.text.isNotEmpty' call
@@ -581,7 +582,7 @@
       tmp_0 = null;
     } else {
       // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'com.motorro.keeplink.uri.toSearchComponent.stub_for_inlining' call
       tmp_0 = decode(tmp0_safe_receiver);
     }
     var tmp1_safe_receiver = tmp_0;
@@ -594,9 +595,9 @@
       // Inline function 'kotlin.collections.map' call
       // Inline function 'kotlin.collections.mapTo' call
       var destination = ArrayList_init_$Create$(collectionSizeOrDefault(tmp3_safe_receiver, 10));
-      var tmp0_iterator = tmp3_safe_receiver.n();
-      while (tmp0_iterator.u()) {
-        var item = tmp0_iterator.v();
+      var _iterator__ex2g4s = tmp3_safe_receiver.j();
+      while (_iterator__ex2g4s.k()) {
+        var item = _iterator__ex2g4s.l();
         // Inline function 'com.motorro.keeplink.uri.toSearchComponent.<anonymous>' call
         var idx = indexOf(item, _Char___init__impl__6a9atx(61));
         var tmp_2;
@@ -613,7 +614,7 @@
           tmp_2 = of(item, '');
         }
         var tmp$ret$9 = tmp_2;
-        destination.k(tmp$ret$9);
+        destination.e(tmp$ret$9);
       }
       tmp_1 = destination;
     }
@@ -637,7 +638,6 @@
   }
   function toHashComponent(_this__u8e3s4) {
     // Inline function 'kotlin.takeIf' call
-    // Inline function 'kotlin.contracts.contract' call
     var tmp;
     // Inline function 'com.motorro.keeplink.uri.toHashComponent.<anonymous>' call
     // Inline function 'kotlin.text.isNotEmpty' call
@@ -653,7 +653,7 @@
       tmp_0 = null;
     } else {
       // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'com.motorro.keeplink.uri.toHashComponent.stub_for_inlining' call
       tmp_0 = decode(tmp1_safe_receiver);
     }
     var tmp2_elvis_lhs = tmp_0;
@@ -667,11 +667,10 @@
     // Inline function 'kotlin.js.unsafeCast' call
     return decodeURIComponent(string);
   }
-  function toSearch$lambda(_name_for_destructuring_parameter_0__wldtmu) {
-    var name = _name_for_destructuring_parameter_0__wldtmu.o9();
-    var value = _name_for_destructuring_parameter_0__wldtmu.p9();
+  function toSearch$lambda(_destruct__k2r9zo) {
+    var name = _destruct__k2r9zo.y9();
+    var value = _destruct__k2r9zo.z9();
     // Inline function 'kotlin.takeIf' call
-    // Inline function 'kotlin.contracts.contract' call
     var tmp;
     // Inline function 'com.motorro.keeplink.uri.toSearch.<anonymous>.<anonymous>' call
     // Inline function 'kotlin.text.isNotBlank' call
@@ -686,7 +685,6 @@
       tmp_0 = null;
     } else {
       // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.motorro.keeplink.uri.toSearch.<anonymous>.<anonymous>' call
       tmp_0 = encode(name) + '=' + encode(tmp0_safe_receiver);
     }
@@ -694,8 +692,8 @@
     return tmp1_elvis_lhs == null ? encode(name) : tmp1_elvis_lhs;
   }
   //region block: post-declaration
-  protoOf($serializer).cg = typeParametersSerializers;
-  protoOf($serializer_0).cg = typeParametersSerializers;
+  protoOf($serializer).ah = typeParametersSerializers;
+  protoOf($serializer_0).ah = typeParametersSerializers;
   //endregion
   //region block: init
   Companion_instance = new Companion();

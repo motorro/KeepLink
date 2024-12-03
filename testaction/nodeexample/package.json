@@ -4,7 +4,7 @@
   "description": "Deep-links NodeJS example",
   "main": "index.ts",
   "scripts": {
-    "test": "mocha test/**/*.spec.{ts,tsx} --colors"
+    "test": "mocha 'test/**/*.spec.{ts,tsx}' --colors"
   },
   "author": "Motorro <motorro@gmail.com>",
   "license": "Apache-2.0",
