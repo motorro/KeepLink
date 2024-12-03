@@ -1,15 +1,13 @@
 {
   "name": "testaction",
-  "version": "2.0.3",
+  "version": "2.1.2",
   "main": "testaction.js",
   "types": "testaction.d.ts",
   "devDependencies": {
-    "typescript": "5.0.4",
+    "typescript": "5.5.4",
     "source-map-support": "0.5.21"
   },
-  "dependencies": {
-    "format-util": "^1.0.5"
-  },
+  "dependencies": {},
   "peerDependencies": {},
   "optionalDependencies": {},
   "bundledDependencies": []

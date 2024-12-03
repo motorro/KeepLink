@@ -1,7 +1,7 @@
 [versions]
-kotlin = "2.0.0"
+kotlin = "2.1.0"
 dokka = "1.9.20"
-serialization = "1.6.3"
+serialization = "1.7.3"
 
 [plugins]
 kotlin_multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
