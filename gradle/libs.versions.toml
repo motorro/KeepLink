@@ -7,7 +7,7 @@ serialization = "1.6.3"
 kotlin_multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin_serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlin_dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
-git = { id = "org.ajoberstar.grgit", version = "3.0.0" }
+git = { id = "org.ajoberstar.grgit", version = "5.0.0" }
 nexus_publish = { id = "io.github.gradle-nexus.publish-plugin", version = "1.3.0" }
 
 [libraries]
