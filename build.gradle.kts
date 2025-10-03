@@ -11,7 +11,7 @@
  * limitations under the License.
  */
 
-@file:Suppress("EXPERIMENTAL_API_USAGE", "DSL_SCOPE_VIOLATION")
+@file:Suppress("EXPERIMENTAL_API_USAGE")
 
 import org.jetbrains.dokka.Platform
 import org.jetbrains.dokka.gradle.DokkaTask
@@ -105,8 +105,8 @@ val displayVersion by tasks.registering(Jar::class) {
 nexusPublishing {
     repositories {
         sonatype {
-            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
-            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+            nexusUrl.set(uri("https://ossrh-staging-api.central.sonatype.com/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://central.sonatype.com/repository/maven-snapshots"))
             username.set(project.extra["ossrhUsername"].toString())
             password.set(project.extra["ossrhPassword"].toString())
         }

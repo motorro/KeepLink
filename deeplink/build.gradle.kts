@@ -126,17 +126,6 @@ val javadocJar by tasks.registering(Jar::class) {
 }
 
 publishing {
-    repositories {
-        maven {
-            name = "sonatype"
-            url = URI("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
-            credentials {
-                username = ossrhUsername
-                password = ossrhPassword
-            }
-        }
-    }
-
     publications.withType<MavenPublication> {
         artifact(javadocJar)
         pom {
