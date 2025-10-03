@@ -50,7 +50,6 @@ kotlin {
     }
 
     js(IR) {
-        moduleName = "mocks"
         compilerOptions {
             freeCompilerArgs.add("-opt-in=kotlin.js.ExperimentalJsExport")
         }

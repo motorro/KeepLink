@@ -54,7 +54,6 @@ kotlin {
     }
 
     js(IR) {
-        moduleName = "keeplink"
         compilerOptions {
             freeCompilerArgs.add("-opt-in=kotlin.js.ExperimentalJsExport")
         }
@@ -119,10 +118,9 @@ val developerEmail: String by rootProject.extra
 val signingKey: String? by rootProject.extra
 val signingPassword: String? by rootProject.extra
 
-val javadocJar by tasks.creating(Jar::class) {
+val javadocJar by tasks.registering(Jar::class) {
     group = "documentation"
     archiveClassifier.set("javadoc")
-    from(tasks.dokkaHtml)
 }
 
 publishing {

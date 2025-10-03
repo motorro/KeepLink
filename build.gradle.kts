@@ -93,7 +93,7 @@ subprojects {
     }
 }
 
-val displayVersion by tasks.creating(Jar::class) {
+val displayVersion by tasks.registering(Jar::class) {
     group = "documentation"
     description = "Display application version name"
     outputs.upToDateWhen { false }
@@ -114,13 +114,8 @@ nexusPublishing {
 }
 
 val docDir = projectDir.resolve("docs")
-tasks {
-    dokkaHtmlMultiModule {
-        outputDirectory.set(docDir)
-        includes.from("moduledoc.md")
-    }
-    dokkaGfmMultiModule {
-        outputDirectory.set(docDir)
-        includes.from("moduledoc.md")
-    }
+dependencies {
+    dokka(project(":deeplink:"))
+    dokka(project(":push:"))
+    dokka(project(":uri:"))
 }

@@ -41,7 +41,7 @@ kotlin {
             framework(listOf(DEBUG))
         }
     }
-    val outputIos by tasks.creating(org.jetbrains.kotlin.gradle.tasks.FatFrameworkTask::class) {
+    val outputIos by tasks.registering(org.jetbrains.kotlin.gradle.tasks.FatFrameworkTask::class) {
         group = "output"
         destinationDirProperty = file("$projectDir/output/ios/Fat")
         from(
@@ -49,15 +49,15 @@ kotlin {
             iosX64.binaries.getFramework("RELEASE")
         )
     }
-    val outputIosArm64 by tasks.creating(Copy::class) {
+    val outputIosArm64 by tasks.registering(Copy::class) {
         group = "output"
         into(file("$projectDir/output/ios/Arm64"))
-        from(iosArm64.binaries.getFramework("RELEASE").linkTask)
+        from(iosArm64.binaries.getFramework("RELEASE").linkTaskProvider)
     }
-    val outputIosX64 by tasks.creating(Copy::class) {
+    val outputIosX64 by tasks.registering(Copy::class) {
         group = "output"
         into(file("$projectDir/output/ios/X64"))
-        from(iosX64.binaries.getFramework("RELEASE").linkTask)
+        from(iosX64.binaries.getFramework("RELEASE").linkTaskProvider)
     }
 
     jvm {
@@ -70,7 +70,6 @@ kotlin {
     }
 
     js(IR) {
-        moduleName = "testaction"
         compilerOptions {
             freeCompilerArgs.add("-opt-in=kotlin.js.ExperimentalJsExport")
         }
@@ -130,8 +129,7 @@ kotlin {
     }
 }
 
-val javadocJar by tasks.creating(Jar::class) {
+val javadocJar by tasks.registering(Jar::class) {
     group = "documentation"
     archiveClassifier.set("javadoc")
-    from(tasks.dokkaHtml)
 }

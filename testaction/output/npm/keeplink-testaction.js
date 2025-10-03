@@ -2,46 +2,46 @@
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var protoOf = kotlin_kotlin.$_$.z2;
-  var initMetadataForCompanion = kotlin_kotlin.$_$.u2;
-  var initMetadataForClass = kotlin_kotlin.$_$.t2;
-  var VOID = kotlin_kotlin.$_$.c;
-  var getKClass = kotlin_kotlin.$_$.b;
+  var protoOf = kotlin_kotlin.$_$.x2;
+  var initMetadataForCompanion = kotlin_kotlin.$_$.s2;
+  var initMetadataForClass = kotlin_kotlin.$_$.r2;
+  var VOID = kotlin_kotlin.$_$.a;
+  var getKClass = kotlin_kotlin.$_$.b3;
   var SealedClassSerializer_init_$Create$ = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.b;
   var of = kotlin_com_motorro_keeplink_uri.$_$.d;
-  var LazyThreadSafetyMode_PUBLICATION_getInstance = kotlin_kotlin.$_$.d;
-  var lazy = kotlin_kotlin.$_$.c4;
+  var LazyThreadSafetyMode_PUBLICATION_getInstance = kotlin_kotlin.$_$.b;
+  var lazy = kotlin_kotlin.$_$.f4;
   var Action = kotlin_com_motorro_keeplink_deeplink.$_$.b;
-  var defineProp = kotlin_kotlin.$_$.n2;
-  var Regex_init_$Create$ = kotlin_kotlin.$_$.l;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.m;
-  var toInt = kotlin_kotlin.$_$.k3;
-  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.p;
+  var defineProp = kotlin_kotlin.$_$.m2;
+  var Regex_init_$Create$ = kotlin_kotlin.$_$.j;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.k;
+  var toInt = kotlin_kotlin.$_$.m3;
+  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.n;
   var padStart = kotlin_kotlin.$_$.i3;
-  var THROW_CCE = kotlin_kotlin.$_$.q3;
   var ComponentValue = kotlin_com_motorro_keeplink_uri.$_$.a;
-  var getStringHashCode = kotlin_kotlin.$_$.r2;
-  var initMetadataForObject = kotlin_kotlin.$_$.w2;
-  var equals = kotlin_kotlin.$_$.o2;
-  var FunctionAdapter = kotlin_kotlin.$_$.j2;
-  var isInterface = kotlin_kotlin.$_$.x2;
+  var getStringHashCode = kotlin_kotlin.$_$.p2;
+  var initMetadataForObject = kotlin_kotlin.$_$.u2;
+  var equals = kotlin_kotlin.$_$.n2;
+  var FunctionAdapter = kotlin_kotlin.$_$.i2;
+  var isInterface = kotlin_kotlin.$_$.v2;
   var ActionParser = kotlin_com_motorro_keeplink_deeplink.$_$.a;
-  var hashCode = kotlin_kotlin.$_$.s2;
-  var getOrNull = kotlin_kotlin.$_$.u1;
+  var hashCode = kotlin_kotlin.$_$.q2;
+  var getOrNull = kotlin_kotlin.$_$.t1;
   var isBlank = kotlin_kotlin.$_$.h3;
-  var Companion_instance = kotlin_kotlin.$_$.f1;
+  var Companion_instance = kotlin_kotlin.$_$.e1;
   var getValue = kotlin_com_motorro_keeplink_uri.$_$.c;
-  var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.q;
-  var createFailure = kotlin_kotlin.$_$.a4;
-  var _Result___get_value__impl__bjfvqg = kotlin_kotlin.$_$.s;
-  var _Result___get_isFailure__impl__jpiriv = kotlin_kotlin.$_$.r;
-  var Unit_instance = kotlin_kotlin.$_$.k1;
-  var listOf = kotlin_kotlin.$_$.y1;
+  var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.o;
+  var createFailure = kotlin_kotlin.$_$.d4;
+  var _Result___get_value__impl__bjfvqg = kotlin_kotlin.$_$.q;
+  var THROW_CCE = kotlin_kotlin.$_$.t3;
+  var _Result___get_isFailure__impl__jpiriv = kotlin_kotlin.$_$.p;
+  var Unit_instance = kotlin_kotlin.$_$.j1;
+  var listOf = kotlin_kotlin.$_$.x1;
   var BranchActionParser = kotlin_com_motorro_keeplink_deeplink.$_$.c;
   var SegmentCheckParser = kotlin_com_motorro_keeplink_deeplink.$_$.g;
   var BranchActionParser_init_$Create$ = kotlin_com_motorro_keeplink_deeplink.$_$.h;
   var DefaultActionParser = kotlin_com_motorro_keeplink_deeplink.$_$.d;
-  var listOf_0 = kotlin_kotlin.$_$.z1;
+  var listOf_0 = kotlin_kotlin.$_$.y1;
   var SchemeHostLinkParser = kotlin_com_motorro_keeplink_deeplink.$_$.f;
   var SchemeHostLinkBuilder = kotlin_com_motorro_keeplink_deeplink.$_$.e;
   //endregion
@@ -126,14 +126,14 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$3 = ['magic'];
-    var tmp2 = tmp$ret$0.concat(tmp$ret$3);
+    var tmp0 = tmp$ret$0.concat(tmp$ret$3);
     // Inline function 'kotlin.collections.plus' call
     // Inline function 'kotlin.js.asDynamic' call
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$8 = [this.token];
-    return tmp2.concat(tmp$ret$8);
+    return tmp0.concat(tmp$ret$8);
   };
   function Companion_4() {
     this.sk_1 = 'search';
@@ -147,7 +147,7 @@
     return Companion_instance_5;
   }
   function _get_$cachedSerializer__te6jhj($this) {
-    return $this.xk_1.j1();
+    return $this.xk_1.l1();
   }
   function TestAction$Companion$_anonymous__lnvpp5() {
     var tmp = getKClass(TestAction);
@@ -259,14 +259,14 @@
     return tmp$ret$0.concat(tmp$ret$3);
   };
   protoOf(Search).getSearch = function () {
-    var tmp1 = protoOf(TestAction).getSearch.call(this);
+    var tmp0 = protoOf(TestAction).getSearch.call(this);
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     // Inline function 'kotlin.collections.plus' call
     var elements = [of('type', this.type.toComponentValue()), of('from', this.from), of('to', this.to), of('date', this.date.toComponentValue())];
     // Inline function 'kotlin.js.asDynamic' call
-    return tmp1.concat(elements);
+    return tmp0.concat(elements);
   };
   function Companion_5() {
     Companion_instance_6 = this;
@@ -298,7 +298,7 @@
     tmp.il_1 = Regex_init_$Create$(this_0);
   }
   protoOf(Companion_6).parse = function (componentValue) {
-    var tmp0_elvis_lhs = this.il_1.k8(componentValue);
+    var tmp0_elvis_lhs = this.il_1.w7(componentValue);
     var tmp;
     if (tmp0_elvis_lhs == null) {
       throw IllegalArgumentException_init_$Create$('Not a valid local date');
@@ -307,9 +307,8 @@
     }
     var match = tmp;
     // Inline function 'kotlin.run' call
-    // Inline function 'com.motorro.keeplink.testaction.data.Companion.parse.<anonymous>' call
-    var $this$run = match.z8();
-    return new LocalDateFields(toInt($this$run.n(1)), toInt($this$run.n(2)), toInt($this$run.n(3)));
+    var $this$run = match.l8();
+    return new LocalDateFields(toInt($this$run.p(1)), toInt($this$run.p(2)), toInt($this$run.p(3)));
   };
   var Companion_instance_7;
   function Companion_getInstance_6() {
@@ -335,10 +334,10 @@
   protoOf(LocalDateFields).toComponentValue = function () {
     return '' + this.year + '-' + padStart(this.month.toString(), 2, _Char___init__impl__6a9atx(48)) + '-' + padStart(this.day.toString(), 2, _Char___init__impl__6a9atx(48));
   };
-  protoOf(LocalDateFields).y9 = function () {
+  protoOf(LocalDateFields).k9 = function () {
     return this.year;
   };
-  protoOf(LocalDateFields).z9 = function () {
+  protoOf(LocalDateFields).l9 = function () {
     return this.month;
   };
   protoOf(LocalDateFields).bj = function () {
@@ -351,7 +350,7 @@
     year = year === VOID ? this.year : year;
     month = month === VOID ? this.month : month;
     day = day === VOID ? this.day : day;
-    return this.ml(year, month, day);
+    return $super === VOID ? this.ml(year, month, day) : $super.ml.call(this, year, month, day);
   };
   protoOf(LocalDateFields).toString = function () {
     return 'LocalDateFields(year=' + this.year + ', month=' + this.month + ', day=' + this.day + ')';
@@ -367,12 +366,11 @@
       return true;
     if (!(other instanceof LocalDateFields))
       return false;
-    var tmp0_other_with_cast = other instanceof LocalDateFields ? other : THROW_CCE();
-    if (!(this.year === tmp0_other_with_cast.year))
+    if (!(this.year === other.year))
       return false;
-    if (!(this.month === tmp0_other_with_cast.month))
+    if (!(this.month === other.month))
       return false;
-    if (!(this.day === tmp0_other_with_cast.day))
+    if (!(this.day === other.day))
       return false;
     return true;
   };
@@ -399,13 +397,13 @@
   function TransportType(value) {
     this.value = value;
   }
-  protoOf(TransportType).j1 = function () {
+  protoOf(TransportType).l1 = function () {
     return this.value;
   };
   protoOf(TransportType).toComponentValue = function () {
     return this.value;
   };
-  protoOf(TransportType).y9 = function () {
+  protoOf(TransportType).k9 = function () {
     return this.value;
   };
   protoOf(TransportType).nl = function (value) {
@@ -413,7 +411,7 @@
   };
   protoOf(TransportType).copy = function (value, $super) {
     value = value === VOID ? this.value : value;
-    return this.nl(value);
+    return $super === VOID ? this.nl(value) : $super.nl.call(this, value);
   };
   protoOf(TransportType).toString = function () {
     return 'TransportType(value=' + this.value + ')';
@@ -426,8 +424,7 @@
       return true;
     if (!(other instanceof TransportType))
       return false;
-    var tmp0_other_with_cast = other instanceof TransportType ? other : THROW_CCE();
-    if (!(this.value === tmp0_other_with_cast.value))
+    if (!(this.value === other.value))
       return false;
     return true;
   };
@@ -489,7 +486,7 @@
   protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0).jj = function (components, pathIndex) {
     return this.ql_1(components, pathIndex);
   };
-  protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0).o2 = function () {
+  protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0).c2 = function () {
     return this.ql_1;
   };
   protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0).equals = function (other) {
@@ -497,7 +494,7 @@
     if (!(other == null) ? isInterface(other, ActionParser) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.o2(), other.o2());
+        tmp_0 = equals(this.c2(), other.c2());
       } else {
         tmp_0 = false;
       }
@@ -508,7 +505,7 @@
     return tmp;
   };
   protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0).hashCode = function () {
-    return hashCode(this.o2());
+    return hashCode(this.c2());
   };
   function sam$com_motorro_keeplink_deeplink_ActionParser$0_0(function_0) {
     this.rl_1 = function_0;
@@ -516,7 +513,7 @@
   protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_0).jj = function (components, pathIndex) {
     return this.rl_1(components, pathIndex);
   };
-  protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_0).o2 = function () {
+  protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_0).c2 = function () {
     return this.rl_1;
   };
   protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_0).equals = function (other) {
@@ -524,7 +521,7 @@
     if (!(other == null) ? isInterface(other, ActionParser) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.o2(), other.o2());
+        tmp_0 = equals(this.c2(), other.c2());
       } else {
         tmp_0 = false;
       }
@@ -535,7 +532,7 @@
     return tmp;
   };
   protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_0).hashCode = function () {
-    return hashCode(this.o2());
+    return hashCode(this.c2());
   };
   function sam$com_motorro_keeplink_deeplink_ActionParser$0_1(function_0) {
     this.sl_1 = function_0;
@@ -543,7 +540,7 @@
   protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_1).jj = function (components, pathIndex) {
     return this.sl_1(components, pathIndex);
   };
-  protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_1).o2 = function () {
+  protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_1).c2 = function () {
     return this.sl_1;
   };
   protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_1).equals = function (other) {
@@ -551,7 +548,7 @@
     if (!(other == null) ? isInterface(other, ActionParser) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.o2(), other.o2());
+        tmp_0 = equals(this.c2(), other.c2());
       } else {
         tmp_0 = false;
       }
@@ -562,7 +559,7 @@
     return tmp;
   };
   protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_1).hashCode = function () {
-    return hashCode(this.o2());
+    return hashCode(this.c2());
   };
   function sam$com_motorro_keeplink_deeplink_ActionParser$0_2(function_0) {
     this.tl_1 = function_0;
@@ -570,7 +567,7 @@
   protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_2).jj = function (components, pathIndex) {
     return this.tl_1(components, pathIndex);
   };
-  protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_2).o2 = function () {
+  protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_2).c2 = function () {
     return this.tl_1;
   };
   protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_2).equals = function (other) {
@@ -578,7 +575,7 @@
     if (!(other == null) ? isInterface(other, ActionParser) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.o2(), other.o2());
+        tmp_0 = equals(this.c2(), other.c2());
       } else {
         tmp_0 = false;
       }
@@ -589,7 +586,7 @@
     return tmp;
   };
   protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0_2).hashCode = function () {
-    return hashCode(this.o2());
+    return hashCode(this.c2());
   };
   function MagicLinkHashParser$lambda(components, pathIndex) {
     _init_properties_testActionParsers_kt__q0ar6u();
@@ -600,7 +597,6 @@
     } else {
       // Inline function 'kotlin.takeIf' call
       var tmp_0;
-      // Inline function 'com.motorro.keeplink.testaction.MagicLinkHashParser.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.text.isNotBlank' call
       if (!isBlank(tmp0_safe_receiver)) {
         tmp_0 = tmp0_safe_receiver;
@@ -615,7 +611,6 @@
       tmp_1 = null;
     } else {
       // Inline function 'kotlin.let' call
-      // Inline function 'com.motorro.keeplink.testaction.MagicLinkHashParser.<anonymous>.<anonymous>' call
       tmp_1 = new Magic(tmp1_safe_receiver);
     }
     return tmp_1;
@@ -629,14 +624,12 @@
       // Inline function 'kotlin.runCatching' call
       var tmp;
       try {
-        // Inline function 'com.motorro.keeplink.testaction.SearchParser.<anonymous>.<anonymous>.<anonymous>' call
         var tmp0_safe_receiver = getValue(components.getSearch(), 'type');
         var tmp_0;
         if (tmp0_safe_receiver == null) {
           tmp_0 = null;
         } else {
           // Inline function 'kotlin.let' call
-          // Inline function 'com.motorro.keeplink.testaction.SearchParser.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
           tmp_0 = Companion_instance_8.parse(tmp0_safe_receiver);
         }
         // Inline function 'kotlin.Companion.success' call
@@ -689,14 +682,12 @@
       // Inline function 'kotlin.runCatching' call
       var tmp_7;
       try {
-        // Inline function 'com.motorro.keeplink.testaction.SearchParser.<anonymous>.<anonymous>.<anonymous>' call
         var tmp0_safe_receiver_0 = getValue(components.getSearch(), 'date');
         var tmp_8;
         if (tmp0_safe_receiver_0 == null) {
           tmp_8 = null;
         } else {
           // Inline function 'kotlin.let' call
-          // Inline function 'com.motorro.keeplink.testaction.SearchParser.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
           tmp_8 = Companion_getInstance_6().parse(tmp0_safe_receiver_0);
         }
         // Inline function 'kotlin.Companion.success' call
@@ -759,7 +750,6 @@
       MagicLinkParser = new SegmentCheckParser('magic', new BranchActionParser(tmp_0, new sam$com_motorro_keeplink_deeplink_ActionParser$0_0(tmp_1)));
       LoginParser = new SegmentCheckParser('login', BranchActionParser_init_$Create$([get_MagicLinkParser()]));
       // Inline function 'kotlin.with' call
-      // Inline function 'com.motorro.keeplink.testaction.SearchParser.<anonymous>' call
       var tmp_2 = SearchParser$lambda(Companion_instance_5);
       SearchParser = new SegmentCheckParser('search', new sam$com_motorro_keeplink_deeplink_ActionParser$0_1(tmp_2));
       ProfileParser = new SegmentCheckParser('profile', new DefaultActionParser(ProfileParser$lambda));
@@ -837,28 +827,28 @@
     $com$motorro$keeplink$testaction.TestAction.Login = Login;
     $com$motorro$keeplink$testaction.TestAction.Login.Magic = Magic;
     $com$motorro$keeplink$testaction.TestAction.Search = Search;
-    defineProp($com$motorro$keeplink$testaction.TestAction, 'Companion', Companion_getInstance_5);
+    defineProp($com$motorro$keeplink$testaction.TestAction, 'Companion', Companion_getInstance_5, VOID, true);
     var $com = _.com || (_.com = {});
     var $com$motorro = $com.motorro || ($com.motorro = {});
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
     var $com$motorro$keeplink$testaction = $com$motorro$keeplink.testaction || ($com$motorro$keeplink.testaction = {});
     var $com$motorro$keeplink$testaction$data = $com$motorro$keeplink$testaction.data || ($com$motorro$keeplink$testaction.data = {});
     $com$motorro$keeplink$testaction$data.LocalDateFields = LocalDateFields;
-    defineProp($com$motorro$keeplink$testaction$data.LocalDateFields, 'Companion', Companion_getInstance_6);
+    defineProp($com$motorro$keeplink$testaction$data.LocalDateFields, 'Companion', Companion_getInstance_6, VOID, true);
     var $com = _.com || (_.com = {});
     var $com$motorro = $com.motorro || ($com.motorro = {});
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
     var $com$motorro$keeplink$testaction = $com$motorro$keeplink.testaction || ($com$motorro$keeplink.testaction = {});
     var $com$motorro$keeplink$testaction$data = $com$motorro$keeplink$testaction.data || ($com$motorro$keeplink$testaction.data = {});
     $com$motorro$keeplink$testaction$data.TransportType = TransportType;
-    defineProp($com$motorro$keeplink$testaction$data.TransportType, 'Companion', Companion_getInstance_7);
-    defineProp($com$motorro$keeplink$testaction$data, 'TransportTypes', TransportTypes_getInstance);
+    defineProp($com$motorro$keeplink$testaction$data.TransportType, 'Companion', Companion_getInstance_7, VOID, true);
+    defineProp($com$motorro$keeplink$testaction$data, 'TransportTypes', TransportTypes_getInstance, VOID, true);
     var $com = _.com || (_.com = {});
     var $com$motorro = $com.motorro || ($com.motorro = {});
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
     var $com$motorro$keeplink$testaction = $com$motorro$keeplink.testaction || ($com$motorro$keeplink.testaction = {});
-    defineProp($com$motorro$keeplink$testaction, 'LinkParsers', LinkParsers_getInstance);
-    defineProp($com$motorro$keeplink$testaction, 'LinkBuilders', LinkBuilders_getInstance);
+    defineProp($com$motorro$keeplink$testaction, 'LinkParsers', LinkParsers_getInstance, VOID, true);
+    defineProp($com$motorro$keeplink$testaction, 'LinkBuilders', LinkBuilders_getInstance, VOID, true);
     var $com = _.com || (_.com = {});
     var $com$motorro = $com.motorro || ($com.motorro = {});
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
@@ -878,6 +868,6 @@
   kotlin_com_motorro_keeplink_deeplink.$jsExportAll$(_);
   //endregion
   return _;
-}(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./kotlinx-serialization-kotlinx-serialization-core.js'), require('./uri.js'), require('./deeplink.js')));
+}(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./kotlinx-serialization-kotlinx-serialization-core.js'), require('./keeplink-uri.js'), require('./keeplink-deeplink.js')));
 
-//# sourceMappingURL=testaction.js.map
+//# sourceMappingURL=keeplink-testaction.js.map

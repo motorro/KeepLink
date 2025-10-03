@@ -1,11 +1,10 @@
 {
-  "name": "testaction",
+  "name": "keeplink-testaction",
   "version": "2.1.2",
-  "main": "testaction.js",
-  "types": "testaction.d.ts",
+  "main": "keeplink-testaction.js",
+  "types": "keeplink-testaction.d.ts",
   "devDependencies": {
-    "typescript": "5.5.4",
-    "source-map-support": "0.5.21"
+    "typescript": "5.8.3"
   },
   "dependencies": {},
   "peerDependencies": {},

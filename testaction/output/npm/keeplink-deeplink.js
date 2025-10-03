@@ -1,44 +1,44 @@
 (function (_, kotlin_kotlin, kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core, kotlin_com_motorro_keeplink_uri) {
   'use strict';
   //region block: imports
-  var getKClass = kotlin_kotlin.$_$.b;
+  var getKClass = kotlin_kotlin.$_$.b3;
   var PolymorphicSerializer_init_$Create$ = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.a;
-  var LazyThreadSafetyMode_PUBLICATION_getInstance = kotlin_kotlin.$_$.d;
-  var lazy = kotlin_kotlin.$_$.c4;
-  var protoOf = kotlin_kotlin.$_$.z2;
-  var initMetadataForCompanion = kotlin_kotlin.$_$.u2;
+  var LazyThreadSafetyMode_PUBLICATION_getInstance = kotlin_kotlin.$_$.b;
+  var lazy = kotlin_kotlin.$_$.f4;
+  var protoOf = kotlin_kotlin.$_$.x2;
+  var initMetadataForCompanion = kotlin_kotlin.$_$.s2;
   var PshComponents = kotlin_com_motorro_keeplink_uri.$_$.b;
-  var defineProp = kotlin_kotlin.$_$.n2;
-  var initMetadataForClass = kotlin_kotlin.$_$.t2;
-  var VOID = kotlin_kotlin.$_$.c;
-  var initMetadataForInterface = kotlin_kotlin.$_$.v2;
-  var asIterable = kotlin_kotlin.$_$.l1;
-  var objectCreate = kotlin_kotlin.$_$.y2;
-  var equals = kotlin_kotlin.$_$.o2;
-  var FunctionAdapter = kotlin_kotlin.$_$.j2;
-  var isInterface = kotlin_kotlin.$_$.x2;
-  var hashCode = kotlin_kotlin.$_$.s2;
-  var Unit_instance = kotlin_kotlin.$_$.k1;
+  var defineProp = kotlin_kotlin.$_$.m2;
+  var initMetadataForClass = kotlin_kotlin.$_$.r2;
+  var VOID = kotlin_kotlin.$_$.a;
+  var initMetadataForInterface = kotlin_kotlin.$_$.t2;
+  var asIterable = kotlin_kotlin.$_$.k1;
+  var objectCreate = kotlin_kotlin.$_$.w2;
+  var equals = kotlin_kotlin.$_$.n2;
+  var FunctionAdapter = kotlin_kotlin.$_$.i2;
+  var isInterface = kotlin_kotlin.$_$.v2;
+  var hashCode = kotlin_kotlin.$_$.q2;
+  var Unit_instance = kotlin_kotlin.$_$.j1;
   var PluginGeneratedSerialDescriptor = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.i;
   var $serializer_getInstance = kotlin_com_motorro_keeplink_uri.$_$.j;
   var GeneratedSerializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.h;
-  var toString = kotlin_kotlin.$_$.a3;
+  var toString = kotlin_kotlin.$_$.y2;
   var utm = kotlin_com_motorro_keeplink_uri.$_$.f;
   var STRING_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.c;
   var PrimitiveSerialDescriptor = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.f;
-  var THROW_CCE = kotlin_kotlin.$_$.q3;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.m;
+  var THROW_CCE = kotlin_kotlin.$_$.t3;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.k;
   var KSerializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.j;
   var UriComponents_init_$Create$ = kotlin_com_motorro_keeplink_uri.$_$.i;
   var build = kotlin_com_motorro_keeplink_uri.$_$.g;
-  var Companion_instance = kotlin_kotlin.$_$.f1;
+  var Companion_instance = kotlin_kotlin.$_$.e1;
   var toComponents = kotlin_com_motorro_keeplink_uri.$_$.h;
-  var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.q;
-  var createFailure = kotlin_kotlin.$_$.a4;
-  var _Result___get_value__impl__bjfvqg = kotlin_kotlin.$_$.s;
-  var _Result___get_isFailure__impl__jpiriv = kotlin_kotlin.$_$.r;
+  var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.o;
+  var createFailure = kotlin_kotlin.$_$.d4;
+  var _Result___get_value__impl__bjfvqg = kotlin_kotlin.$_$.q;
+  var _Result___get_isFailure__impl__jpiriv = kotlin_kotlin.$_$.p;
   var parseUtm = kotlin_com_motorro_keeplink_uri.$_$.e;
-  var getOrNull = kotlin_kotlin.$_$.u1;
+  var getOrNull = kotlin_kotlin.$_$.t1;
   var equals_0 = kotlin_kotlin.$_$.f3;
   //endregion
   //region block: pre-declaration
@@ -60,7 +60,7 @@
   initMetadataForClass(SegmentCheckParser, 'SegmentCheckParser', VOID, VOID, [ActionParser]);
   //endregion
   function _get_$cachedSerializer__te6jhj($this) {
-    return $this.fj_1.j1();
+    return $this.fj_1.l1();
   }
   function Action$Companion$_anonymous__old2xz() {
     var tmp = getKClass(Action);
@@ -124,7 +124,7 @@
   protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0).jj = function (components, pathIndex) {
     return this.kj_1(components, pathIndex);
   };
-  protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0).o2 = function () {
+  protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0).c2 = function () {
     return this.kj_1;
   };
   protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0).equals = function (other) {
@@ -132,7 +132,7 @@
     if (!(other == null) ? isInterface(other, ActionParser) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.o2(), other.o2());
+        tmp_0 = equals(this.c2(), other.c2());
       } else {
         tmp_0 = false;
       }
@@ -143,7 +143,7 @@
     return tmp;
   };
   protoOf(sam$com_motorro_keeplink_deeplink_ActionParser$0).hashCode = function () {
-    return hashCode(this.o2());
+    return hashCode(this.c2());
   };
   function BranchActionParser$_init_$lambda_siwkdo(_unused_var__etf5q3, _unused_var__etf5q3_0) {
     return null;
@@ -153,9 +153,9 @@
     this.mj_1 = default_0;
   }
   protoOf(BranchActionParser).jj = function (components, pathIndex) {
-    var _iterator__ex2g4s = this.lj_1.j();
-    while (_iterator__ex2g4s.k()) {
-      var child = _iterator__ex2g4s.l();
+    var _iterator__ex2g4s = this.lj_1.l();
+    while (_iterator__ex2g4s.m()) {
+      var child = _iterator__ex2g4s.n();
       var tmp0_safe_receiver = child.jj(components, pathIndex + 1 | 0);
       if (tmp0_safe_receiver == null)
         null;
@@ -202,7 +202,7 @@
     tmp0_serialDesc.xg('utm', false);
     this.nj_1 = tmp0_serialDesc;
   }
-  protoOf($serializer).qd = function () {
+  protoOf($serializer).pd = function () {
     return this.nj_1;
   };
   protoOf($serializer).zg = function () {
@@ -259,7 +259,7 @@
     this.wj_1 = parser;
     this.xj_1 = PrimitiveSerialDescriptor('DeepLink', STRING_getInstance());
   }
-  protoOf(DeepLinkSerializer).qd = function () {
+  protoOf(DeepLinkSerializer).pd = function () {
     return this.xj_1;
   };
   protoOf(DeepLinkSerializer).yj = function (encoder, value) {
@@ -274,7 +274,6 @@
     $l$block: {
       // Inline function 'kotlin.requireNotNull' call
       if (tmp0 == null) {
-        // Inline function 'com.motorro.keeplink.deeplink.DeepLinkSerializer.deserialize.<anonymous>' call
         var message = 'Tried to deserialize invalid link: ' + decoder.ck();
         throw IllegalArgumentException_init_$Create$(toString(message));
       } else {
@@ -301,19 +300,17 @@
   };
   function LinkParser() {
   }
-  function isTargetUri(_this__u8e3s4, $this) {
+  function isTargetUri($this, _this__u8e3s4) {
     return _this__u8e3s4.bi_1 === $this.hk_1 && _this__u8e3s4.ci_1 === $this.ik_1;
   }
   function parseUri($this, uri) {
     // Inline function 'kotlin.runCatching' call
     var tmp;
     try {
-      // Inline function 'com.motorro.keeplink.deeplink.SchemeHostLinkParser.parseUri.<anonymous>' call
       // Inline function 'kotlin.takeIf' call
       var this_0 = toComponents(uri);
       var tmp_0;
-      // Inline function 'com.motorro.keeplink.deeplink.SchemeHostLinkParser.parseUri.<anonymous>.<anonymous>' call
-      if (isTargetUri(this_0, $this)) {
+      if (isTargetUri($this, this_0)) {
         tmp_0 = this_0;
       } else {
         tmp_0 = null;
@@ -350,7 +347,6 @@
       tmp = null;
     } else {
       // Inline function 'kotlin.let' call
-      // Inline function 'com.motorro.keeplink.deeplink.SchemeHostLinkParser.parseLink.<anonymous>' call
       tmp = new DeepLink(tmp0_safe_receiver, parseUtm(components));
     }
     return tmp;
@@ -367,7 +363,6 @@
       tmp = null;
     } else {
       // Inline function 'kotlin.let' call
-      // Inline function 'com.motorro.keeplink.deeplink.SchemeHostLinkParser.parse.stub_for_inlining' call
       tmp = parseLink(this, tmp0_safe_receiver);
     }
     return tmp;
@@ -398,13 +393,13 @@
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
     var $com$motorro$keeplink$deeplink = $com$motorro$keeplink.deeplink || ($com$motorro$keeplink.deeplink = {});
     $com$motorro$keeplink$deeplink.Action = Action;
-    defineProp($com$motorro$keeplink$deeplink.Action, 'Companion', Companion_getInstance);
+    defineProp($com$motorro$keeplink$deeplink.Action, 'Companion', Companion_getInstance, VOID, true);
     var $com = _.com || (_.com = {});
     var $com$motorro = $com.motorro || ($com.motorro = {});
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
     var $com$motorro$keeplink$deeplink = $com$motorro$keeplink.deeplink || ($com$motorro$keeplink.deeplink = {});
     $com$motorro$keeplink$deeplink.DeepLink = DeepLink;
-    defineProp($com$motorro$keeplink$deeplink.DeepLink, 'Companion', Companion_getInstance_0);
+    defineProp($com$motorro$keeplink$deeplink.DeepLink, 'Companion', Companion_getInstance_0, VOID, true);
     $com$motorro$keeplink$deeplink.deepLink = deepLink;
     var $com = _.com || (_.com = {});
     var $com$motorro = $com.motorro || ($com.motorro = {});
@@ -439,6 +434,6 @@
   _.$_$.h = BranchActionParser_init_$Create$;
   //endregion
   return _;
-}(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./kotlinx-serialization-kotlinx-serialization-core.js'), require('./uri.js')));
+}(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./kotlinx-serialization-kotlinx-serialization-core.js'), require('./keeplink-uri.js')));
 
-//# sourceMappingURL=deeplink.js.map
+//# sourceMappingURL=keeplink-deeplink.js.map

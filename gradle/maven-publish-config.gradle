@@ -39,7 +39,6 @@ if (secretPropsFile.exists()) {
     getFromEnv()
 }
 
-@SuppressWarnings('GrMethodMayBeStatic')
 def getFromEnv() {
     ext["signingKey"] = System.getenv('SIGNING_KEY')
     ext["signingPassword"] = System.getenv('SIGNING_PASSWORD')

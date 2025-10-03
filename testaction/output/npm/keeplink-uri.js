@@ -2,40 +2,42 @@
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var protoOf = kotlin_kotlin.$_$.z2;
-  var objectCreate = kotlin_kotlin.$_$.y2;
-  var getKClassFromExpression = kotlin_kotlin.$_$.a;
-  var THROW_CCE = kotlin_kotlin.$_$.q3;
-  var Unit_instance = kotlin_kotlin.$_$.k1;
-  var contentEquals = kotlin_kotlin.$_$.o1;
-  var getStringHashCode = kotlin_kotlin.$_$.r2;
-  var contentHashCode = kotlin_kotlin.$_$.p1;
-  var initMetadataForClass = kotlin_kotlin.$_$.t2;
-  var VOID = kotlin_kotlin.$_$.c;
-  var initMetadataForInterface = kotlin_kotlin.$_$.v2;
-  var initMetadataForCompanion = kotlin_kotlin.$_$.u2;
+  var protoOf = kotlin_kotlin.$_$.x2;
+  var objectCreate = kotlin_kotlin.$_$.w2;
+  var getKClassFromExpression = kotlin_kotlin.$_$.a3;
+  var THROW_CCE = kotlin_kotlin.$_$.t3;
+  var Unit_instance = kotlin_kotlin.$_$.j1;
+  var contentEquals = kotlin_kotlin.$_$.n1;
+  var getStringHashCode = kotlin_kotlin.$_$.p2;
+  var contentHashCode = kotlin_kotlin.$_$.o1;
+  var initMetadataForClass = kotlin_kotlin.$_$.r2;
+  var VOID = kotlin_kotlin.$_$.a;
+  var initMetadataForInterface = kotlin_kotlin.$_$.t2;
+  var initMetadataForCompanion = kotlin_kotlin.$_$.s2;
   var PluginGeneratedSerialDescriptor = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.i;
   var StringSerializer_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.d;
   var typeParametersSerializers = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.g;
   var GeneratedSerializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.h;
-  var initMetadataForObject = kotlin_kotlin.$_$.w2;
-  var defineProp = kotlin_kotlin.$_$.n2;
-  var contentToString = kotlin_kotlin.$_$.q1;
+  var initMetadataForObject = kotlin_kotlin.$_$.u2;
+  var defineProp = kotlin_kotlin.$_$.m2;
+  var contentToString = kotlin_kotlin.$_$.p1;
   var get_nullable = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.e;
   var isBlank = kotlin_kotlin.$_$.h3;
-  var mutableListOf = kotlin_kotlin.$_$.c2;
-  var copyToArray = kotlin_kotlin.$_$.r1;
-  var charSequenceLength = kotlin_kotlin.$_$.m2;
-  var toString = kotlin_kotlin.$_$.a3;
+  var mutableListOf = kotlin_kotlin.$_$.b2;
+  var copyToArray = kotlin_kotlin.$_$.q1;
+  var charSequenceLength = kotlin_kotlin.$_$.l2;
+  var toString = kotlin_kotlin.$_$.y2;
   var dropLast = kotlin_kotlin.$_$.d3;
-  var joinToString = kotlin_kotlin.$_$.x1;
+  var joinToString = kotlin_kotlin.$_$.w1;
   var drop = kotlin_kotlin.$_$.e3;
-  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.p;
-  var charArrayOf = kotlin_kotlin.$_$.l2;
+  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.n;
+  var charArrayOf = kotlin_kotlin.$_$.k2;
   var split = kotlin_kotlin.$_$.j3;
-  var collectionSizeOrDefault = kotlin_kotlin.$_$.n1;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.e;
+  var collectionSizeOrDefault = kotlin_kotlin.$_$.m1;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.c;
   var indexOf = kotlin_kotlin.$_$.g3;
+  var substring = kotlin_kotlin.$_$.l3;
+  var substring_0 = kotlin_kotlin.$_$.k3;
   //endregion
   //region block: pre-declaration
   initMetadataForInterface(PathComponent, 'PathComponent');
@@ -123,7 +125,7 @@
     tmp0_serialDesc.xg('value', false);
     this.hi_1 = tmp0_serialDesc;
   }
-  protoOf($serializer).qd = function () {
+  protoOf($serializer).pd = function () {
     return this.hi_1;
   };
   protoOf($serializer).zg = function () {
@@ -145,13 +147,13 @@
   protoOf(Param).ii = function () {
     return this.name;
   };
-  protoOf(Param).j1 = function () {
+  protoOf(Param).l1 = function () {
     return this.value;
   };
-  protoOf(Param).y9 = function () {
+  protoOf(Param).k9 = function () {
     return this.name;
   };
-  protoOf(Param).z9 = function () {
+  protoOf(Param).l9 = function () {
     return this.value;
   };
   protoOf(Param).ji = function (name, value) {
@@ -160,7 +162,7 @@
   protoOf(Param).copy = function (name, value, $super) {
     name = name === VOID ? this.name : name;
     value = value === VOID ? this.value : value;
-    return this.ji(name, value);
+    return $super === VOID ? this.ji(name, value) : $super.ji.call(this, name, value);
   };
   protoOf(Param).toString = function () {
     return 'Param(name=' + this.name + ', value=' + this.value + ')';
@@ -175,10 +177,9 @@
       return true;
     if (!(other instanceof Param))
       return false;
-    var tmp0_other_with_cast = other instanceof Param ? other : THROW_CCE();
-    if (!(this.name === tmp0_other_with_cast.name))
+    if (!(this.name === other.name))
       return false;
-    if (!(this.value === tmp0_other_with_cast.value))
+    if (!(this.value === other.value))
       return false;
     return true;
   };
@@ -194,7 +195,6 @@
       while (inductionVariable < last) {
         var element = _this__u8e3s4[inductionVariable];
         inductionVariable = inductionVariable + 1 | 0;
-        // Inline function 'com.motorro.keeplink.uri.data.getValue.<anonymous>' call
         if (name === element.name) {
           tmp$ret$1 = element;
           break $l$block;
@@ -313,7 +313,7 @@
     tmp0_serialDesc.xg('utm_content', false);
     this.vi_1 = tmp0_serialDesc;
   }
-  protoOf($serializer_0).qd = function () {
+  protoOf($serializer_0).pd = function () {
     return this.vi_1;
   };
   protoOf($serializer_0).zg = function () {
@@ -357,38 +357,33 @@
     if (!isBlank(this_0)) {
       // Inline function 'kotlin.apply' call
       var this_1 = mutableListOf([of('utm_source', this.utmSource)]);
-      // Inline function 'com.motorro.keeplink.uri.data.Utm.getSearch.<anonymous>' call
       var tmp0_safe_receiver = this.utmMedium;
       if (tmp0_safe_receiver == null)
         null;
       else {
         // Inline function 'kotlin.let' call
-        // Inline function 'com.motorro.keeplink.uri.data.Utm.getSearch.<anonymous>.<anonymous>' call
-        this_1.e(of('utm_medium', tmp0_safe_receiver));
+        this_1.g(of('utm_medium', tmp0_safe_receiver));
       }
       var tmp1_safe_receiver = this.utmCampaign;
       if (tmp1_safe_receiver == null)
         null;
       else {
         // Inline function 'kotlin.let' call
-        // Inline function 'com.motorro.keeplink.uri.data.Utm.getSearch.<anonymous>.<anonymous>' call
-        this_1.e(of('utm_campaign', tmp1_safe_receiver));
+        this_1.g(of('utm_campaign', tmp1_safe_receiver));
       }
       var tmp2_safe_receiver = this.utmTerm;
       if (tmp2_safe_receiver == null)
         null;
       else {
         // Inline function 'kotlin.let' call
-        // Inline function 'com.motorro.keeplink.uri.data.Utm.getSearch.<anonymous>.<anonymous>' call
-        this_1.e(of('utm_term', tmp2_safe_receiver));
+        this_1.g(of('utm_term', tmp2_safe_receiver));
       }
       var tmp3_safe_receiver = this.utmContent;
       if (tmp3_safe_receiver == null)
         null;
       else {
         // Inline function 'kotlin.let' call
-        // Inline function 'com.motorro.keeplink.uri.data.Utm.getSearch.<anonymous>.<anonymous>' call
-        this_1.e(of('utm_content', tmp3_safe_receiver));
+        this_1.g(of('utm_content', tmp3_safe_receiver));
       }
       // Inline function 'kotlin.collections.toTypedArray' call
       tmp = copyToArray(this_1);
@@ -410,10 +405,10 @@
   protoOf(Utm).content = function (value) {
     return this.copy(VOID, VOID, VOID, VOID, value);
   };
-  protoOf(Utm).y9 = function () {
+  protoOf(Utm).k9 = function () {
     return this.utmSource;
   };
-  protoOf(Utm).z9 = function () {
+  protoOf(Utm).l9 = function () {
     return this.utmMedium;
   };
   protoOf(Utm).bj = function () {
@@ -434,7 +429,7 @@
     utmCampaign = utmCampaign === VOID ? this.utmCampaign : utmCampaign;
     utmTerm = utmTerm === VOID ? this.utmTerm : utmTerm;
     utmContent = utmContent === VOID ? this.utmContent : utmContent;
-    return this.ej(utmSource, utmMedium, utmCampaign, utmTerm, utmContent);
+    return $super === VOID ? this.ej(utmSource, utmMedium, utmCampaign, utmTerm, utmContent) : $super.ej.call(this, utmSource, utmMedium, utmCampaign, utmTerm, utmContent);
   };
   protoOf(Utm).toString = function () {
     return 'Utm(utmSource=' + this.utmSource + ', utmMedium=' + this.utmMedium + ', utmCampaign=' + this.utmCampaign + ', utmTerm=' + this.utmTerm + ', utmContent=' + this.utmContent + ')';
@@ -452,16 +447,15 @@
       return true;
     if (!(other instanceof Utm))
       return false;
-    var tmp0_other_with_cast = other instanceof Utm ? other : THROW_CCE();
-    if (!(this.utmSource === tmp0_other_with_cast.utmSource))
+    if (!(this.utmSource === other.utmSource))
       return false;
-    if (!(this.utmMedium == tmp0_other_with_cast.utmMedium))
+    if (!(this.utmMedium == other.utmMedium))
       return false;
-    if (!(this.utmCampaign == tmp0_other_with_cast.utmCampaign))
+    if (!(this.utmCampaign == other.utmCampaign))
       return false;
-    if (!(this.utmTerm == tmp0_other_with_cast.utmTerm))
+    if (!(this.utmTerm == other.utmTerm))
       return false;
-    if (!(this.utmContent == tmp0_other_with_cast.utmContent))
+    if (!(this.utmContent == other.utmContent))
       return false;
     return true;
   };
@@ -470,7 +464,6 @@
   }
   function parseUtm(searchComponent) {
     // Inline function 'kotlin.with' call
-    // Inline function 'com.motorro.keeplink.uri.data.parseUtm.<anonymous>' call
     var $this$with = searchComponent.getSearch();
     var tmp0_elvis_lhs = getValue($this$with, 'utm_source');
     return new Utm(tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs, getValue($this$with, 'utm_medium'), getValue($this$with, 'utm_campaign'), getValue($this$with, 'utm_term'), getValue($this$with, 'utm_content'));
@@ -485,21 +478,18 @@
     base = base + toPath(_this__u8e3s4.getPath());
     // Inline function 'kotlin.also' call
     var this_1 = new URL(base);
-    // Inline function 'com.motorro.keeplink.uri.build.<anonymous>' call
     this_1.search = toSearch(_this__u8e3s4.getSearch());
     this_1.hash = toHash(_this__u8e3s4.getHash());
     return toString(this_1);
   }
   function toComponents(_this__u8e3s4) {
     // Inline function 'kotlin.with' call
-    // Inline function 'com.motorro.keeplink.uri.toComponents.<anonymous>' call
     var $this$with = new URL(_this__u8e3s4);
     return new UriComponents(dropLast($this$with.protocol, 1), $this$with.host, toPathComponent($this$with.pathname), toSearchComponent($this$with.search), toHashComponent($this$with.hash));
   }
   function toPath(_this__u8e3s4) {
     // Inline function 'kotlin.takeIf' call
     var tmp;
-    // Inline function 'com.motorro.keeplink.uri.toPath.<anonymous>' call
     // Inline function 'kotlin.collections.isNotEmpty' call
     // Inline function 'kotlin.collections.isEmpty' call
     if (!(_this__u8e3s4.length === 0)) {
@@ -517,7 +507,6 @@
   function toHash(_this__u8e3s4) {
     // Inline function 'kotlin.takeIf' call
     var tmp;
-    // Inline function 'com.motorro.keeplink.uri.toHash.<anonymous>' call
     // Inline function 'kotlin.text.isNotEmpty' call
     if (charSequenceLength(_this__u8e3s4) > 0) {
       tmp = _this__u8e3s4;
@@ -530,7 +519,6 @@
       tmp_0 = null;
     } else {
       // Inline function 'kotlin.let' call
-      // Inline function 'com.motorro.keeplink.uri.toHash.<anonymous>' call
       tmp_0 = '#' + encode(tmp0_safe_receiver);
     }
     var tmp1_elvis_lhs = tmp_0;
@@ -539,7 +527,6 @@
   function toPathComponent(_this__u8e3s4) {
     // Inline function 'kotlin.takeIf' call
     var tmp;
-    // Inline function 'com.motorro.keeplink.uri.toPathComponent.<anonymous>' call
     // Inline function 'kotlin.text.isNotEmpty' call
     if (charSequenceLength(_this__u8e3s4) > 0) {
       tmp = _this__u8e3s4;
@@ -569,7 +556,6 @@
   function toSearchComponent(_this__u8e3s4) {
     // Inline function 'kotlin.takeIf' call
     var tmp;
-    // Inline function 'com.motorro.keeplink.uri.toSearchComponent.<anonymous>' call
     // Inline function 'kotlin.text.isNotEmpty' call
     if (charSequenceLength(_this__u8e3s4) > 0) {
       tmp = _this__u8e3s4;
@@ -582,7 +568,6 @@
       tmp_0 = null;
     } else {
       // Inline function 'kotlin.let' call
-      // Inline function 'com.motorro.keeplink.uri.toSearchComponent.stub_for_inlining' call
       tmp_0 = decode(tmp0_safe_receiver);
     }
     var tmp1_safe_receiver = tmp_0;
@@ -595,51 +580,42 @@
       // Inline function 'kotlin.collections.map' call
       // Inline function 'kotlin.collections.mapTo' call
       var destination = ArrayList_init_$Create$(collectionSizeOrDefault(tmp3_safe_receiver, 10));
-      var _iterator__ex2g4s = tmp3_safe_receiver.j();
-      while (_iterator__ex2g4s.k()) {
-        var item = _iterator__ex2g4s.l();
-        // Inline function 'com.motorro.keeplink.uri.toSearchComponent.<anonymous>' call
+      var _iterator__ex2g4s = tmp3_safe_receiver.l();
+      while (_iterator__ex2g4s.m()) {
+        var item = _iterator__ex2g4s.n();
         var idx = indexOf(item, _Char___init__impl__6a9atx(61));
         var tmp_2;
         if (idx >= 0) {
-          // Inline function 'kotlin.text.substring' call
-          // Inline function 'kotlin.js.asDynamic' call
-          var tmp_3 = item.substring(0, idx);
-          // Inline function 'kotlin.text.substring' call
-          var startIndex = idx + 1 | 0;
-          // Inline function 'kotlin.js.asDynamic' call
-          var tmp$ret$8 = item.substring(startIndex);
-          tmp_2 = of(tmp_3, tmp$ret$8);
+          tmp_2 = of(substring(item, 0, idx), substring_0(item, idx + 1 | 0));
         } else {
           tmp_2 = of(item, '');
         }
-        var tmp$ret$9 = tmp_2;
-        destination.e(tmp$ret$9);
+        var tmp$ret$5 = tmp_2;
+        destination.g(tmp$ret$5);
       }
       tmp_1 = destination;
     }
     var tmp4_safe_receiver = tmp_1;
-    var tmp_4;
+    var tmp_3;
     if (tmp4_safe_receiver == null) {
-      tmp_4 = null;
+      tmp_3 = null;
     } else {
       // Inline function 'kotlin.collections.toTypedArray' call
-      tmp_4 = copyToArray(tmp4_safe_receiver);
+      tmp_3 = copyToArray(tmp4_safe_receiver);
     }
-    var tmp5_elvis_lhs = tmp_4;
-    var tmp_5;
+    var tmp5_elvis_lhs = tmp_3;
+    var tmp_4;
     if (tmp5_elvis_lhs == null) {
       // Inline function 'kotlin.emptyArray' call
-      tmp_5 = [];
+      tmp_4 = [];
     } else {
-      tmp_5 = tmp5_elvis_lhs;
+      tmp_4 = tmp5_elvis_lhs;
     }
-    return tmp_5;
+    return tmp_4;
   }
   function toHashComponent(_this__u8e3s4) {
     // Inline function 'kotlin.takeIf' call
     var tmp;
-    // Inline function 'com.motorro.keeplink.uri.toHashComponent.<anonymous>' call
     // Inline function 'kotlin.text.isNotEmpty' call
     if (charSequenceLength(_this__u8e3s4) > 0) {
       tmp = _this__u8e3s4;
@@ -653,7 +629,6 @@
       tmp_0 = null;
     } else {
       // Inline function 'kotlin.let' call
-      // Inline function 'com.motorro.keeplink.uri.toHashComponent.stub_for_inlining' call
       tmp_0 = decode(tmp1_safe_receiver);
     }
     var tmp2_elvis_lhs = tmp_0;
@@ -668,11 +643,10 @@
     return decodeURIComponent(string);
   }
   function toSearch$lambda(_destruct__k2r9zo) {
-    var name = _destruct__k2r9zo.y9();
-    var value = _destruct__k2r9zo.z9();
+    var name = _destruct__k2r9zo.k9();
+    var value = _destruct__k2r9zo.l9();
     // Inline function 'kotlin.takeIf' call
     var tmp;
-    // Inline function 'com.motorro.keeplink.uri.toSearch.<anonymous>.<anonymous>' call
     // Inline function 'kotlin.text.isNotBlank' call
     if (!isBlank(value)) {
       tmp = value;
@@ -685,7 +659,6 @@
       tmp_0 = null;
     } else {
       // Inline function 'kotlin.let' call
-      // Inline function 'com.motorro.keeplink.uri.toSearch.<anonymous>.<anonymous>' call
       tmp_0 = encode(name) + '=' + encode(tmp0_safe_receiver);
     }
     var tmp1_elvis_lhs = tmp_0;
@@ -717,7 +690,7 @@
     var $com$motorro$keeplink$uri = $com$motorro$keeplink.uri || ($com$motorro$keeplink.uri = {});
     var $com$motorro$keeplink$uri$data = $com$motorro$keeplink$uri.data || ($com$motorro$keeplink$uri.data = {});
     $com$motorro$keeplink$uri$data.Param = Param;
-    defineProp($com$motorro$keeplink$uri$data.Param, 'Companion', Companion_getInstance);
+    defineProp($com$motorro$keeplink$uri$data.Param, 'Companion', Companion_getInstance, VOID, true);
     var $com = _.com || (_.com = {});
     var $com$motorro = $com.motorro || ($com.motorro = {});
     var $com$motorro$keeplink = $com$motorro.keeplink || ($com$motorro.keeplink = {});
@@ -760,4 +733,4 @@
   return _;
 }(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./kotlinx-serialization-kotlinx-serialization-core.js')));
 
-//# sourceMappingURL=uri.js.map
+//# sourceMappingURL=keeplink-uri.js.map
